@@ -14,12 +14,13 @@
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./Logo/favicon.png">
   <link rel="canonical" href="https://jvccatering.vercel.app/">
-  <link rel="preload" as="image" href="./menu/pilau.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/hero-mobile.webp" type="image/webp" media="(max-width: 759px)" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/hero.webp" type="image/webp" media="(min-width: 760px)" fetchpriority="high">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
   <meta property="og:description" content="Premium catering for weddings, corporate events and private celebrations in Dar es Salaam.">
-  <meta property="og:image" content="https://jvccatering.vercel.app/menu/pilau.webp">
+  <meta property="og:image" content="https://jvccatering.vercel.app/assets/hero.webp">
   <meta property="og:url" content="https://jvccatering.vercel.app/">
 
   <script type="application/ld+json">
@@ -28,7 +29,7 @@
     "@type":"CateringBusiness",
     "name":"JVC Catering",
     "description":"Premium Tanzanian catering for weddings, corporate events and private celebrations.",
-    "telephone":["+255767602509","+255715602509"],
+    "telephone":["+255767620509","+255715602509"],
     "email":"veronica.wlff@gmail.com",
     "address":{"@type":"PostalAddress","streetAddress":"Lagana Street, Sinza Mori","addressLocality":"Dar es Salaam","addressCountry":"TZ"},
     "sameAs":["https://instagram.com/jvc.catering._tz"]
@@ -118,25 +119,18 @@
     .scrim{position:fixed;inset:0;z-index:1050;background:rgba(9,16,12,.52);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
     .scrim.show{opacity:1;visibility:visible}
 
-    .hero{position:relative;overflow:hidden;background:#f5efe5}
-    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(23,59,43,.09) 1px,transparent 0);background-size:25px 25px;opacity:.22;pointer-events:none}
-    .hero__inner{position:relative;z-index:1;min-height:calc(100svh - 76px);display:grid;align-items:center;padding:42px 0 36px}
-    .hero__copy{max-width:660px;padding:14px 0}
-    .hero__copy h1{margin:0;color:var(--green);font-family:var(--display);font-size:clamp(2.85rem,12vw,6rem);font-weight:700;line-height:.96;letter-spacing:-.055em;text-wrap:balance}
-    .hero__copy h1 span{color:inherit}
-    .hero__copy p:not(.eyebrow){max-width:570px;margin:20px 0 0;color:#52574f;font-size:clamp(1rem,2.7vw,1.18rem)}
+    .hero{position:relative;isolation:isolate;overflow:hidden;background-color:#173b2b;background-image:url('./assets/hero-mobile.webp');background-repeat:no-repeat;background-position:54% center;background-size:cover}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,25,17,.28) 0%,rgba(8,25,17,.42) 100%),linear-gradient(90deg,rgba(255,253,249,.94) 0%,rgba(255,253,249,.86) 58%,rgba(255,253,249,.40) 100%);pointer-events:none}
+    .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 28%,rgba(10,28,19,.12));pointer-events:none}
+    .hero__inner{min-height:calc(100svh - 76px);display:flex;align-items:center;padding:54px 0 46px}
+    .hero__copy{width:100%;max-width:680px;padding:28px 22px;border:1px solid rgba(255,255,255,.70);border-radius:26px;background:rgba(255,253,249,.82);box-shadow:0 24px 70px rgba(8,25,17,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .hero__copy .eyebrow{margin-bottom:14px}
+    .hero__copy h1{margin:0;color:var(--green);font-family:var(--display);font-size:clamp(3rem,13vw,6.15rem);font-weight:700;line-height:.95;letter-spacing:-.055em;text-wrap:balance}
+    .hero__copy h1 span{display:block;color:inherit}
     .hero__actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
-    .hero__trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;color:#4f574f;font-size:.82rem;font-weight:700}
+    .hero__trust{display:flex;flex-wrap:wrap;gap:13px 18px;margin-top:24px;color:#445047;font-size:.8rem;font-weight:800}
     .hero__trust span{display:inline-flex;align-items:center;gap:7px}
     .hero__trust svg{width:17px;height:17px;color:var(--orange-dark)}
-    .hero__media{position:relative;margin-top:34px}
-    .hero__frame{position:relative;overflow:hidden;border-radius:26px;background:#ddd;box-shadow:var(--shadow-lg);aspect-ratio:1.35/1}
-    .hero__frame::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.34);border-radius:inherit;pointer-events:none}
-    .hero__frame img{width:100%;height:100%;object-fit:cover;object-position:center}
-    .hero__badge{position:absolute;right:12px;bottom:12px;max-width:160px;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.94);box-shadow:var(--shadow-sm);backdrop-filter:blur(10px)}
-    .hero__badge strong{display:block;color:var(--green);font-family:var(--display);font-size:1.35rem;line-height:1}
-    .hero__badge span{display:block;margin-top:5px;color:var(--muted);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-    .hero__leaf{display:none;position:absolute;left:-40px;bottom:-30px;width:170px;height:170px;border:30px solid rgba(23,59,43,.09);border-radius:100% 0 100% 0;transform:rotate(28deg)}
 
     .ticker{overflow:hidden;background:var(--green);color:#fff}
     .ticker__track{display:flex;width:max-content;animation:ticker 30s linear infinite}
@@ -185,12 +179,17 @@
 
     .feature-grid{display:grid;gap:14px}
     .feature{display:flex;align-items:flex-start;gap:14px;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}
-    .client-band{padding:38px 0;border-top:1px solid var(--line);background:#fff}
-    .client-band__title{margin:0 0 22px;text-align:center;color:var(--muted);font-size:.7rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
-    .logo-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .logo-card{min-height:86px;display:grid;place-items:center;padding:15px;border:1px solid var(--line);border-radius:14px;background:#fff}
-    .logo-card img{width:100%;height:48px;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .2s ease,opacity .2s ease,transform .2s ease}
-    .logo-card:hover img{filter:none;opacity:1;transform:scale(1.03)}
+    .client-band{padding:54px 0 62px;border-top:1px solid var(--line);background:#fff}
+    .client-band__heading{max-width:780px;margin:0 auto 30px;text-align:center}
+    .client-band__title{display:flex;align-items:center;justify-content:center;gap:14px;margin:0;color:var(--green);font-family:var(--display);font-size:clamp(1.55rem,5vw,2.25rem);font-weight:700;line-height:1.18;letter-spacing:-.02em;text-transform:none}
+    .client-band__title::before,.client-band__title::after{content:"";width:38px;height:1px;background:var(--orange);opacity:.72}
+    .client-band__subtitle{max-width:620px;margin:10px auto 0;color:var(--muted);font-size:.9rem}
+    .logo-strip{display:flex;flex-wrap:wrap;align-items:stretch;justify-content:center;gap:14px}
+    .logo-card{flex:1 1 calc(50% - 14px);max-width:260px;min-height:112px;display:grid;place-items:center;padding:20px;border:1px solid #e5ded4;border-radius:17px;background:#fff;box-shadow:0 8px 24px rgba(23,59,43,.045);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+    .logo-card:hover{transform:translateY(-2px);border-color:rgba(201,122,42,.55);box-shadow:0 14px 32px rgba(23,59,43,.09)}
+    .logo-card img{display:block;width:min(100%,190px);height:72px;object-fit:contain;object-position:center;filter:none;opacity:1;transform:none;image-rendering:auto;transition:none}
+    .logo-card:hover img{filter:none;opacity:1;transform:none}
+
     .feature__icon{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:13px;background:var(--orange-soft);color:var(--orange-dark)}
     .feature__icon svg{width:23px;height:23px}
     .feature h3{margin:0;font-family:var(--display);font-size:1.18rem}
@@ -260,10 +259,11 @@
     .reveal.visible{opacity:1;transform:none}
 
     @media (min-width:560px){
+      .hero__copy{padding:32px 30px}
+      .logo-card{flex-basis:calc(33.333% - 14px)}
       .category-grid{grid-auto-columns:43%}
       .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .logo-strip{grid-template-columns:repeat(5,minmax(0,1fr))}
       .form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
       .footer__bottom{flex-direction:row;justify-content:space-between;align-items:center}
     }
@@ -273,7 +273,10 @@
       .nav{min-height:88px}
       .brand img{width:48px;height:48px}
       .brand__name{font-size:1.58rem}
-      .hero__inner{min-height:720px;padding:54px 0}
+      .hero{background-image:url('./assets/hero.webp');background-position:center center}
+      .hero::before{background:linear-gradient(180deg,rgba(8,25,17,.18) 0%,rgba(8,25,17,.34) 100%),linear-gradient(90deg,rgba(255,253,249,.96) 0%,rgba(255,253,249,.88) 43%,rgba(255,253,249,.46) 72%,rgba(255,253,249,.16) 100%)}
+      .hero__inner{min-height:720px;padding:66px 0 58px}
+      .hero__copy{padding:38px 36px}
       .hero__actions .btn{min-width:170px}
       .category-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:unset;overflow:visible}
       .promo__inner{grid-template-columns:1fr auto;text-align:left}
@@ -289,11 +292,9 @@
       .desktop-nav{display:flex}
       .menu-toggle{display:none}
       .header-actions .btn{display:inline-flex}
-      .hero__inner{grid-template-columns:.91fr 1.09fr;gap:50px;min-height:670px}
-      .hero__media{margin-top:0}
-      .hero__frame{aspect-ratio:1.18/1;border-radius:38px}
-      .hero__badge{right:-18px;bottom:26px;padding:17px 18px}
-      .hero__leaf{display:block}
+      .hero__inner{min-height:690px;padding:74px 0 66px}
+      .hero__copy{max-width:690px}
+      .logo-card{flex:0 1 calc(20% - 14px);max-width:230px}
       .category-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
       .menu-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
       .feature-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -372,12 +373,11 @@
   </aside>
 
   <main>
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
       <div class="container hero__inner">
         <div class="hero__copy reveal visible">
           <p class="eyebrow">Premium catering in Dar es Salaam</p>
-          <h1>Tailored tastes. <span>Warm moments.</span></h1>
-          <p>Authentic Tanzanian flavours, thoughtful presentation and dependable service for weddings, corporate events, private celebrations and intimate gatherings.</p>
+          <h1 id="heroTitle">Tailored tastes. <span>Warm moments.</span></h1>
           <div class="hero__actions">
             <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book Catering <svg><use href="#i-arrow"/></svg></button>
             <a class="btn btn--secondary" href="#menu">Explore Menu</a>
@@ -387,17 +387,6 @@
             <span><svg><use href="#i-check"/></svg>Custom menus</span>
             <span><svg><use href="#i-check"/></svg>Professional service</span>
           </div>
-        </div>
-
-        <div class="hero__media reveal visible">
-          <div class="hero__leaf" aria-hidden="true"></div>
-          <div class="hero__frame">
-            <picture>
-              <source type="image/webp" srcset="./menu/pilau.webp">
-              <img src="./menu/pilau.webp" alt="JVC Catering signature Tanzanian pilau" width="1000" height="800" fetchpriority="high" decoding="async">
-            </picture>
-          </div>
-          <div class="hero__badge"><strong>25+</strong><span>Years of food passion</span></div>
         </div>
       </div>
     </section>
@@ -478,9 +467,12 @@
       </div>
     </section>
 
-    <section class="client-band" aria-label="Organisations served by JVC Catering">
+    <section class="client-band" aria-labelledby="clientHeading">
       <div class="container">
-        <p class="client-band__title reveal">Trusted for professional gatherings and community events</p>
+        <div class="client-band__heading reveal">
+          <h2 class="client-band__title" id="clientHeading">Trusted for professional gatherings and community events</h2>
+          <p class="client-band__subtitle">Organisations and teams that have experienced JVC Catering service.</p>
+        </div>
         <div class="logo-strip reveal">
           <div class="logo-card"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async"></div>
           <div class="logo-card"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async"></div>
