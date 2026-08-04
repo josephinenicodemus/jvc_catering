@@ -1,513 +1,703 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#a95619" />
-    <meta name="color-scheme" content="light" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="format-detection" content="telephone=no" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#173b2b">
+  <meta name="description" content="JVC Catering delivers premium Tanzanian catering for weddings, corporate events, private celebrations, buffets and delivery in Dar es Salaam.">
+  <meta name="keywords" content="JVC Catering, Tanzania catering, Dar es Salaam catering, wedding catering, corporate catering, buffet service">
+  <meta name="author" content="JVC Catering">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
 
-    <title>JVC Catering Tanzania | Weddings & Corporate Events</title>
-    <meta
-      name="description"
-      content="Authentic Tanzanian catering in Dar es Salaam for weddings, corporate events and private celebrations. Request a tailored menu and quotation from JVC Catering."
-    />
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
-    <link rel="canonical" href="https://jvc-catering.vercel.app/" />
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+  <link rel="canonical" href="https://jvc-catering.vercel.app/">
+  <link rel="preload" as="image" href="./menu/hero-pilau-1100.webp" imagesrcset="./menu/hero-pilau-640.webp 640w, ./menu/hero-pilau-1100.webp 1100w, ./menu/hero-pilau-1600.webp 1600w" imagesizes="(max-width: 900px) 100vw, 52vw" fetchpriority="high">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="JVC Catering" />
-    <meta property="og:locale" content="en_TZ" />
-    <meta property="og:url" content="https://jvc-catering.vercel.app/" />
-    <meta property="og:title" content="JVC Catering Tanzania | Weddings & Corporate Events" />
-    <meta
-      property="og:description"
-      content="Authentic Tanzanian catering for weddings, corporate events and private celebrations in Dar es Salaam."
-    />
-    <meta property="og:image" content="https://jvc-catering.vercel.app/images/meta/social-card.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="JVC Catering food presentation and event team" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
+  <meta property="og:description" content="Premium catering for weddings, corporate events and private celebrations in Dar es Salaam.">
+  <meta property="og:image" content="https://jvc-catering.vercel.app/menu/hero-pilau-1100.webp">
+  <meta property="og:url" content="https://jvc-catering.vercel.app/">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JVC Catering Tanzania | Weddings & Corporate Events" />
-    <meta
-      name="twitter:description"
-      content="Authentic Tanzanian catering for weddings, corporate events and private celebrations in Dar es Salaam."
-    />
-    <meta name="twitter:image" content="https://jvc-catering.vercel.app/images/meta/social-card.jpg" />
-    <meta name="twitter:image:alt" content="JVC Catering food presentation and event team" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CateringBusiness",
+    "name":"JVC Catering",
+    "description":"Premium Tanzanian catering for weddings, corporate events and private celebrations.",
+    "telephone":["+255767620509","+255715602509"],
+    "email":"veronica.wlff@gmail.com",
+    "address":{"@type":"PostalAddress","streetAddress":"Lagana Street, Sinza Mori","addressLocality":"Dar es Salaam","addressCountry":"TZ"},
+    "sameAs":["https://instagram.com/jvc.catering._tz"]
+  }
+  </script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link
-      rel="preload"
-      as="image"
-      href="images/hero/hero-desktop.webp"
-      imagesrcset="images/hero/hero-mobile.webp 1080w, images/hero/hero-desktop.webp 1920w"
-      imagesizes="100vw"
-      fetchpriority="high"
-      type="image/webp"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/main.js" defer></script>
+  <style>
+    :root{
+      --orange:#c97a2a;
+      --orange-dark:#a85f1d;
+      --orange-soft:#f7eadc;
+      --green:#173b2b;
+      --green-2:#23543d;
+      --ink:#171914;
+      --muted:#6b706a;
+      --line:#e7e2d9;
+      --paper:#fffdf9;
+      --white:#fff;
+      --shadow-sm:0 10px 30px rgba(26,31,24,.08);
+      --shadow-lg:0 28px 80px rgba(20,35,25,.16);
+      --radius:22px;
+      --container:min(1180px,calc(100% - 32px));
+      --display:Georgia,"Times New Roman",serif;
+      --sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    }
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://jvc-catering.vercel.app/#business",
-        "name": "JVC Catering",
-        "url": "https://jvc-catering.vercel.app/",
-        "image": "https://jvc-catering.vercel.app/images/meta/social-card.jpg",
-        "description": "Authentic Tanzanian catering services for weddings, corporate events and private celebrations in Dar es Salaam.",
-        "foundingDate": "2016",
-        "telephone": "+255767602509",
-        "email": "veronica.wlff@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Lagana Street, Sinza Mori",
-          "addressLocality": "Dar es Salaam",
-          "addressCountry": "TZ"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Tanzania"
-        },
-        "sameAs": ["https://instagram.com/jvc.catering._tz"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Catering services",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding catering" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate event catering" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private celebration catering" } }
-          ]
-        }
-      }
-    </script>
-  </head>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:96px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    body.nav-open{overflow:hidden}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    ::selection{background:var(--orange);color:#fff}
+    :focus-visible{outline:3px solid rgba(201,122,42,.45);outline-offset:3px}
+    [hidden]{display:none!important}
 
-  <body>
-    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to main content</a>
+    .container{width:var(--container);margin-inline:auto}
+    .section{padding:72px 0;content-visibility:auto;contain-intrinsic-size:700px}
+    .section--white{background:var(--white)}
+    .section--soft{background:#f7f3ec}
+    .eyebrow{margin:0 0 12px;color:var(--orange-dark);font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+    .section-heading{max-width:760px;margin:0 auto 36px;text-align:center}
+    .section-heading h2{margin:0;font-family:var(--display);font-size:clamp(2rem,7vw,3.8rem);line-height:1.04;letter-spacing:-.035em}
+    .section-heading p{max-width:640px;margin:14px auto 0;color:var(--muted)}
+    .ornament{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:18px;color:var(--orange)}
+    .ornament::before,.ornament::after{content:"";width:42px;height:1px;background:currentColor;opacity:.55}
+    .ornament svg{width:18px;height:18px}
 
-    <header class="site-header" data-header>
-      <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="JVC Catering home">
-          <span class="brand-main">JVC</span>
-          <span class="brand-accent">Catering</span>
-        </a>
+    .btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:10px;padding:12px 19px;border:1px solid transparent;border-radius:12px;font-size:.85rem;font-weight:800;letter-spacing:.055em;text-transform:uppercase;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn--primary{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(201,122,42,.25)}
+    .btn--primary:hover{background:var(--orange-dark)}
+    .btn--secondary{background:#fff;color:var(--green);border-color:rgba(23,59,43,.25)}
+    .btn--secondary:hover{border-color:var(--green);box-shadow:var(--shadow-sm)}
+    .btn--light{background:#fff;color:var(--green)}
+    .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+    .btn svg{width:18px;height:18px;flex:0 0 auto}
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-          aria-label="Open navigation menu"
-          data-menu-toggle
-        >
-          <span class="menu-toggle-line"></span>
-          <span class="menu-toggle-line"></span>
-          <span class="menu-toggle-line"></span>
+    .topbar{display:none;background:#f4eadc;border-bottom:1px solid #eadcc8;color:#4f4a42;font-size:.75rem}
+    .topbar__inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .topbar__group{display:flex;align-items:center;gap:20px}
+    .topbar a,.topbar span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+    .topbar svg{width:14px;height:14px;color:var(--orange-dark)}
+
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,253,249,.96);border-bottom:1px solid rgba(231,226,217,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:11px;min-width:0}
+    .brand img{width:42px;height:42px;object-fit:contain}
+    .brand__copy{display:grid;line-height:1}
+    .brand__name{font-family:var(--display);font-size:1.42rem;font-weight:700;letter-spacing:.08em;color:var(--green)}
+    .brand__tag{margin-top:6px;font-size:.54rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-dark)}
+    .desktop-nav{display:none;align-items:center;gap:27px}
+    .desktop-nav a{position:relative;padding:26px 0 23px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:16px;height:2px;background:var(--orange);transition:right .2s ease}
+    .desktop-nav a:hover::after,.desktop-nav a.active::after{right:0}
+    .header-actions{display:flex;align-items:center;gap:9px}
+    .header-actions .btn{display:none;min-height:42px;padding:9px 14px}
+    .menu-toggle{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--green)}
+    .menu-toggle svg{width:22px;height:22px}
+
+    .mobile-panel{position:fixed;inset:0 0 0 auto;z-index:1100;width:min(88vw,390px);height:100dvh;padding:24px;background:#fff;transform:translateX(105%);transition:transform .3s cubic-bezier(.22,.8,.24,1);box-shadow:-24px 0 70px rgba(0,0,0,.16);overflow-y:auto}
+    .mobile-panel.open{transform:translateX(0)}
+    .mobile-panel__head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
+    .close-menu{width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--green)}
+    .mobile-links{display:grid;margin:22px 0}
+    .mobile-links a{padding:15px 4px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.42rem;font-weight:700}
+    .mobile-panel .btn{width:100%;margin-top:8px}
+    .mobile-contact{display:grid;gap:10px;margin-top:24px;color:var(--muted);font-size:.9rem}
+    .mobile-contact a{display:flex;align-items:center;gap:10px}
+    .mobile-contact svg{width:18px;height:18px;color:var(--orange)}
+    .scrim{position:fixed;inset:0;z-index:1050;background:rgba(9,16,12,.52);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
+    .scrim.show{opacity:1;visibility:visible}
+
+    .hero{position:relative;overflow:hidden;background:#f5efe5}
+    .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(23,59,43,.09) 1px,transparent 0);background-size:25px 25px;opacity:.22;pointer-events:none}
+    .hero__inner{position:relative;z-index:1;min-height:calc(100svh - 76px);display:grid;align-items:center;padding:42px 0 36px}
+    .hero__copy{max-width:660px;padding:14px 0}
+    .hero__copy h1{margin:0;font-family:var(--display);font-size:clamp(2.85rem,12vw,6rem);font-weight:700;line-height:.96;letter-spacing:-.055em;text-wrap:balance}
+    .hero__copy h1 span{color:var(--orange-dark)}
+    .hero__copy p:not(.eyebrow){max-width:570px;margin:20px 0 0;color:#52574f;font-size:clamp(1rem,2.7vw,1.18rem)}
+    .hero__actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+    .hero__trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;color:#4f574f;font-size:.82rem;font-weight:700}
+    .hero__trust span{display:inline-flex;align-items:center;gap:7px}
+    .hero__trust svg{width:17px;height:17px;color:var(--orange-dark)}
+    .hero__media{position:relative;margin-top:34px}
+    .hero__frame{position:relative;overflow:hidden;border-radius:26px;background:#ddd;box-shadow:var(--shadow-lg);aspect-ratio:1.35/1}
+    .hero__frame::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.34);border-radius:inherit;pointer-events:none}
+    .hero__frame img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .hero__badge{position:absolute;right:12px;bottom:12px;max-width:160px;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.94);box-shadow:var(--shadow-sm);backdrop-filter:blur(10px)}
+    .hero__badge strong{display:block;color:var(--green);font-family:var(--display);font-size:1.35rem;line-height:1}
+    .hero__badge span{display:block;margin-top:5px;color:var(--muted);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .hero__leaf{display:none;position:absolute;left:-40px;bottom:-30px;width:170px;height:170px;border:30px solid rgba(23,59,43,.09);border-radius:100% 0 100% 0;transform:rotate(28deg)}
+
+    .ticker{overflow:hidden;background:var(--green);color:#fff}
+    .ticker__track{display:flex;width:max-content;animation:ticker 30s linear infinite}
+    .ticker__item{display:flex;align-items:center;gap:18px;padding:13px 18px;font-size:.69rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+    .ticker__dot{width:5px;height:5px;border-radius:50%;background:var(--orange)}
+    @keyframes ticker{to{transform:translateX(-50%)}}
+
+    .category-grid{display:grid;grid-auto-flow:column;grid-auto-columns:74%;gap:16px;overflow-x:auto;padding:4px 2px 16px;scroll-snap-type:x mandatory;scrollbar-width:none}
+    .category-grid::-webkit-scrollbar{display:none}
+    .category-card{scroll-snap-align:start;text-align:center}
+    .category-card__image{position:relative;overflow:hidden;aspect-ratio:1;border:10px solid #f2ede5;border-radius:50%;box-shadow:0 12px 30px rgba(20,35,25,.08)}
+    .category-card img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+    .category-card:hover img{transform:scale(1.06)}
+    .category-card h3{margin:13px 0 2px;font-family:var(--display);font-size:1.12rem}
+    .category-card p{margin:0;color:var(--muted);font-size:.78rem}
+
+    .filter-bar{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 14px;margin:0 auto 22px;scrollbar-width:none}
+    .filter-bar::-webkit-scrollbar{display:none}
+    .filter-btn{flex:0 0 auto;min-height:42px;padding:9px 15px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#4d514b;font-size:.8rem;font-weight:800}
+    .filter-btn.active{background:var(--green);border-color:var(--green);color:#fff}
+    .menu-grid{display:grid;gap:18px}
+    .dish-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(22,30,23,.05);transition:transform .25s ease,box-shadow .25s ease}
+    .dish-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+    .dish-card.is-hidden{display:none}
+    .dish-card__media{position:relative;overflow:hidden;aspect-ratio:1.36/1;background:#eee}
+    .dish-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+    .dish-card:hover img{transform:scale(1.045)}
+    .dish-card__tag{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:8px;background:var(--orange);color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .dish-card__body{padding:17px}
+    .dish-card__top{display:flex;align-items:start;justify-content:space-between;gap:14px}
+    .dish-card h3{margin:0;font-family:var(--display);font-size:1.34rem;line-height:1.1}
+    .dish-card p{margin:8px 0 0;color:var(--muted);font-size:.87rem;line-height:1.55}
+    .dish-card__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px;padding-top:14px;border-top:1px solid #eee9e1}
+    .dish-card__category{color:var(--orange-dark);font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .order-link{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:var(--green);font-size:.76rem;font-weight:900;text-transform:uppercase}
+    .order-link svg{width:16px;height:16px}
+
+    .promo{position:relative;overflow:hidden;padding:52px 0;background:var(--green);color:#fff}
+    .promo::before{content:"";position:absolute;inset:0;background:url('./menu/cocktail.webp') center/cover no-repeat;opacity:.16}
+    .promo::after{content:"";position:absolute;inset:0;background:rgba(10,32,22,.7)}
+    .promo__inner{position:relative;z-index:1;display:grid;gap:24px;align-items:center;text-align:center}
+    .promo h2{margin:0;font-family:var(--display);font-size:clamp(2rem,8vw,4.1rem);line-height:1.02}
+    .promo p{max-width:650px;margin:12px auto 0;color:rgba(255,255,255,.79)}
+    .promo .eyebrow{color:#f3b36f}
+    .promo__actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+
+    .feature-grid{display:grid;gap:14px}
+    .feature{display:flex;align-items:flex-start;gap:14px;padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .client-band{padding:38px 0;border-top:1px solid var(--line);background:#fff}
+    .client-band__title{margin:0 0 22px;text-align:center;color:var(--muted);font-size:.7rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
+    .logo-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .logo-card{min-height:86px;display:grid;place-items:center;padding:15px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .logo-card img{width:100%;height:48px;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .2s ease,opacity .2s ease,transform .2s ease}
+    .logo-card:hover img{filter:none;opacity:1;transform:scale(1.03)}
+    .feature__icon{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto;border-radius:13px;background:var(--orange-soft);color:var(--orange-dark)}
+    .feature__icon svg{width:23px;height:23px}
+    .feature h3{margin:0;font-family:var(--display);font-size:1.18rem}
+    .feature p{margin:4px 0 0;color:var(--muted);font-size:.83rem;line-height:1.5}
+
+    .service-grid{display:grid;gap:18px}
+    .service-card{position:relative;overflow:hidden;min-height:330px;border-radius:22px;background:#222;color:#fff;box-shadow:var(--shadow-sm)}
+    .service-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+    .service-card:hover img{transform:scale(1.05)}
+    .service-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,16,12,.05) 24%,rgba(9,16,12,.87) 100%)}
+    .service-card__body{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:24px}
+    .service-card__number{display:inline-grid;place-items:center;width:36px;height:36px;margin-bottom:14px;border:1px solid rgba(255,255,255,.45);border-radius:50%;font-size:.72rem;font-weight:900}
+    .service-card h3{margin:0;font-family:var(--display);font-size:1.7rem;line-height:1.05}
+    .service-card p{margin:9px 0 0;color:rgba(255,255,255,.78);font-size:.88rem}
+
+    .about-grid{display:grid;gap:36px;align-items:center}
+    .about-media{position:relative;max-width:610px;margin:auto}
+    .about-media__main{overflow:hidden;border-radius:26px;box-shadow:var(--shadow-lg);aspect-ratio:1.08/1}
+    .about-media__main img{width:100%;height:100%;object-fit:cover}
+    .about-media__small{position:absolute;right:-4px;bottom:-22px;width:34%;overflow:hidden;border:7px solid #fff;border-radius:18px;box-shadow:var(--shadow-sm);aspect-ratio:.82/1}
+    .about-media__small img{width:100%;height:100%;object-fit:cover}
+    .about-copy h2{margin:0;font-family:var(--display);font-size:clamp(2.35rem,8vw,4.4rem);line-height:1.02;letter-spacing:-.04em}
+    .about-copy>p{margin:18px 0 0;color:var(--muted)}
+    .about-points{display:grid;gap:12px;margin-top:22px}
+    .about-point{display:flex;gap:11px;align-items:flex-start}
+    .about-point svg{width:20px;height:20px;flex:0 0 auto;margin-top:2px;color:var(--orange)}
+    .about-point strong{display:block;color:var(--green)}
+    .about-point span{display:block;color:var(--muted);font-size:.88rem}
+    .about-copy .btn{margin-top:25px}
+
+    .contact-grid{display:grid;gap:24px}
+    .contact-card{padding:25px;border-radius:22px;background:var(--green);color:#fff}
+    .contact-card h2{margin:0;font-family:var(--display);font-size:clamp(2rem,8vw,3.5rem);line-height:1.04}
+    .contact-card>p{color:rgba(255,255,255,.72)}
+    .contact-list{display:grid;gap:13px;margin-top:25px}
+    .contact-list a,.contact-list span{display:flex;align-items:flex-start;gap:12px;color:rgba(255,255,255,.9)}
+    .contact-list svg{width:20px;height:20px;flex:0 0 auto;margin-top:2px;color:#f2aa5b}
+    .contact-form{display:grid;gap:14px;padding:25px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:var(--shadow-sm)}
+    .field{display:grid;gap:7px}
+    .field label{font-size:.75rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #dcd6cc;border-radius:12px;background:#fff;padding:13px 14px;color:var(--ink);transition:border-color .2s ease,box-shadow .2s ease}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--orange);outline:0;box-shadow:0 0 0 4px rgba(201,122,42,.12)}
+    .field textarea{min-height:124px;resize:vertical}
+    .form-row{display:grid;gap:14px}
+    .form-note{margin:0;color:var(--muted);font-size:.76rem}
+
+    .footer{background:#111a15;color:#fff}
+    .footer__main{display:grid;gap:30px;padding:50px 0 36px}
+    .footer .brand__name{color:#fff}
+    .footer__about{max-width:430px;color:rgba(255,255,255,.64);font-size:.9rem}
+    .footer h3{margin:0 0 14px;font-family:var(--display);font-size:1.2rem}
+    .footer-links{display:grid;gap:9px;color:rgba(255,255,255,.69);font-size:.88rem}
+    .footer-links a:hover{color:#fff}
+    .socials{display:flex;gap:10px;margin-top:18px}
+    .socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:12px;color:#fff}
+    .socials a:hover{background:var(--orange);border-color:var(--orange)}
+    .socials svg{width:19px;height:19px}
+    .footer__bottom{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.48);font-size:.75rem}
+
+    .back-top{position:fixed;right:16px;bottom:16px;z-index:900;width:46px;height:46px;display:grid;place-items:center;border:0;border-radius:13px;background:var(--orange);color:#fff;box-shadow:0 12px 28px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s ease}
+    .back-top.show{opacity:1;visibility:visible;transform:none}
+    .back-top svg{width:21px;height:21px}
+    .toast{position:fixed;left:50%;bottom:80px;z-index:1200;max-width:calc(100% - 30px);padding:12px 16px;border-radius:12px;background:#17241c;color:#fff;box-shadow:var(--shadow-lg);font-size:.85rem;font-weight:700;opacity:0;visibility:hidden;transform:translate(-50%,15px);transition:.25s ease;text-align:center}
+    .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media (min-width:560px){
+      .category-grid{grid-auto-columns:43%}
+      .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .logo-strip{grid-template-columns:repeat(5,minmax(0,1fr))}
+      .form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .footer__bottom{flex-direction:row;justify-content:space-between;align-items:center}
+    }
+
+    @media (min-width:760px){
+      .topbar{display:block}
+      .site-header{top:0}
+      .nav{min-height:88px}
+      .brand img{width:48px;height:48px}
+      .brand__name{font-size:1.58rem}
+      .hero__inner{min-height:720px;padding:54px 0}
+      .hero__actions .btn{min-width:170px}
+      .category-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:unset;overflow:visible}
+      .promo__inner{grid-template-columns:1fr auto;text-align:left}
+      .promo p{margin-left:0}
+      .promo__actions{justify-content:flex-end}
+      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .contact-form,.contact-card{padding:34px}
+    }
+
+    @media (min-width:960px){
+      :root{--container:min(1240px,calc(100% - 56px))}
+      .section{padding:96px 0}
+      .desktop-nav{display:flex}
+      .menu-toggle{display:none}
+      .header-actions .btn{display:inline-flex}
+      .hero__inner{grid-template-columns:.91fr 1.09fr;gap:50px;min-height:670px}
+      .hero__media{margin-top:0}
+      .hero__frame{aspect-ratio:1.18/1;border-radius:38px}
+      .hero__badge{right:-18px;bottom:26px;padding:17px 18px}
+      .hero__leaf{display:block}
+      .category-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+      .menu-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .feature-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .service-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .service-card{min-height:390px}
+      .about-grid{grid-template-columns:1.02fr .98fr;gap:76px}
+      .contact-grid{grid-template-columns:.9fr 1.1fr;gap:28px}
+      .footer__main{grid-template-columns:1.5fr .7fr .8fr 1fr;gap:42px}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.61 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.28 1.73.49 2.63.61A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20.8 3.2C13 3.4 7.6 6.2 5.1 11.4 3.2 15.3 4.5 19 4.5 19s3.9 1.3 7.7-.8c5.1-2.8 7.9-8.3 8.6-15Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 19c2.7-4 6.6-7.3 11.7-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24"><path d="M6 10a4 4 0 0 1 1.4-7.8A5 5 0 0 1 17 4a3.5 3.5 0 0 1 1 6.9V21H6V10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 15h12M9 18h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11v12H3zM14 9h4l3 4v4h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.5.3.5.5 0 .3-.2 1.4-.8 1.9-.6.5-1.3.8-2.2.7-1-.1-2.3-.6-4-1.7-1.6-1.1-2.7-2.5-3.3-3.6-.6-1.1-1.2-2.8-.5-3.9Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__group">
+        <a href="tel:+255767620509"><svg><use href="#i-phone"/></svg>+255 767 620 509</a>
+        <a href="mailto:veronica.wlff@gmail.com"><svg><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
+      </div>
+      <span><svg><use href="#i-clock"/></svg>Freshly prepared for every event</span>
+      <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg>@jvc.catering._tz</a>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="container nav" aria-label="Primary navigation">
+      <a class="brand" href="#hero" aria-label="JVC Catering home">
+        <img src="./favicon.png" alt="" width="42" height="42">
+        <span class="brand__copy"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span>
+      </a>
+
+      <div class="desktop-nav" aria-label="Desktop links">
+        <a href="#hero" class="active">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">
+          Book an Event
         </button>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mobilePanel" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+      </div>
+    </nav>
+  </header>
 
-        <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation" data-navigation>
-          <a href="#home" data-nav-link data-i18n="nav.home">Home</a>
-          <a href="#about" data-nav-link data-i18n="nav.about">About</a>
-          <a href="#services" data-nav-link data-i18n="nav.services">Services</a>
-          <a href="#menu" data-nav-link data-i18n="nav.menu">Menu</a>
-          <a href="#clients" data-nav-link data-i18n="nav.clients">Clients</a>
-          <a href="#contact" data-nav-link data-i18n="nav.contact">Contact</a>
-          <div class="mobile-language-switcher" role="group" aria-label="Choose language">
-            <button type="button" class="language-button is-active" data-language="en" aria-pressed="true">EN</button>
-            <button type="button" class="language-button" data-language="sw" aria-pressed="false">SW</button>
-            <button type="button" class="language-button" data-language="fr" aria-pressed="false">FR</button>
-          </div>
-        </nav>
+  <div class="scrim" id="scrim" aria-hidden="true"></div>
+  <aside class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-panel__head">
+      <a class="brand" href="#hero"><img src="./favicon.png" alt="" width="42" height="42"><span class="brand__copy"><span class="brand__name">JVC Catering</span><span class="brand__tag">Premium Catering</span></span></a>
+      <button class="close-menu" id="closeMenu" type="button" aria-label="Close menu"><svg><use href="#i-x"/></svg></button>
+    </div>
+    <nav class="mobile-links" aria-label="Mobile links">
+      <a href="#hero">Home</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#about">About JVC</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to request an event catering quotation.">Request a Quotation</button>
+    <div class="mobile-contact">
+      <a href="tel:+255767620509"><svg><use href="#i-phone"/></svg>+255 767 620 509</a>
+      <a href="mailto:veronica.wlff@gmail.com"><svg><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
+      <span><svg><use href="#i-map"/></svg>Sinza Mori, Dar es Salaam</span>
+    </div>
+  </aside>
 
-        <div class="header-actions">
-          <div class="language-switcher" role="group" aria-label="Choose language">
-            <button type="button" class="language-button is-active" data-language="en" aria-pressed="true">EN</button>
-            <button type="button" class="language-button" data-language="sw" aria-pressed="false">SW</button>
-            <button type="button" class="language-button" data-language="fr" aria-pressed="false">FR</button>
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal visible">
+          <p class="eyebrow">Premium catering in Dar es Salaam</p>
+          <h1>Tailored tastes. <span>Warm moments.</span></h1>
+          <p>Authentic Tanzanian flavours, thoughtful presentation and dependable service for weddings, corporate events, private celebrations and intimate gatherings.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book Catering <svg><use href="#i-arrow"/></svg></button>
+            <a class="btn btn--secondary" href="#menu">Explore Menu</a>
           </div>
-          <a class="button button-small button-primary header-quote" href="#contact" data-i18n="nav.quote">Get a quote</a>
+          <div class="hero__trust" aria-label="Service highlights">
+            <span><svg><use href="#i-check"/></svg>Fresh ingredients</span>
+            <span><svg><use href="#i-check"/></svg>Custom menus</span>
+            <span><svg><use href="#i-check"/></svg>Professional service</span>
+          </div>
+        </div>
+
+        <div class="hero__media reveal visible">
+          <div class="hero__leaf" aria-hidden="true"></div>
+          <div class="hero__frame">
+            <picture>
+              <source type="image/webp" srcset="./menu/hero-pilau-640.webp 640w, ./menu/hero-pilau-1100.webp 1100w, ./menu/hero-pilau-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 52vw">
+              <img src="./menu/hero-pilau-1100.webp" alt="JVC Catering signature Tanzanian pilau" width="1100" height="759" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+          <div class="hero__badge"><strong>25+</strong><span>Years of food passion</span></div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="main-content">
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <picture class="hero-media">
-          <source media="(max-width: 47.99rem)" srcset="images/hero/hero-mobile.webp" />
-          <img
-            src="images/hero/hero-desktop.webp"
-            alt="Tanzanian grilled food prepared for a JVC Catering event"
-            width="1920"
-            height="1080"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </picture>
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="container hero-content">
-          <p class="eyebrow hero-eyebrow" data-i18n="hero.badge">Dar es Salaam, Tanzania · Established 2016</p>
-          <h1 id="hero-title" data-i18n="hero.title">Authentic Tanzanian catering for memorable events</h1>
-          <p class="hero-lead" data-i18n="hero.lead">
-            Tailored menus, warm hospitality and dependable service for weddings, corporate events and private celebrations.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#contact" data-i18n="hero.quote">Request a quote</a>
-            <a class="button button-secondary" href="#menu" data-i18n="hero.menu">Explore the menu</a>
-          </div>
-          <dl class="hero-stats" aria-label="JVC Catering highlights">
-            <div><dt>500+</dt><dd data-i18n="stats.events">events catered</dd></div>
-            <div><dt>25+</dt><dd data-i18n="stats.experience">years of experience</dd></div>
-            <div><dt>9+</dt><dd data-i18n="stats.partners">trusted partners</dd></div>
-          </dl>
+    <div class="ticker" aria-label="JVC Catering highlights">
+      <div class="ticker__track">
+        <div class="ticker__item">Wedding Catering <span class="ticker__dot"></span> Pilau & Biryani <span class="ticker__dot"></span> Corporate Events <span class="ticker__dot"></span> Nyama Choma <span class="ticker__dot"></span> Private Celebrations <span class="ticker__dot"></span> Buffet Service <span class="ticker__dot"></span> Dar es Salaam</div>
+        <div class="ticker__item" aria-hidden="true">Wedding Catering <span class="ticker__dot"></span> Pilau & Biryani <span class="ticker__dot"></span> Corporate Events <span class="ticker__dot"></span> Nyama Choma <span class="ticker__dot"></span> Private Celebrations <span class="ticker__dot"></span> Buffet Service <span class="ticker__dot"></span> Dar es Salaam</div>
+      </div>
+    </div>
+
+    <section class="section section--white" id="categories">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Made for every occasion</p>
+          <h2>Our menu categories</h2>
+          <div class="ornament"><svg><use href="#i-leaf"/></svg></div>
         </div>
-      </section>
-
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="container about-layout">
-          <div class="about-media reveal">
-            <img
-              src="images/about/veronica-nguma-event.webp"
-              alt="Veronica Nguma of JVC Catering at a catered event"
-              width="1400"
-              height="1000"
-              loading="lazy"
-              decoding="async"
-            />
-            <figure class="about-inset">
-              <img
-                src="images/about/jvc-team.webp"
-                alt="JVC Catering team members at a client event"
-                width="900"
-                height="1200"
-                loading="lazy"
-                decoding="async"
-              />
-            </figure>
-          </div>
-
-          <div class="about-copy reveal">
-            <p class="eyebrow" data-i18n="about.eyebrow">Our story</p>
-            <h2 id="about-title" data-i18n="about.title">The heart behind JVC Catering</h2>
-            <p data-i18n="about.p1">
-              JVC Catering grew from founder Veronica Nguma's passion for cooking and connecting with people through memorable meals.
-            </p>
-            <p data-i18n="about.p2">
-              With more than 25 years of experience, Veronica built a business grounded in authenticity, creativity, dependable service and fresh ingredients.
-            </p>
-            <blockquote data-i18n="about.quote">“Tailored Tastes. Warm Moments. Spectacular Impressions.”</blockquote>
-            <div class="values-grid" aria-label="Our values">
-              <article><h3 data-i18n="values.quality.title">Quality</h3><p data-i18n="values.quality.text">Fresh ingredients and care in every detail.</p></article>
-              <article><h3 data-i18n="values.reliability.title">Reliability</h3><p data-i18n="values.reliability.text">Prepared, punctual and committed.</p></article>
-              <article><h3 data-i18n="values.flexibility.title">Flexibility</h3><p data-i18n="values.flexibility.text">Menus and service adapted to your event.</p></article>
-              <article><h3 data-i18n="values.authenticity.title">Authenticity</h3><p data-i18n="values.authenticity.text">Genuine Tanzanian flavours and hospitality.</p></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-muted" id="services" aria-labelledby="services-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="services.eyebrow">What we offer</p>
-            <h2 id="services-title" data-i18n="services.title">Professional catering for every occasion</h2>
-            <p data-i18n="services.lead">Each event receives a tailored menu, polished presentation and attentive service.</p>
-          </div>
-
-          <div class="service-grid">
-            <article class="service-card reveal">
-              <img src="images/menu/pilau.webp" alt="Pilau prepared for wedding catering" width="1200" height="900" loading="lazy" decoding="async" />
-              <div class="service-card-body">
-                <p class="card-number" aria-hidden="true">01</p>
-                <h3 data-i18n="services.wedding.title">Wedding catering</h3>
-                <p data-i18n="services.wedding.text">Celebrate with a tailored Tanzanian or international menu and organised event service.</p>
-                <ul>
-                  <li data-i18n="services.wedding.item1">Custom menu planning</li>
-                  <li data-i18n="services.wedding.item2">Buffet or plated service</li>
-                  <li data-i18n="services.wedding.item3">Professional service team</li>
-                </ul>
-                <a class="text-link service-quote" href="#contact" data-event="Wedding" data-i18n="services.cta">Request a quote</a>
-              </div>
-            </article>
-
-            <article class="service-card reveal">
-              <img src="images/menu/beverage.webp" alt="Beverage service prepared for a corporate event" width="1200" height="900" loading="lazy" decoding="async" />
-              <div class="service-card-body">
-                <p class="card-number" aria-hidden="true">02</p>
-                <h3 data-i18n="services.corporate.title">Corporate events</h3>
-                <p data-i18n="services.corporate.text">Dependable catering for meetings, conferences, launches and executive hospitality.</p>
-                <ul>
-                  <li data-i18n="services.corporate.item1">Business lunch packages</li>
-                  <li data-i18n="services.corporate.item2">Conference catering</li>
-                  <li data-i18n="services.corporate.item3">Takeaway and delivery</li>
-                </ul>
-                <a class="text-link service-quote" href="#contact" data-event="Corporate" data-i18n="services.cta">Request a quote</a>
-              </div>
-            </article>
-
-            <article class="service-card reveal">
-              <img src="images/menu/kitumbua.webp" alt="Kitumbua prepared for a private celebration" width="1200" height="900" loading="lazy" decoding="async" />
-              <div class="service-card-body">
-                <p class="card-number" aria-hidden="true">03</p>
-                <h3 data-i18n="services.private.title">Private celebrations</h3>
-                <p data-i18n="services.private.text">Food and hospitality for birthdays, anniversaries, engagements and family gatherings.</p>
-                <ul>
-                  <li data-i18n="services.private.item1">Flexible guest packages</li>
-                  <li data-i18n="services.private.item2">Custom themes</li>
-                  <li data-i18n="services.private.item3">Home or venue service</li>
-                </ul>
-                <a class="text-link service-quote" href="#contact" data-event="Birthday" data-i18n="services.cta">Request a quote</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section menu-section" id="menu" aria-labelledby="menu-title">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow" data-i18n="menu.eyebrow">Tanzanian flavours</p>
-            <h2 id="menu-title" data-i18n="menu.title">Explore our menu</h2>
-            <p data-i18n="menu.lead">A selection of familiar favourites prepared with fresh ingredients. Final menus are tailored to your event.</p>
-          </div>
-
-          <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-            <button type="button" role="tab" id="tab-starters" aria-controls="panel-starters" aria-selected="true" tabindex="0" data-menu-tab="starters" data-i18n="menu.tabs.starters">Starters</button>
-            <button type="button" role="tab" id="tab-mains" aria-controls="panel-mains" aria-selected="false" tabindex="-1" data-menu-tab="mains" data-i18n="menu.tabs.mains">Mains</button>
-            <button type="button" role="tab" id="tab-desserts" aria-controls="panel-desserts" aria-selected="false" tabindex="-1" data-menu-tab="desserts" data-i18n="menu.tabs.desserts">Desserts</button>
-            <button type="button" role="tab" id="tab-beverages" aria-controls="panel-beverages" aria-selected="false" tabindex="-1" data-menu-tab="beverages" data-i18n="menu.tabs.beverages">Beverages</button>
-          </div>
-
-          <div class="menu-panel" id="panel-starters" role="tabpanel" tabindex="0" aria-labelledby="tab-starters" data-menu-panel="starters">
-            <div class="menu-grid">
-              <article class="menu-card"><img src="images/menu/maandazi.webp" alt="Fresh maandazi" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Maandazi</h3><p data-i18n="food.maandazi">Soft East African fried bread, lightly sweetened.</p></div></article>
-              <article class="menu-card"><img src="images/menu/kitumbua.webp" alt="Golden kitumbua rice pancakes" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Kitumbua</h3><p data-i18n="food.kitumbua">Coconut and cardamom rice pancakes.</p></div></article>
-              <article class="menu-card"><img src="images/menu/kachori.webp" alt="Kachori arranged on a plate" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Kachori</h3><p data-i18n="food.kachori">Golden bites filled with seasoned lentils or potatoes.</p></div></article>
-              <article class="menu-card"><img src="images/menu/mshikaki.webp" alt="Mishkaki beef skewers on a grill" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Mishkaki</h3><p data-i18n="food.mishkaki">Marinated beef skewers grilled over charcoal.</p></div></article>
-            </div>
-          </div>
-
-          <div class="menu-panel" id="panel-mains" role="tabpanel" tabindex="0" aria-labelledby="tab-mains" data-menu-panel="mains" hidden>
-            <div class="menu-grid">
-              <article class="menu-card"><img src="images/menu/pilau.webp" alt="Tanzanian beef pilau" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Pilau</h3><p data-i18n="food.pilau">Fragrant rice cooked with warming spices and tender meat.</p></div></article>
-              <article class="menu-card"><img src="images/menu/nyamachoma.webp" alt="Nyama choma served with accompaniments" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Nyama Choma</h3><p data-i18n="food.nyamachoma">Fire-grilled meat served with fresh accompaniments.</p></div></article>
-              <article class="menu-card"><img src="images/menu/walinazi.webp" alt="Coconut rice served with fish" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Wali wa Nazi</h3><p data-i18n="food.walinazi">Coconut rice served with a richly seasoned main dish.</p></div></article>
-              <article class="menu-card"><img src="images/menu/maharage.webp" alt="Seasoned maharage bean dish" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Maharage</h3><p data-i18n="food.maharage">Slow-cooked beans with Tanzanian spices.</p></div></article>
-              <article class="menu-card"><img src="images/menu/ndizinyama.webp" alt="Ndizi na nyama stew" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Ndizi na Nyama</h3><p data-i18n="food.ndizi">Green banana and beef stew with a comforting sauce.</p></div></article>
-            </div>
-          </div>
-
-          <div class="menu-panel" id="panel-desserts" role="tabpanel" tabindex="0" aria-labelledby="tab-desserts" data-menu-panel="desserts" hidden>
-            <div class="menu-grid">
-              <article class="menu-card"><img src="images/menu/halwa.webp" alt="Tanzanian halwa pieces" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Halwa</h3><p data-i18n="food.halwa">A fragrant, rich sweet finished with warming spice.</p></div></article>
-              <article class="menu-card"><img src="images/menu/coconutpudding.webp" alt="Coconut pudding served in a bowl" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Coconut Pudding</h3><p data-i18n="food.pudding">Creamy coconut dessert with a delicate finish.</p></div></article>
-              <article class="menu-card"><img src="images/menu/maandazihoney.webp" alt="Honey maandazi" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Honey Maandazi</h3><p data-i18n="food.honey">Soft maandazi finished with honey.</p></div></article>
-            </div>
-          </div>
-
-          <div class="menu-panel" id="panel-beverages" role="tabpanel" tabindex="0" aria-labelledby="tab-beverages" data-menu-panel="beverages" hidden>
-            <div class="menu-grid">
-              <article class="menu-card"><img src="images/menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Sugarcane Juice</h3><p data-i18n="food.sugarcane">Freshly pressed with lemon and ginger.</p></div></article>
-              <article class="menu-card"><img src="images/menu/chai.webp" alt="Spiced Tanzanian tea" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Chai</h3><p data-i18n="food.chai">Warm tea infused with ginger and aromatic spices.</p></div></article>
-              <article class="menu-card"><img src="images/menu/cocktail.webp" alt="Colourful event cocktails" width="1200" height="900" loading="lazy" decoding="async" /><div><h3>Cocktails</h3><p data-i18n="food.cocktail">Colourful event drinks prepared to suit your occasion.</p></div></article>
-              <article class="menu-card"><img src="images/menu/beverage.webp" alt="Assorted bottled and mixed beverages" width="1200" height="900" loading="lazy" decoding="async" /><div><h3 data-i18n="food.beveragesTitle">Assorted Beverages</h3><p data-i18n="food.beverages">Water, soft drinks and non-alcoholic event options.</p></div></article>
-            </div>
-          </div>
-
-          <div class="menu-cta reveal">
-            <p data-i18n="menu.note">Need a complete event menu and pricing?</p>
-            <a class="button button-primary" href="#contact" data-i18n="menu.cta">Request a tailored menu</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-dark" id="clients" aria-labelledby="clients-title">
-        <div class="container">
-          <div class="section-heading section-heading-light reveal">
-            <p class="eyebrow" data-i18n="clients.eyebrow">Experience and trust</p>
-            <h2 id="clients-title" data-i18n="clients.title">Organisations served by JVC Catering</h2>
-            <p data-i18n="clients.lead">From development organisations to private businesses, every engagement receives the same professional care.</p>
-          </div>
-          <div class="client-grid">
-            <figure><img src="images/brands/internews.webp" alt="Internews logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>Internews</figcaption></figure>
-            <figure><img src="images/brands/aiesec.webp" alt="AIESEC logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>AIESEC</figcaption></figure>
-            <figure><img src="images/brands/domiya.webp" alt="Domiya Estate logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>Domiya Estate</figcaption></figure>
-            <figure><img src="images/brands/cetawico.webp" alt="CETAWICO logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>CETAWICO</figcaption></figure>
-            <figure><img src="images/brands/dcmc.webp" alt="DCMC Trust logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>DCMC Trust</figcaption></figure>
-            <figure><img src="images/brands/tai.webp" alt="Tai Initiative logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>Tai Initiative</figcaption></figure>
-            <figure><img src="images/brands/giz.webp" alt="GIZ logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>GIZ</figcaption></figure>
-            <figure><img src="images/brands/educate.webp" alt="EDUCATE logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>EDUCATE!</figcaption></figure>
-            <figure><img src="images/brands/oneplanet.webp" alt="One Planet logo" width="420" height="280" loading="lazy" decoding="async" /><figcaption>One Planet</figcaption></figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="container contact-layout">
-          <div class="contact-details reveal">
-            <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
-            <h2 id="contact-title" data-i18n="contact.title">Request a catering quote</h2>
-            <p data-i18n="contact.lead">Share the essential event details and send your request directly to Veronica through WhatsApp.</p>
-
-            <address class="contact-list">
-              <a href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer"><span data-i18n="contact.whatsapp">WhatsApp</span><strong>+255 767 602 509</strong></a>
-              <a href="tel:+255715602509"><span data-i18n="contact.phone">Phone</span><strong>+255 715 602 509</strong></a>
-              <a href="tel:+255688407366"><span data-i18n="contact.phone2">Alternative phone</span><strong>+255 688 407 366</strong></a>
-              <a href="mailto:veronica.wlff@gmail.com"><span data-i18n="contact.email">Email</span><strong>veronica.wlff@gmail.com</strong></a>
-              <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@jvc.catering._tz</strong></a>
-              <div><span data-i18n="contact.address">Address</span><strong>Sinza Mori, Lagana Street, Dar es Salaam</strong></div>
-            </address>
-          </div>
-
-          <form class="quote-form reveal" id="quote-form" novalidate>
-            <div class="form-alert" id="form-alert" role="alert" tabindex="-1" hidden></div>
-            <ol class="form-progress" aria-label="Quotation form progress">
-              <li class="is-current" data-progress-step="1"><span>1</span><span data-i18n="form.progress.event">Event</span></li>
-              <li data-progress-step="2"><span>2</span><span data-i18n="form.progress.details">Details</span></li>
-              <li data-progress-step="3"><span>3</span><span data-i18n="form.progress.confirm">Confirm</span></li>
-            </ol>
-
-            <fieldset class="form-step" data-form-step="1">
-              <legend data-i18n="form.step1.title">What is the occasion?</legend>
-              <p class="form-help" data-i18n="form.step1.help">Select one event type.</p>
-              <div class="event-options">
-                <label><input type="radio" name="eventType" value="Wedding" required /><span aria-hidden="true">💍</span><span data-i18n="events.wedding">Wedding</span></label>
-                <label><input type="radio" name="eventType" value="Corporate" /><span aria-hidden="true">💼</span><span data-i18n="events.corporate">Corporate</span></label>
-                <label><input type="radio" name="eventType" value="Birthday" /><span aria-hidden="true">🎂</span><span data-i18n="events.birthday">Birthday</span></label>
-                <label><input type="radio" name="eventType" value="Anniversary" /><span aria-hidden="true">🥂</span><span data-i18n="events.anniversary">Anniversary</span></label>
-                <label><input type="radio" name="eventType" value="Party" /><span aria-hidden="true">🎉</span><span data-i18n="events.party">Party</span></label>
-                <label><input type="radio" name="eventType" value="Other" /><span aria-hidden="true">✨</span><span data-i18n="events.other">Other</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset class="form-step" data-form-step="2">
-              <legend data-i18n="form.step2.title">Tell us about the event</legend>
-              <div class="form-grid">
-                <div class="field-group">
-                  <label for="customer-name" data-i18n="form.name">Your name</label>
-                  <input id="customer-name" name="customerName" type="text" autocomplete="name" required maxlength="80" />
-                </div>
-                <div class="field-group">
-                  <label for="customer-phone" data-i18n="form.phone">Phone number</label>
-                  <input id="customer-phone" name="customerPhone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+255 ..." />
-                </div>
-                <div class="field-group">
-                  <label for="event-date" data-i18n="form.date">Event date</label>
-                  <input id="event-date" name="eventDate" type="date" required />
-                </div>
-                <div class="field-group">
-                  <label for="guest-count" data-i18n="form.guests">Estimated guests</label>
-                  <input id="guest-count" name="guestCount" type="number" inputmode="numeric" min="1" max="10000" required />
-                </div>
-                <div class="field-group field-group-wide">
-                  <label for="event-location" data-i18n="form.location">Event location</label>
-                  <input id="event-location" name="eventLocation" type="text" autocomplete="street-address" required maxlength="140" placeholder="Dar es Salaam" />
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset class="form-step" data-form-step="3">
-              <legend data-i18n="form.step3.title">Review your request</legend>
-              <div class="quote-summary" id="quote-summary" aria-live="polite"></div>
-              <div class="field-group">
-                <label for="event-notes" data-i18n="form.notes">Menu preferences or additional notes</label>
-                <textarea id="event-notes" name="eventNotes" rows="4" maxlength="800"></textarea>
-              </div>
-              <p class="privacy-note" data-i18n="form.privacy">Your information is used only to create the WhatsApp quotation message.</p>
-            </fieldset>
-
-            <div class="form-actions">
-              <button class="button button-quiet" type="button" data-form-back hidden data-i18n="form.back">Back</button>
-              <button class="button button-primary" type="button" data-form-next data-i18n="form.next">Continue</button>
-              <button class="button button-whatsapp" type="submit" data-form-submit hidden data-i18n="form.submit">Send with WhatsApp</button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <section class="cta-section" aria-labelledby="cta-title">
-        <div class="container cta-inner reveal">
-          <div>
-            <p class="eyebrow" data-i18n="cta.eyebrow">Plan your event</p>
-            <h2 id="cta-title" data-i18n="cta.title">Ready to create a memorable dining experience?</h2>
-          </div>
-          <a
-            class="button button-light"
-            href="https://wa.me/255767602509?text=Hello%20JVC%20Catering%2C%20I%20would%20like%20to%20discuss%20my%20event."
-            target="_blank"
-            rel="noopener noreferrer"
-            data-i18n="cta.button"
-          >Chat with Veronica</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand footer-brand" href="#home" aria-label="JVC Catering home"><span class="brand-main">JVC</span><span class="brand-accent">Catering</span></a>
-          <p data-i18n="footer.description">Authentic Tanzanian catering, warm hospitality and dependable event service.</p>
-          <p class="footer-est">Est. 2016 · Dar es Salaam</p>
-        </div>
-        <div>
-          <h2 data-i18n="footer.navigation">Navigation</h2>
-          <ul>
-            <li><a href="#about" data-i18n="nav.about">About</a></li>
-            <li><a href="#services" data-i18n="nav.services">Services</a></li>
-            <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
-            <li><a href="#clients" data-i18n="nav.clients">Clients</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 data-i18n="footer.services">Services</h2>
-          <ul>
-            <li data-i18n="services.wedding.title">Wedding catering</li>
-            <li data-i18n="services.corporate.title">Corporate events</li>
-            <li data-i18n="services.private.title">Private celebrations</li>
-            <li data-i18n="footer.delivery">Takeaway and delivery</li>
-          </ul>
-        </div>
-        <div>
-          <h2 data-i18n="footer.contact">Contact</h2>
-          <ul>
-            <li><a href="tel:+255767602509">+255 767 602 509</a></li>
-            <li><a href="tel:+255715602509">+255 715 602 509</a></li>
-            <li><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a></li>
-            <li><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener noreferrer">@jvc.catering._tz</a></li>
-          </ul>
+        <div class="category-grid reveal">
+          <article class="category-card"><div class="category-card__image"><img src="./menu/pilau.webp" alt="Main meals category" width="1000" height="800" loading="lazy" decoding="async"></div><h3>Main Meals</h3><p>Pilau, rice and hearty classics</p></article>
+          <article class="category-card"><div class="category-card__image"><img src="./menu/nyamachoma.webp" alt="Grilled food category" width="740" height="493" loading="lazy" decoding="async"></div><h3>Grills</h3><p>Nyama choma and mishkaki</p></article>
+          <article class="category-card"><div class="category-card__image"><img src="./menu/maandazi.webp" alt="Snacks category" width="1000" height="667" loading="lazy" decoding="async"></div><h3>Fresh Bites</h3><p>Mandazi, kachori and kitumbua</p></article>
+          <article class="category-card"><div class="category-card__image"><img src="./menu/coconutpudding.webp" alt="Dessert category" width="300" height="168" loading="lazy" decoding="async"></div><h3>Desserts</h3><p>Sweet finishes for every table</p></article>
+          <article class="category-card"><div class="category-card__image"><img src="./menu/cocktail.webp" alt="Cold beverages category" width="1000" height="667" loading="lazy" decoding="async"></div><h3>Cold Drinks</h3><p>Juices and event mocktails</p></article>
+          <article class="category-card"><div class="category-card__image"><img src="./menu/chai.webp" alt="Hot drinks category" width="1000" height="667" loading="lazy" decoding="async"></div><h3>Hot Drinks</h3><p>Tea and warm refreshments</p></article>
         </div>
       </div>
-      <div class="container footer-bottom">
-        <p>© <span data-current-year>2026</span> JVC Catering. <span data-i18n="footer.rights">All rights reserved.</span></p>
-        <p><a href="privacy.html" data-i18n="footer.privacy">Privacy notice</a><span aria-hidden="true"> · </span><a href="terms.html" data-i18n="footer.terms">Website terms</a></p>
+    </section>
+
+    <section class="section section--soft" id="menu">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Guest favourites</p>
+          <h2>Chef's recommendations</h2>
+          <p>Browse a selection of our most requested dishes. Every menu can be customised around your guest count, event style and budget.</p>
+          <div class="ornament"><svg><use href="#i-chef"/></svg></div>
+        </div>
+
+        <div class="filter-bar reveal" role="group" aria-label="Filter menu">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All Items</button>
+          <button class="filter-btn" type="button" data-filter="main" aria-pressed="false">Main Meals</button>
+          <button class="filter-btn" type="button" data-filter="grill" aria-pressed="false">Grills</button>
+          <button class="filter-btn" type="button" data-filter="bites" aria-pressed="false">Bites</button>
+          <button class="filter-btn" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
+          <button class="filter-btn" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/pilau.webp" alt="Tanzanian beef pilau" width="1000" height="800" loading="lazy" decoding="async"><span class="dish-card__tag">Bestseller</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Signature Pilau</h3></div><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in ordering Signature Pilau.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="1000" height="800" loading="lazy" decoding="async"><span class="dish-card__tag">Popular</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Wali wa Nazi</h3></div><p>Coconut rice served with flavourful chicken and warm coastal spices.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Wali wa Nazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="grill"><div class="dish-card__media"><img src="./menu/nyamachoma.webp" alt="Nyama choma grilled meat" width="740" height="493" loading="lazy" decoding="async"><span class="dish-card__tag">Chef pick</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Nyama Choma</h3></div><p>Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.</p><div class="dish-card__foot"><span class="dish-card__category">Grill</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Nyama Choma catering.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="grill"><div class="dish-card__media"><img src="./menu/mshikaki.webp" alt="Tanzanian mishkaki skewers" width="1000" height="1000" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Mishkaki</h3></div><p>Seasoned meat skewers grilled over heat and served fresh from the flame.</p><div class="dish-card__foot"><span class="dish-card__category">Grill</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Mishkaki for my event.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="bites"><div class="dish-card__media"><img src="./menu/maandazi.webp" alt="Fresh mandazi" width="1000" height="667" loading="lazy" decoding="async"><span class="dish-card__tag">Fresh daily</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Classic Mandazi</h3></div><p>Soft, golden and lightly sweetened pastries for breakfast or event tea service.</p><div class="dish-card__foot"><span class="dish-card__category">Fresh bite</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Classic Mandazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="bites"><div class="dish-card__media"><img src="./menu/kitumbua.webp" alt="Kitumbua rice cakes" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Kitumbua</h3></div><p>Traditional rice cakes with a delicately crisp outside and soft centre.</p><div class="dish-card__foot"><span class="dish-card__category">Fresh bite</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Kitumbua.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="dessert"><div class="dish-card__media"><img src="./menu/coconutpudding.webp" alt="Coconut pudding dessert" width="300" height="168" loading="lazy" decoding="async"><span class="dish-card__tag">Sweet finish</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Coconut Pudding</h3></div><p>A creamy coconut dessert with a smooth texture and gentle tropical flavour.</p><div class="dish-card__foot"><span class="dish-card__category">Dessert</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Coconut Pudding.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="dessert"><div class="dish-card__media"><img src="./menu/halwa.webp" alt="Halwa dessert" width="750" height="1000" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Traditional Halwa</h3></div><p>Rich, aromatic halwa prepared for celebrations and special gatherings.</p><div class="dish-card__foot"><span class="dish-card__category">Dessert</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Traditional Halwa.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="1000" height="667" loading="lazy" decoding="async"><span class="dish-card__tag">Refreshing</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Sugarcane Juice</h3></div><p>Freshly pressed sugarcane with a bright, naturally refreshing finish.</p><div class="dish-card__foot"><span class="dish-card__category">Cold drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Fresh Sugarcane Juice.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/cocktail.webp" alt="Event mocktails" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Event Mocktails</h3></div><p>Colourful non-alcoholic drinks tailored to your event theme and guest profile.</p><div class="dish-card__foot"><span class="dish-card__category">Cold drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Event Mocktails.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/maharage.webp" alt="Tanzanian beans dish" width="1000" height="430" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Maharage</h3></div><p>Slow-cooked beans seasoned for a comforting, satisfying side or vegetarian meal.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Maharage.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/chai.webp" alt="Spiced tea" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Spiced Chai</h3></div><p>Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.</p><div class="dish-card__foot"><span class="dish-card__category">Hot drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Spiced Chai service.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <a
-      class="floating-whatsapp"
-      href="https://wa.me/255767602509?text=Hello%20JVC%20Catering%2C%20I%20would%20like%20to%20request%20a%20quote."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Request a quote on WhatsApp"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.73 9.73 0 0 0-8.42 14.6L2.05 22l5.54-1.46A9.83 9.83 0 1 0 12.04 2Zm0 17.87a7.7 7.7 0 0 1-3.92-1.07l-.28-.17-3.29.87.88-3.2-.18-.3a7.69 7.69 0 1 1 6.79 3.87Zm4.22-5.76c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12-.15.23-.59.75-.72.9-.13.16-.26.18-.49.06-.23-.12-.97-.36-1.84-1.14a6.9 6.9 0 0 1-1.27-1.58c-.13-.23-.01-.36.1-.47.1-.1.23-.26.35-.39.11-.13.15-.23.23-.39.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.9s.82 2.2.93 2.35c.11.16 1.6 2.45 3.89 3.44.54.23.97.37 1.3.48.55.17 1.04.15 1.43.09.44-.07 1.36-.56 1.55-1.09.19-.54.19-1 .13-1.09-.05-.1-.21-.15-.44-.27Z" /></svg>
-      <span data-i18n="whatsapp">WhatsApp quote</span>
-    </a>
+    <section class="promo" aria-label="Catering quotation">
+      <div class="container promo__inner">
+        <div class="reveal"><p class="eyebrow">Your occasion, thoughtfully catered</p><h2>Planning an event?</h2><p>Tell us your date, venue, guest count and preferred menu. We will help you create a practical catering package.</p></div>
+        <div class="promo__actions reveal"><button class="btn btn--light js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for an upcoming event.">Get a Quotation</button><a class="btn btn--ghost" href="tel:+255767620509">Call Us</a></div>
+      </div>
+    </section>
 
-    <noscript>
-      <div class="noscript-message">JavaScript is disabled. You can still call JVC Catering on +255 767 602 509 or email veronica.wlff@gmail.com.</div>
-    </noscript>
-  </body>
+    <section class="section section--white" aria-label="Why choose JVC Catering">
+      <div class="container feature-grid">
+        <article class="feature reveal"><div class="feature__icon"><svg><use href="#i-leaf"/></svg></div><div><h3>Fresh Ingredients</h3><p>Carefully selected produce and ingredients prepared for your event.</p></div></article>
+        <article class="feature reveal"><div class="feature__icon"><svg><use href="#i-chef"/></svg></div><div><h3>Experienced Team</h3><p>Professional cooking, presentation and guest service from start to finish.</p></div></article>
+        <article class="feature reveal"><div class="feature__icon"><svg><use href="#i-home"/></svg></div><div><h3>Flexible Events</h3><p>Menus for intimate homes, offices, weddings and large celebrations.</p></div></article>
+        <article class="feature reveal"><div class="feature__icon"><svg><use href="#i-truck"/></svg></div><div><h3>Reliable Delivery</h3><p>Coordinated setup and delivery across Dar es Salaam by arrangement.</p></div></article>
+      </div>
+    </section>
+
+    <section class="client-band" aria-label="Organisations served by JVC Catering">
+      <div class="container">
+        <p class="client-band__title reveal">Trusted for professional gatherings and community events</p>
+        <div class="logo-strip reveal">
+          <div class="logo-card"><img src="./logo/dcmc.png" alt="DCMC" width="225" height="225" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/oneplanet.png" alt="One Planet" width="540" height="540" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/internews.png" alt="Internews" width="225" height="225" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/giz.png" alt="GIZ" width="866" height="650" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/aiesec.png" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/cetawico.png" alt="CETAWICO" width="225" height="225" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/domiya.png" alt="Domiya" width="225" height="225" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/tai.png" alt="TAI" width="1170" height="476" loading="lazy" decoding="async"></div>
+          <div class="logo-card"><img src="./logo/educate.png" alt="Educate" width="233" height="216" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="services">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">Catering for meaningful moments</p><h2>Our services</h2><p>From intimate tables to large guest lists, JVC Catering adapts the menu and service style to your occasion.</p><div class="ornament"><svg><use href="#i-leaf"/></svg></div></div>
+        <div class="service-grid">
+          <article class="service-card reveal"><img src="./menu/walinazi.webp" alt="Wedding catering service" width="1000" height="800" loading="lazy" decoding="async"><div class="service-card__body"><span class="service-card__number">01</span><h3>Wedding Catering</h3><p>Elegant food service and tailored menus for your celebration.</p></div></article>
+          <article class="service-card reveal"><img src="./menu/beverage.webp" alt="Corporate event catering" width="1000" height="667" loading="lazy" decoding="async"><div class="service-card__body"><span class="service-card__number">02</span><h3>Corporate Events</h3><p>Reliable breakfast, lunch, refreshment and meeting packages.</p></div></article>
+          <article class="service-card reveal"><img src="./menu/nyamachoma.webp" alt="Private gathering catering" width="740" height="493" loading="lazy" decoding="async"><div class="service-card__body"><span class="service-card__number">03</span><h3>Private Gatherings</h3><p>Warm, personal catering for birthdays, family events and celebrations.</p></div></article>
+          <article class="service-card reveal"><img src="./menu/pilau.webp" alt="Buffet catering service" width="1000" height="800" loading="lazy" decoding="async"><div class="service-card__body"><span class="service-card__number">04</span><h3>Buffet & Delivery</h3><p>Freshly prepared dishes delivered or arranged as a complete buffet.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal"><div class="about-media__main"><img src="./assets/FOUNDER-BiUk_k7X.webp" alt="Veronica Nguma, founder of JVC Catering" width="1200" height="800" loading="lazy" decoding="async"></div><div class="about-media__small"><img src="./assets/Photo-NoLpZ-_W.webp" alt="JVC Catering team at an event" width="799" height="1200" loading="lazy" decoding="async"></div></div>
+        <div class="about-copy reveal"><p class="eyebrow">Meet JVC Catering</p><h2>Food prepared with heart and purpose.</h2><p>JVC Catering brings together Tanzanian flavour, practical event experience and a personal approach. Our goal is simple: serve food that feels generous, looks inviting and helps every gathering run smoothly.</p><div class="about-points"><div class="about-point"><svg><use href="#i-check"/></svg><div><strong>Menus designed around your event</strong><span>Guest count, service style and food preferences are considered from the start.</span></div></div><div class="about-point"><svg><use href="#i-check"/></svg><div><strong>Authentic local flavours</strong><span>Familiar Tanzanian favourites prepared with care and consistent quality.</span></div></div><div class="about-point"><svg><use href="#i-check"/></svg><div><strong>Clear communication</strong><span>Direct coordination before the event so timing and expectations stay aligned.</span></div></div></div><button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to Our Team</button></div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card reveal"><p class="eyebrow">Contact JVC Catering</p><h2>Let us plan your menu.</h2><p>Share a few event details. The form will prepare a WhatsApp message so you can send your enquiry directly to our team.</p><div class="contact-list"><a href="tel:+255767620509"><svg><use href="#i-phone"/></svg><span>+255 767 620 509</span></a><a href="tel:+255715602509"><svg><use href="#i-phone"/></svg><span>+255 715 602 509</span></a><a href="mailto:veronica.wlff@gmail.com"><svg><use href="#i-mail"/></svg><span>veronica.wlff@gmail.com</span></a><span><svg><use href="#i-map"/></svg><span>Sinza Mori, Lagana Street, Dar es Salaam</span></span><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg><span>@jvc.catering._tz</span></a></div></div>
+
+        <form class="contact-form reveal" id="quoteForm" novalidate>
+          <div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. +255 7xx xxx xxx"></div></div>
+          <div class="form-row"><div class="field"><label for="eventType">Event type</label><select id="eventType" name="eventType" required><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select></div><div class="field"><label for="guestCount">Estimated guests</label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80"></div></div>
+          <div class="form-row"><div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div><div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" placeholder="Event location"></div></div>
+          <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" placeholder="Tell us the dishes, service style or budget range you have in mind."></textarea></div>
+          <button class="btn btn--primary" type="submit">Send via WhatsApp <svg><use href="#i-whatsapp"/></svg></button>
+          <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__main">
+      <div><a class="brand" href="#hero"><img src="./favicon.png" alt="" width="42" height="42"><span class="brand__copy"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a><p class="footer__about">Premium Tanzanian catering for weddings, corporate events, private celebrations and buffet service in Dar es Salaam.</p><div class="socials"><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a><a href="https://wa.me/255767620509" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a><a href="mailto:veronica.wlff@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a></div></div>
+      <div><h3>Explore</h3><nav class="footer-links"><a href="#hero">Home</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#about">About JVC</a></nav></div>
+      <div><h3>Services</h3><div class="footer-links"><span>Wedding Catering</span><span>Corporate Events</span><span>Private Gatherings</span><span>Buffet & Delivery</span></div></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+255767620509">+255 767 620 509</a><a href="tel:+255715602509">+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a><span>Dar es Salaam, Tanzania</span></div></div>
+    </div>
+    <div class="container footer__bottom"><span>© <span id="year"></span> JVC Catering. All rights reserved.</span><span>Tailored Tastes. Warm Moments. Spectacular Impressions.</span></div>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top"><svg><use href="#i-up"/></svg></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const PHONE = '255767620509';
+      const $ = (selector, scope = document) => scope.querySelector(selector);
+      const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const openWhatsApp = (message) => {
+        const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+        const popup = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!popup) window.location.href = url;
+      };
+
+      $$('.js-wa').forEach((button) => {
+        button.addEventListener('click', () => openWhatsApp(button.dataset.message || 'Hello JVC Catering, I would like more information.'));
+      });
+
+      const panel = $('#mobilePanel');
+      const scrim = $('#scrim');
+      const toggle = $('#menuToggle');
+      const closeButton = $('#closeMenu');
+      let lastFocused = null;
+
+      const setMenu = (open) => {
+        lastFocused = open ? document.activeElement : lastFocused;
+        panel.classList.toggle('open', open);
+        scrim.classList.toggle('show', open);
+        document.body.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        panel.setAttribute('aria-hidden', String(!open));
+        if (open) closeButton.focus();
+        else if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      };
+
+      toggle.addEventListener('click', () => setMenu(true));
+      closeButton.addEventListener('click', () => setMenu(false));
+      scrim.addEventListener('click', () => setMenu(false));
+      $$('.mobile-links a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && panel.classList.contains('open')) setMenu(false);
+      });
+
+      const filterButtons = $$('.filter-btn');
+      const dishes = $$('.dish-card');
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          filterButtons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-pressed', String(active));
+          });
+          dishes.forEach((dish) => {
+            const show = filter === 'all' || dish.dataset.category === filter;
+            dish.classList.toggle('is-hidden', !show);
+          });
+        });
+      });
+
+      const quoteForm = $('#quoteForm');
+      const toast = $('#toast');
+      let toastTimer;
+      const showToast = (message) => {
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+      };
+
+      quoteForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!quoteForm.checkValidity()) {
+          quoteForm.reportValidity();
+          showToast('Please complete the required fields.');
+          return;
+        }
+        const data = new FormData(quoteForm);
+        const message = [
+          'Hello JVC Catering, I would like a catering quotation.',
+          '',
+          `Name: ${data.get('name')}`,
+          `Phone: ${data.get('phone')}`,
+          `Event: ${data.get('eventType')}`,
+          `Guests: ${data.get('guestCount')}`,
+          `Date: ${data.get('eventDate') || 'To be confirmed'}`,
+          `Location: ${data.get('location') || 'To be confirmed'}`,
+          `Menu preferences: ${data.get('message') || 'Please advise me'}`
+        ].join('\n');
+        openWhatsApp(message);
+      });
+
+      const backTop = $('#backTop');
+      const updateScrollUI = () => backTop.classList.toggle('show', window.scrollY > 600);
+      window.addEventListener('scroll', updateScrollUI, { passive: true });
+      updateScrollUI();
+      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+      const sections = $$('main section[id]');
+      const navLinks = $$('.desktop-nav a');
+      const setActiveLink = () => {
+        const marker = window.scrollY + 160;
+        let activeId = 'hero';
+        sections.forEach((section) => {
+          if (section.offsetTop <= marker) activeId = section.id;
+        });
+        navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`));
+      };
+      window.addEventListener('scroll', setActiveLink, { passive: true });
+      setActiveLink();
+
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+        $$('.reveal:not(.visible)').forEach((item) => observer.observe(item));
+      } else {
+        $$('.reveal').forEach((item) => item.classList.add('visible'));
+      }
+
+      const fallbackSvg = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f2ede5"/><text x="400" y="285" text-anchor="middle" font-family="Arial" font-size="44" fill="#173b2b">JVC Catering</text><text x="400" y="338" text-anchor="middle" font-family="Arial" font-size="20" fill="#a85f1d">Freshly prepared</text></svg>')}`;
+      $$('img').forEach((image) => {
+        image.addEventListener('error', () => {
+          if (image.dataset.fallbackApplied) return;
+          image.dataset.fallbackApplied = 'true';
+          image.removeAttribute('srcset');
+          image.src = fallbackSvg;
+        });
+      });
+
+      $('#year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
 </html>
