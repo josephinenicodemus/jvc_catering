@@ -165,7 +165,6 @@
     .dish-card__media{position:relative;overflow:hidden;aspect-ratio:1.36/1;background:#eee}
     .dish-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
     .dish-card:hover img{transform:scale(1.045)}
-    .dish-card__tag{position:absolute;top:12px;left:12px;padding:6px 9px;border-radius:8px;background:var(--orange);color:#fff;font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
     .dish-card__body{padding:17px}
     .dish-card__top{display:flex;align-items:start;justify-content:space-between;gap:14px}
     .dish-card h3{margin:0;font-family:var(--display);font-size:1.34rem;line-height:1.1}
@@ -174,6 +173,22 @@
     .dish-card__category{color:var(--orange-dark);font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
     .order-link{display:inline-flex;align-items:center;gap:6px;border:0;background:transparent;color:var(--green);font-size:.76rem;font-weight:900;text-transform:uppercase}
     .order-link svg{width:16px;height:16px}
+
+    .menu-download{position:relative;isolation:isolate;overflow:hidden;margin-top:46px;border-radius:26px;background:var(--green);color:#fff;box-shadow:0 24px 60px rgba(23,59,43,.18)}
+    .menu-download::before{content:"";position:absolute;inset:0;z-index:-2;background:url('./assets/Buffet.webp') center 58%/cover no-repeat;transform:scale(1.02)}
+    .menu-download::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,36,24,.96) 0%,rgba(12,36,24,.90) 48%,rgba(12,36,24,.58) 100%)}
+    .menu-download__inner{display:grid;gap:22px;align-items:center;padding:30px 24px}
+    .menu-download__copy{max-width:720px}
+    .menu-download__label{display:inline-flex;align-items:center;gap:8px;margin:0 0 10px;color:#f3b36f;font-size:.7rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .menu-download__label::before{content:"";width:28px;height:1px;background:currentColor}
+    .menu-download h3{margin:0;font-family:var(--display);font-size:clamp(1.85rem,7vw,3.25rem);line-height:1.04;letter-spacing:-.035em}
+    .menu-download p{max-width:650px;margin:12px 0 0;color:rgba(255,255,255,.78);font-size:.94rem}
+    .menu-download__actions{display:flex;flex-wrap:wrap;gap:10px}
+    .menu-download__actions .btn{min-width:190px}
+    .menu-download__actions .btn--ghost:hover{background:#fff;color:var(--green);border-color:#fff}
+    .menu-download__meta{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:17px;color:rgba(255,255,255,.76);font-size:.76rem;font-weight:700}
+    .menu-download__meta span{display:inline-flex;align-items:center;gap:7px}
+    .menu-download__meta svg{width:15px;height:15px;color:#f3b36f}
 
     .promo{position:relative;overflow:hidden;padding:52px 0;background:var(--green);color:#fff}
     .promo::before{content:"";position:absolute;inset:0;background:url('./menu/cocktail.webp') center/cover no-repeat;opacity:.16}
@@ -309,6 +324,8 @@
       .hero__copy{max-width:720px}
       .hero__copy h1{font-size:clamp(5.2rem,9.1vw,7.8rem)}
       .hero__actions .btn{min-width:180px}
+      .menu-download__inner{grid-template-columns:minmax(0,1fr) auto;padding:38px 40px}
+      .menu-download__actions{justify-content:flex-end}
       .category-grid{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:unset;overflow:visible}
       .promo__inner{grid-template-columns:1fr auto;text-align:left}
       .promo p{margin-left:0}
@@ -490,19 +507,42 @@
         </div>
 
         <div class="menu-grid" id="menuGrid">
-          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/pilau.webp" alt="Tanzanian beef pilau" width="1000" height="800" loading="lazy" decoding="async"><span class="dish-card__tag">Bestseller</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Signature Pilau</h3></div><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in ordering Signature Pilau.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="1000" height="800" loading="lazy" decoding="async"><span class="dish-card__tag">Popular</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Wali wa Nazi</h3></div><p>Coconut rice served with flavourful chicken and warm coastal spices.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Wali wa Nazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="dish-card reveal" data-category="grill"><div class="dish-card__media"><img src="./menu/nyamachoma.webp" alt="Nyama choma grilled meat" width="740" height="493" loading="lazy" decoding="async"><span class="dish-card__tag">Chef pick</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Nyama Choma</h3></div><p>Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.</p><div class="dish-card__foot"><span class="dish-card__category">Grill</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Nyama Choma catering.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/pilau.webp" alt="Tanzanian beef pilau" width="1000" height="800" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Signature Pilau</h3></div><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in ordering Signature Pilau.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="1000" height="800" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Wali wa Nazi</h3></div><p>Coconut rice served with flavourful chicken and warm coastal spices.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Wali wa Nazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="grill"><div class="dish-card__media"><img src="./menu/nyamachoma.webp" alt="Nyama choma grilled meat" width="740" height="493" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Nyama Choma</h3></div><p>Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.</p><div class="dish-card__foot"><span class="dish-card__category">Grill</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Nyama Choma catering.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="grill"><div class="dish-card__media"><img src="./menu/mshikaki.webp" alt="Tanzanian mishkaki skewers" width="1000" height="1000" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Mishkaki</h3></div><p>Seasoned meat skewers grilled over heat and served fresh from the flame.</p><div class="dish-card__foot"><span class="dish-card__category">Grill</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Mishkaki for my event.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="dish-card reveal" data-category="bites"><div class="dish-card__media"><img src="./menu/maandazi.webp" alt="Fresh mandazi" width="1000" height="667" loading="lazy" decoding="async"><span class="dish-card__tag">Fresh daily</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Classic Mandazi</h3></div><p>Soft, golden and lightly sweetened pastries for breakfast or event tea service.</p><div class="dish-card__foot"><span class="dish-card__category">Fresh bite</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Classic Mandazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="bites"><div class="dish-card__media"><img src="./menu/maandazi.webp" alt="Fresh mandazi" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Classic Mandazi</h3></div><p>Soft, golden and lightly sweetened pastries for breakfast or event tea service.</p><div class="dish-card__foot"><span class="dish-card__category">Fresh bite</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Classic Mandazi.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="bites"><div class="dish-card__media"><img src="./menu/kitumbua.webp" alt="Kitumbua rice cakes" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Kitumbua</h3></div><p>Traditional rice cakes with a delicately crisp outside and soft centre.</p><div class="dish-card__foot"><span class="dish-card__category">Fresh bite</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Kitumbua.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="dish-card reveal" data-category="dessert"><div class="dish-card__media"><img src="./menu/coconutpudding.webp" alt="Coconut pudding dessert" width="300" height="168" loading="lazy" decoding="async"><span class="dish-card__tag">Sweet finish</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Coconut Pudding</h3></div><p>A creamy coconut dessert with a smooth texture and gentle tropical flavour.</p><div class="dish-card__foot"><span class="dish-card__category">Dessert</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Coconut Pudding.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="dessert"><div class="dish-card__media"><img src="./menu/coconutpudding.webp" alt="Coconut pudding dessert" width="300" height="168" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Coconut Pudding</h3></div><p>A creamy coconut dessert with a smooth texture and gentle tropical flavour.</p><div class="dish-card__foot"><span class="dish-card__category">Dessert</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Coconut Pudding.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="dessert"><div class="dish-card__media"><img src="./menu/halwa.webp" alt="Halwa dessert" width="750" height="1000" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Traditional Halwa</h3></div><p>Rich, aromatic halwa prepared for celebrations and special gatherings.</p><div class="dish-card__foot"><span class="dish-card__category">Dessert</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Traditional Halwa.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="1000" height="667" loading="lazy" decoding="async"><span class="dish-card__tag">Refreshing</span></div><div class="dish-card__body"><div class="dish-card__top"><h3>Sugarcane Juice</h3></div><p>Freshly pressed sugarcane with a bright, naturally refreshing finish.</p><div class="dish-card__foot"><span class="dish-card__category">Cold drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Fresh Sugarcane Juice.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
+          <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Sugarcane Juice</h3></div><p>Freshly pressed sugarcane with a bright, naturally refreshing finish.</p><div class="dish-card__foot"><span class="dish-card__category">Cold drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Fresh Sugarcane Juice.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/cocktail.webp" alt="Event mocktails" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Event Mocktails</h3></div><p>Colourful non-alcoholic drinks tailored to your event theme and guest profile.</p><div class="dish-card__foot"><span class="dish-card__category">Cold drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Event Mocktails.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="main"><div class="dish-card__media"><img src="./menu/maharage.webp" alt="Tanzanian beans dish" width="1000" height="430" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Maharage</h3></div><p>Slow-cooked beans seasoned for a comforting, satisfying side or vegetarian meal.</p><div class="dish-card__foot"><span class="dish-card__category">Main meal</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Maharage.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
           <article class="dish-card reveal" data-category="drink"><div class="dish-card__media"><img src="./menu/chai.webp" alt="Spiced tea" width="1000" height="667" loading="lazy" decoding="async"></div><div class="dish-card__body"><div class="dish-card__top"><h3>Spiced Chai</h3></div><p>Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.</p><div class="dish-card__foot"><span class="dish-card__category">Hot drink</span><button class="order-link js-wa" type="button" data-message="Hello JVC Catering, I am interested in Spiced Chai service.">Order <svg><use href="#i-arrow"/></svg></button></div></div></article>
         </div>
+
+
+        <aside class="menu-download reveal" aria-labelledby="downloadMenuTitle">
+          <div class="menu-download__inner">
+            <div class="menu-download__copy">
+              <p class="menu-download__label">Full catering brochure</p>
+              <h3 id="downloadMenuTitle">Download the complete JVC Catering menu</h3>
+              <p>Explore main meals, grills, fresh bites, desserts, drinks and flexible event service options in one professionally designed PDF.</p>
+              <div class="menu-download__meta" aria-label="PDF menu highlights">
+                <span><svg><use href="#i-check"/></svg>Detailed food categories</span>
+                <span><svg><use href="#i-check"/></svg>Event service guidance</span>
+                <span><svg><use href="#i-check"/></svg>Contact and booking details</span>
+              </div>
+            </div>
+            <div class="menu-download__actions">
+              <a class="btn btn--light" href="./JVC-Catering-Menu.pdf" download="JVC-Catering-Menu.pdf" aria-label="Download the JVC Catering menu as a PDF">
+                Download Menu
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <button class="btn btn--ghost js-wa" type="button" data-message="Hello JVC Catering, I have reviewed your menu and would like a custom quotation for my event.">Request a Custom Menu</button>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
