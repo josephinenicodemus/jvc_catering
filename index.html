@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0a2c20">
+  <meta name="theme-color" content="#0b2f22">
   <meta name="description" content="JVC Catering creates tailored Tanzanian menus for weddings, corporate events, private gatherings, buffets and delivery in Dar es Salaam.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
@@ -13,9 +13,9 @@
   <link rel="canonical" href="https://jvccatering.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:700px)" fetchpriority="high">
-  <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:699px)" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:760px)" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:759px)" fetchpriority="high">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
@@ -39,235 +39,342 @@
   </script>
 
   <style>
+    /* ==========================================================
+       1. VARIABLES
+       ========================================================== */
     :root{
-      --pine-1000:#061d15;
+      /* Palette */
       --pine-950:#08251a;
       --pine-900:#0b2f22;
-      --pine-800:#124330;
-      --pine-700:#1b5c42;
-      --tangerine:#dc7b25;
-      --tangerine-deep:#bb5c14;
-      --cream:#fffaf1;
-      --sand:#f5eadb;
-      --sand-2:#ead9c4;
-      --ink:#152019;
-      --muted:#6b706b;
-      --line:rgba(11,47,34,.15);
+      --pine-800:#12402e;
+      --pine-700:#1c5a41;
+      --tangerine:#c9772f;
+      --tangerine-deep:#a85f21;
+      --cream:#faf6ec;
+      --sand:#f1e7d6;
+      --ink:#1a231d;
+      --muted:#666b62;
+      --line:rgba(11,47,34,.14);
       --white:#fff;
+
+      /* Type */
       --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
       --ui:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
-      --container:min(1280px,calc(100% - 30px));
-      --header-h:74px;
-      --ease:cubic-bezier(.19,.75,.24,1);
-      --shadow-1:0 18px 48px rgba(6,29,21,.12);
-      --shadow-2:0 34px 90px rgba(6,29,21,.2);
-      --radius-xl:34px;
+
+      /* Layout */
+      --container:min(1240px,calc(100% - 32px));
+      --header-h:70px;
+      --radius-sm:10px;
+      --radius-md:18px;
+      --radius-lg:26px;
+      --ease:cubic-bezier(.22,.7,.28,1);
+      --shadow-1:0 10px 30px rgba(8,37,26,.10);
+      --shadow-2:0 24px 60px rgba(8,37,26,.16);
+
+      /* Spacing scale */
+      --space-3xs:clamp(.25rem,.5vw,.375rem);
+      --space-2xs:clamp(.5rem,1vw,.625rem);
+      --space-xs:clamp(.75rem,1.4vw,1rem);
+      --space-sm:clamp(1rem,2vw,1.25rem);
+      --space-md:clamp(1.5rem,3vw,2rem);
+      --space-lg:clamp(2rem,4vw,3rem);
+      --space-xl:clamp(2.75rem,5.5vw,4.5rem);
+      --space-2xl:clamp(3.5rem,7vw,6rem);
+      --section-space:clamp(3.5rem,8vw,6.5rem);
+
+      /* Type scale */
+      --fs-eyebrow:.72rem;
+      --fs-nav:.74rem;
+      --fs-body:1rem;
+      --fs-lead:clamp(1rem,1.4vw,1.14rem);
+      --fs-h3:clamp(1.3rem,2vw,1.6rem);
+      --fs-h2:clamp(1.9rem,3.6vw,2.9rem);
+      --fs-hero:clamp(2.5rem,6.4vw,4.6rem);
     }
 
+    /* ==========================================================
+       2. RESET / BASE
+       ========================================================== */
     *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 20px)}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px)}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
     body.menu-open{overflow:hidden}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
-    button,input,select,textarea{font:inherit}
-    button{cursor:pointer}
+    button,input,select,textarea{font:inherit;color:inherit}
+    button{cursor:pointer;background:none;border:0}
+    ul{margin:0;padding:0;list-style:none}
     ::selection{background:var(--tangerine);color:#fff}
-    :focus-visible{outline:3px solid rgba(220,123,37,.55);outline-offset:4px}
+    :focus-visible{outline:2.5px solid var(--tangerine);outline-offset:3px}
     [hidden]{display:none!important}
 
-    .skip-link{position:fixed;left:16px;top:-80px;z-index:4000;padding:10px 14px;border-radius:12px;background:#fff;color:var(--pine-900);font-weight:700;transition:top .2s ease}.skip-link:focus{top:16px}
+    /* ==========================================================
+       3. UTILITIES
+       ========================================================== */
+    .skip-link{position:fixed;left:14px;top:-70px;z-index:4000;padding:10px 16px;border-radius:var(--radius-sm);background:#fff;color:var(--pine-900);font-weight:700;transition:top .2s ease}
+    .skip-link:focus{top:14px}
     .container{width:var(--container);margin-inline:auto}
-    .section{position:relative;padding:84px 0}
-    .eyebrow{margin:0 0 14px;color:var(--tangerine-deep);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
-    .display-title{margin:0;color:var(--pine-900);font-family:var(--display);font-size:clamp(3rem,11vw,6.6rem);font-weight:500;line-height:.9;letter-spacing:-.055em;text-wrap:balance}
-    .lead{max-width:650px;margin:20px 0 0;color:var(--muted);font-size:clamp(1rem,2.5vw,1.12rem)}
+    .section{position:relative;padding-block:var(--section-space)}
+    .eyebrow{margin:0 0 var(--space-2xs);color:var(--tangerine-deep);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .section-head{max-width:640px}
+    .section-title{margin:0;color:var(--pine-900);font-family:var(--display);font-size:var(--fs-h2);font-weight:500;line-height:1.06;letter-spacing:-.02em}
+    .lead{max-width:52ch;margin:var(--space-sm) 0 0;color:var(--muted);font-size:var(--fs-lead)}
     .icon{width:18px;height:18px;flex:0 0 auto}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-    .button{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 20px;border:1px solid transparent;border-radius:999px;overflow:hidden;font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;transition:transform .28s var(--ease),box-shadow .28s ease,border-color .28s ease,color .28s ease,background .28s ease}
-    .button::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-105%);background:rgba(255,255,255,.18);transition:transform .45s var(--ease)}
-    .button:hover::before{transform:translateX(0)}
-    .button:hover{transform:translateY(-3px)}
-    .button--orange{background:var(--tangerine);color:#fff;box-shadow:0 13px 32px rgba(220,123,37,.27)}
-    .button--orange:hover{background:var(--tangerine-deep);box-shadow:0 18px 42px rgba(220,123,37,.34)}
-    .button--dark{background:var(--pine-900);color:#fff;box-shadow:0 14px 32px rgba(6,29,21,.2)}
-    .button--dark:hover{background:var(--pine-700)}
-    .button--glass{border-color:rgba(255,255,255,.5);background:rgba(5,25,18,.22);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-    .button--glass:hover{background:#fff;color:var(--pine-900);border-color:#fff}
-    .button--paper{background:#fff;color:var(--pine-900);border-color:var(--line)}
-    .button--paper:hover{border-color:var(--pine-700);box-shadow:var(--shadow-1)}
+    .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border:1px solid transparent;border-radius:999px;font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .22s var(--ease),box-shadow .22s ease,background .22s ease,color .22s ease,border-color .22s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn--primary{background:var(--tangerine);color:#fff;box-shadow:0 10px 24px rgba(201,119,47,.28)}
+    .btn--primary:hover{background:var(--tangerine-deep)}
+    .btn--dark{background:var(--pine-900);color:#fff;box-shadow:0 10px 24px rgba(8,37,26,.22)}
+    .btn--dark:hover{background:var(--pine-700)}
+    .btn--outline{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(8,37,26,.18)}
+    .btn--outline:hover{background:#fff;color:var(--pine-900);border-color:#fff}
+    .btn--ghost{border-color:var(--line);color:var(--pine-900);background:#fff}
+    .btn--ghost:hover{border-color:var(--pine-700);box-shadow:var(--shadow-1)}
 
-    .scroll-progress{position:fixed;top:0;left:0;z-index:3000;width:0;height:3px;background:var(--tangerine);box-shadow:0 0 16px rgba(220,123,37,.65)}
-
-    /* Header */
-    .site-header{position:fixed;inset:0 0 auto;z-index:1100;height:var(--header-h);border-bottom:1px solid rgba(255,255,255,.15);background:rgba(6,29,21,.11);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:height .32s var(--ease),background .3s ease,border-color .3s ease,box-shadow .3s ease}
-    .site-header.scrolled{background:rgba(255,250,241,.94);border-color:var(--line);box-shadow:0 10px 35px rgba(6,29,21,.08)}
-    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    /* ==========================================================
+       4. HEADER / NAVIGATION
+       ========================================================== */
+    .site-header{position:fixed;inset:0 0 auto;z-index:1100;height:var(--header-h);background:rgba(8,37,26,.24);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.14);transition:background .25s ease,border-color .25s ease,box-shadow .25s ease}
+    .site-header.scrolled{background:rgba(250,246,236,.96);border-color:var(--line);box-shadow:0 6px 24px rgba(8,37,26,.08)}
+    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:inline-flex;align-items:center;gap:10px;min-width:0}
-    .brand__mark{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 6px 16px rgba(0,0,0,.18))}
-    .brand__text{display:grid;line-height:1}
-    .brand__name{color:#fff;font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:.02em;white-space:nowrap;transition:color .25s ease}
-    .brand__tag{margin-top:5px;color:#ffb871;font-size:.49rem;font-weight:700;letter-spacing:.21em;text-transform:uppercase;transition:color .25s ease}
+    .brand__mark{width:40px;height:40px;object-fit:contain}
+    .brand__text{display:grid;line-height:1.1}
+    .brand__name{color:#fff;font-family:var(--display);font-size:1.2rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;transition:color .2s ease}
+    .brand__tag{margin-top:3px;color:#f0c48b;font-size:.46rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase;transition:color .2s ease}
     .site-header.scrolled .brand__name{color:var(--pine-900)}
     .site-header.scrolled .brand__tag{color:var(--tangerine-deep)}
-    .desktop-nav{display:none;align-items:center;gap:6px;padding:5px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(5,25,18,.13)}
-    .desktop-nav a{position:relative;padding:10px 15px;border-radius:999px;color:#fff;font-size:.69rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:background .25s ease,color .25s ease,transform .25s ease}
-    .desktop-nav a:hover,.desktop-nav a.active{background:rgba(255,255,255,.15);transform:translateY(-1px)}
-    .site-header.scrolled .desktop-nav{border-color:var(--line);background:#fff}
+
+    .desktop-nav{display:none;align-items:center;gap:2px}
+    .desktop-nav a{display:inline-block;padding:9px 14px;border-radius:999px;color:#fff;font-size:var(--fs-nav);font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:background .2s ease,color .2s ease}
+    .desktop-nav a:hover,.desktop-nav a[aria-current="true"]{background:rgba(255,255,255,.16)}
     .site-header.scrolled .desktop-nav a{color:var(--pine-900)}
-    .site-header.scrolled .desktop-nav a:hover,.site-header.scrolled .desktop-nav a.active{background:var(--sand)}
+    .site-header.scrolled .desktop-nav a:hover,.site-header.scrolled .desktop-nav a[aria-current="true"]{background:var(--sand)}
+
     .nav-actions{display:flex;align-items:center;gap:8px}
-    .nav-actions>.button{display:none;min-height:43px;padding:10px 16px}
-    .menu-toggle{width:45px;height:45px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.32);border-radius:50%;background:rgba(6,29,21,.2);color:#fff;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}.menu-toggle:hover{transform:rotate(4deg)}
+    .nav-actions .btn{display:none;min-height:42px;padding:10px 18px}
+    .menu-toggle{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.34);border-radius:50%;background:rgba(8,37,26,.2);color:#fff;transition:background .2s ease,color .2s ease,border-color .2s ease}
     .site-header.scrolled .menu-toggle{background:#fff;color:var(--pine-900);border-color:var(--line)}
 
-    .drawer-scrim{position:fixed;inset:0;z-index:1150;background:rgba(2,14,10,.65);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}.drawer-scrim.show{opacity:1;visibility:visible}
-    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(89vw,405px);height:100dvh;padding:25px;background:var(--cream);transform:translateX(105%);transition:transform .4s var(--ease);overflow:auto;box-shadow:-28px 0 90px rgba(0,0,0,.24)}.mobile-drawer.open{transform:translateX(0)}
-    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid var(--line)}
-    .mobile-drawer .brand__name{color:var(--pine-900)}.mobile-drawer .brand__tag{color:var(--tangerine-deep)}
-    .drawer-close{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--pine-900)}
-    .mobile-links{display:grid;margin:24px 0}.mobile-links a{display:flex;align-items:center;justify-content:space-between;padding:16px 3px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.75rem;font-weight:500}.mobile-links a::after{content:"↗";color:var(--tangerine);font-family:var(--ui);font-size:1rem}
-    .mobile-drawer>.button{width:100%}
-    .drawer-contact{display:grid;gap:12px;margin-top:26px;color:var(--muted);font-size:.88rem}.drawer-contact a,.drawer-contact span{display:flex;align-items:center;gap:10px}.drawer-contact svg{color:var(--tangerine)}
+    .drawer-scrim{position:fixed;inset:0;z-index:1150;background:rgba(2,14,10,.6);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+    .drawer-scrim.show{opacity:1;visibility:visible}
+    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(88vw,380px);height:100dvh;padding:var(--space-md);background:var(--cream);transform:translateX(102%);transition:transform .32s var(--ease);overflow-y:auto;box-shadow:-20px 0 60px rgba(0,0,0,.2)}
+    .mobile-drawer.open{transform:translateX(0)}
+    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:var(--space-sm);border-bottom:1px solid var(--line)}
+    .mobile-drawer .brand__name{color:var(--pine-900)}
+    .mobile-drawer .brand__tag{color:var(--tangerine-deep)}
+    .drawer-close{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--pine-900)}
+    .mobile-links{display:grid;margin:var(--space-md) 0}
+    .mobile-links a{display:block;padding:14px 2px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.5rem;font-weight:500;color:var(--pine-900)}
+    .mobile-drawer .btn{width:100%;margin-top:var(--space-xs)}
+    .drawer-contact{display:grid;gap:11px;margin-top:var(--space-lg);color:var(--muted);font-size:.86rem}
+    .drawer-contact a,.drawer-contact span{display:flex;align-items:center;gap:9px}
+    .drawer-contact svg{color:var(--tangerine)}
 
-    /* Hero */
-    .hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background-color:var(--pine-1000);background-image:linear-gradient(90deg,rgba(4,18,13,.84) 0%,rgba(4,18,13,.66) 42%,rgba(4,18,13,.2) 74%,rgba(4,18,13,.04) 100%),url('./assets/hero-mobile.webp');background-size:cover;background-position:center;isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--pointer-x,75%) var(--pointer-y,30%),rgba(255,190,118,.16),transparent 24%),linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.24));pointer-events:none}
-    .hero::after{content:"";position:absolute;inset:auto -14% -34% auto;width:62vw;aspect-ratio:1;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.025),0 0 0 80px rgba(255,255,255,.02);pointer-events:none}
-    .hero__inner{position:relative;z-index:2;width:100%;padding:calc(var(--header-h) + 70px) 0 58px}
-    .hero__copy{max-width:760px;color:#fff;transform:translate3d(0,var(--hero-shift,0),0);transition:transform .1s linear}
-    .hero__kicker{margin:0 0 18px;color:#ffad60;font-size:.69rem;font-weight:700;letter-spacing:.21em;text-transform:uppercase}
-    .hero h1{margin:0;color:#edf2d9;font-family:var(--display);font-size:clamp(4rem,16.5vw,9rem);font-weight:500;line-height:.78;letter-spacing:-.07em;text-shadow:0 20px 60px rgba(0,0,0,.38);text-wrap:balance}
-    .hero h1 span{display:block}
-    .hero h1 span:last-child{font-size:.77em;font-style:italic;letter-spacing:-.055em}
-    .hero__actions{display:flex;flex-direction:column;align-items:stretch;gap:11px;max-width:350px;margin-top:36px}
-    .hero__trust{display:grid;gap:8px;margin-top:26px;color:rgba(255,255,255,.88);font-size:.77rem;font-weight:600}.hero__trust span{display:flex;align-items:center;gap:8px}.hero__trust svg{color:#ffad60}
-    .hero-prism{display:none;position:absolute;right:0;bottom:70px;width:215px;padding:22px;border:1px solid rgba(255,255,255,.22);border-radius:26px;background:rgba(7,31,22,.26);color:#fff;box-shadow:0 24px 60px rgba(0,0,0,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transform:perspective(700px) rotateY(-8deg) rotateX(4deg)}
-    .hero-prism strong{display:block;font-family:var(--display);font-size:3rem;font-weight:500;line-height:1}.hero-prism span{display:block;margin-top:8px;color:rgba(255,255,255,.72);font-size:.69rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
-    .scroll-cue{display:none;position:absolute;left:50%;bottom:24px;z-index:3;transform:translateX(-50%);color:rgba(255,255,255,.72);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.scroll-cue::after{content:"";display:block;width:1px;height:34px;margin:9px auto 0;background:linear-gradient(#fff,transparent);animation:scrollPulse 1.8s ease-in-out infinite}
-    @keyframes scrollPulse{0%,100%{opacity:.35;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
+    /* ==========================================================
+       5. HERO
+       ========================================================== */
+    .hero{position:relative;min-height:88svh;display:flex;align-items:flex-end;background:var(--pine-950)}
+    .hero__media{position:absolute;inset:0;overflow:hidden}
+    .hero__media img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+    .hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,16,11,.82) 0%,rgba(4,16,11,.42) 46%,rgba(4,16,11,.12) 100%)}
+    .hero__inner{position:relative;z-index:2;width:100%;padding:calc(var(--header-h) + var(--space-xl)) 0 var(--space-2xl)}
+    .hero__copy{max-width:44rem;color:#fff}
+    .hero__kicker{margin:0 0 var(--space-xs);color:#f0c48b;font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .hero h1{margin:0;color:#f4efdd;font-family:var(--display);font-size:var(--fs-hero);font-weight:500;line-height:1.02;letter-spacing:-.02em}
+    .hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-lg)}
+    .hero__trust{display:flex;flex-wrap:wrap;gap:var(--space-sm) var(--space-md);margin-top:var(--space-lg);color:rgba(255,255,255,.86);font-size:.8rem;font-weight:600}
+    .hero__trust span{display:flex;align-items:center;gap:7px}
+    .hero__trust svg{color:#f0c48b}
 
-    .trust-rail{position:relative;z-index:5;margin-top:-1px;border-bottom:1px solid var(--line);background:#fff}.trust-rail__inner{display:grid}.trust-item{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}.trust-item:last-child{border-bottom:0}.trust-item strong{color:var(--pine-900);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}.trust-item span{color:var(--muted);font-size:.82rem;text-align:right}
+    .trust-rail{position:relative;z-index:5;border-bottom:1px solid var(--line);background:#fff}
+    .trust-rail__inner{display:grid;gap:0}
+    .trust-item{padding:var(--space-sm) 0;border-bottom:1px solid var(--line)}
+    .trust-item:last-child{border-bottom:0}
+    .trust-item strong{display:block;color:var(--pine-900);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase}
+    .trust-item span{display:block;margin-top:4px;color:var(--muted);font-size:.86rem}
 
-    /* Team / About */
-    .about{overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--cream) 100%)}
-    .about::before{content:"JVC";position:absolute;right:-3vw;top:4%;color:rgba(11,47,34,.035);font-family:var(--display);font-size:clamp(12rem,32vw,32rem);font-weight:600;line-height:.7;pointer-events:none}
-    .about-grid{display:grid;gap:58px;align-items:center}
-    .team-stage{position:relative;max-width:680px;margin-inline:auto;perspective:1300px;isolation:isolate}
-    .team-stage__plane{position:relative;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transform-style:preserve-3d;transition:transform .18s ease-out}
-    .team-orbit{position:absolute;inset:-7%;z-index:-1;border:1px solid rgba(11,47,34,.19);border-radius:48% 52% 59% 41% / 38% 44% 56% 62%;transform:translateZ(-30px) rotate(-8deg);animation:orbit 16s linear infinite}
-    .team-orbit::before,.team-orbit::after{content:"";position:absolute;border-radius:50%;background:var(--tangerine);box-shadow:0 8px 20px rgba(220,123,37,.32)}.team-orbit::before{width:15px;height:15px;left:16%;top:-7px}.team-orbit::after{width:10px;height:10px;right:11%;bottom:7%}
-    @keyframes orbit{to{transform:translateZ(-30px) rotate(352deg)}}
-    .team-portrait{position:relative;overflow:hidden;aspect-ratio:1.02/1;border:1px solid rgba(255,255,255,.82);border-radius:44% 56% 38% 62% / 43% 39% 61% 57%;background:var(--sand);box-shadow:0 34px 85px rgba(6,29,21,.2),inset 0 0 0 8px rgba(255,255,255,.34);transform:translateZ(35px)}
-    .team-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.22),transparent 28%,transparent 72%,rgba(4,25,17,.18));pointer-events:none}
-    .team-portrait img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.025);transition:transform .8s var(--ease)}.team-stage:hover .team-portrait img{transform:scale(1.07)}
-    .team-token{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 15px;border:1px solid rgba(255,255,255,.68);border-radius:999px;background:rgba(255,255,255,.82);box-shadow:0 14px 38px rgba(6,29,21,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateZ(75px)}
-    .team-token--top{right:-2%;top:9%}.team-token--bottom{left:-3%;bottom:8%}
-    .team-token__icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--pine-900);color:#fff}.team-token strong{display:block;color:var(--pine-900);font-size:.84rem}.team-token span{display:block;color:var(--muted);font-size:.69rem}
-    .team-avatar-badge{position:absolute;right:7%;bottom:-2%;z-index:4;width:104px;aspect-ratio:1;display:grid;place-items:center;border:7px solid var(--cream);border-radius:50%;background:var(--tangerine);box-shadow:0 18px 36px rgba(6,29,21,.2);transform:translateZ(95px) rotate(5deg)}.team-avatar-badge img{width:62%;height:62%;object-fit:contain;filter:brightness(0) invert(1)}
-    .about-copy{position:relative;z-index:2;max-width:690px}
-    .about-copy .display-title{font-size:clamp(3.2rem,11vw,6rem)}
-    .about-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:30px}.about-stat{padding:17px 0;border-top:1px solid var(--line)}.about-stat strong{display:block;color:var(--pine-900);font-family:var(--display);font-size:2.3rem;font-weight:500;line-height:1}.about-stat span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem}
-    .about-list{display:grid;gap:0;margin-top:26px;border-top:1px solid var(--line)}.about-list article{display:grid;grid-template-columns:35px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.about-list b{color:var(--tangerine-deep);font-size:.7rem;letter-spacing:.12em}.about-list strong{display:block;color:var(--pine-900);font-size:.94rem}.about-list span{display:block;margin-top:4px;color:var(--muted);font-size:.84rem}.about-copy .button{margin-top:26px}
+    /* ==========================================================
+       6. TEAM / ABOUT
+       ========================================================== */
+    .about{background:#fff}
+    .about-grid{display:grid;gap:var(--space-xl);align-items:center}
+    .about-media{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-2)}
+    .about-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%}
+    .about-copy .section-title{max-width:16ch}
+    .about-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-xs);margin-top:var(--space-lg)}
+    .about-stat{padding-top:var(--space-sm);border-top:1px solid var(--line)}
+    .about-stat strong{display:block;color:var(--pine-900);font-family:var(--display);font-size:1.5rem;font-weight:500}
+    .about-stat span{display:block;margin-top:4px;color:var(--muted);font-size:.78rem}
+    .about-list{display:grid;margin-top:var(--space-lg);border-top:1px solid var(--line)}
+    .about-list article{display:grid;grid-template-columns:1fr;gap:6px;padding:var(--space-sm) 0;border-bottom:1px solid var(--line)}
+    .about-list strong{display:block;color:var(--pine-900);font-size:.96rem}
+    .about-list span{display:block;color:var(--muted);font-size:.86rem}
+    .about-copy .btn{margin-top:var(--space-lg)}
 
-    /* Menu explorer */
-    .menu-section{overflow:hidden;background:var(--pine-950);color:#fff}
-    .menu-section::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 14% 18%,rgba(220,123,37,.16),transparent 26%),radial-gradient(circle at 86% 76%,rgba(255,255,255,.06),transparent 28%);pointer-events:none}
-    .menu-head{position:relative;z-index:2;display:grid;gap:28px;margin-bottom:38px}.menu-head .display-title{color:#f4eedc}.menu-head .lead{color:rgba(255,255,255,.65)}.menu-head__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .menu-explorer{position:relative;z-index:2;display:grid;gap:18px}
-    .menu-categories{display:flex;gap:9px;overflow-x:auto;padding:2px 1px 12px;scrollbar-width:none}.menu-categories::-webkit-scrollbar{display:none}
-    .menu-category{flex:0 0 auto;min-height:42px;padding:9px 15px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.68);font-size:.69rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:.25s ease}.menu-category:hover,.menu-category.active{border-color:rgba(255,255,255,.72);background:#fff;color:var(--pine-900);transform:translateY(-2px)}
-    .menu-showcase{display:grid;gap:18px;perspective:1400px}
-    .menu-feature{position:relative;overflow:hidden;min-height:570px;border:1px solid rgba(255,255,255,.16);border-radius:30px;background:#0c271c;box-shadow:0 34px 90px rgba(0,0,0,.28);transform:rotateX(var(--menu-tilt-x,0deg)) rotateY(var(--menu-tilt-y,0deg));transform-style:preserve-3d;transition:transform .18s ease-out}
-    .menu-feature__media{position:absolute;inset:0}.menu-feature__media img{width:100%;height:100%;object-fit:cover;transition:opacity .28s ease,transform .8s var(--ease)}.menu-feature:hover .menu-feature__media img{transform:scale(1.045)}
-    .menu-feature__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,15,10,.06),rgba(2,15,10,.28) 36%,rgba(2,15,10,.9) 100%)}
-    .menu-feature__content{position:absolute;inset:auto 0 0;padding:26px;transform:translateZ(48px)}
-    .menu-feature__meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;color:#ffc080;font-size:.67rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
-    .menu-feature h3{max-width:720px;margin:0;color:#fff;font-family:var(--display);font-size:clamp(2.8rem,12vw,5.3rem);font-weight:500;line-height:.88;letter-spacing:-.045em}.menu-feature p{max-width:570px;margin:14px 0 0;color:rgba(255,255,255,.75);font-size:.92rem}
-    .menu-feature__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .menu-browser{padding:16px;border:1px solid rgba(255,255,255,.13);border-radius:26px;background:rgba(255,255,255,.035);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-    .menu-browser__head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.menu-browser__head strong{font-family:var(--display);font-size:1.5rem;font-weight:500}.menu-browser__head span{color:rgba(255,255,255,.48);font-size:.72rem}
-    .menu-thumbs{display:grid;grid-auto-flow:column;grid-auto-columns:76%;gap:12px;overflow-x:auto;padding-bottom:5px;scroll-snap-type:x mandatory;scrollbar-width:none}.menu-thumbs::-webkit-scrollbar{display:none}
-    .menu-thumb{position:relative;display:grid;grid-template-columns:82px 1fr;gap:12px;align-items:center;min-width:0;padding:9px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:rgba(255,255,255,.035);color:#fff;text-align:left;scroll-snap-align:start;transition:transform .25s var(--ease),background .25s ease,border-color .25s ease}.menu-thumb:hover,.menu-thumb.active{transform:translateY(-3px);border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.09)}
-    .menu-thumb img{width:82px;height:74px;object-fit:cover;border-radius:13px}.menu-thumb strong{display:block;font-family:var(--display);font-size:1.1rem;font-weight:500;line-height:1}.menu-thumb span{display:block;margin-top:6px;color:rgba(255,255,255,.52);font-size:.66rem;text-transform:uppercase;letter-spacing:.1em}
+    /* ==========================================================
+       7. MENU
+       ========================================================== */
+    .menu-section{background:var(--pine-950);color:#fff}
+    .menu-head{margin-bottom:var(--space-lg)}
+    .menu-head .section-title{color:#f4efdd}
+    .menu-head .lead{color:rgba(255,255,255,.68)}
+    .menu-head__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--space-md)}
 
-    /* Services */
-    .services{overflow:hidden;background:var(--sand)}
-    .services::after{content:"";position:absolute;left:-14%;bottom:-38%;width:58vw;aspect-ratio:1;border:1px solid rgba(11,47,34,.12);border-radius:50%;box-shadow:0 0 0 46px rgba(11,47,34,.025),0 0 0 92px rgba(11,47,34,.018);pointer-events:none}
-    .services-head{position:relative;z-index:2;display:grid;gap:22px;margin-bottom:36px}
-    .service-explorer{position:relative;z-index:2;display:grid;gap:16px}
-    .service-tabs{display:flex;gap:9px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.service-tabs::-webkit-scrollbar{display:none}
-    .service-tab{flex:0 0 auto;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.52);color:var(--pine-900);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.25s ease}.service-tab:hover,.service-tab.active{background:var(--pine-900);color:#fff;transform:translateY(-2px);box-shadow:0 12px 24px rgba(6,29,21,.16)}
-    .service-stage{position:relative;overflow:hidden;min-height:600px;border:1px solid rgba(255,255,255,.72);border-radius:34px;background:var(--pine-900);box-shadow:var(--shadow-2);perspective:1300px;transform:rotateX(var(--service-tilt-x,0deg)) rotateY(var(--service-tilt-y,0deg));transform-style:preserve-3d;transition:transform .18s ease-out}
-    .service-stage__image{position:absolute;inset:0}.service-stage__image img{width:100%;height:100%;object-fit:cover;transition:opacity .28s ease,transform .8s var(--ease)}.service-stage:hover .service-stage__image img{transform:scale(1.045)}
-    .service-stage__image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,24,17,.88) 0%,rgba(5,24,17,.6) 45%,rgba(5,24,17,.16) 80%),linear-gradient(180deg,transparent 45%,rgba(5,24,17,.66) 100%)}
-    .service-stage__content{position:absolute;left:0;bottom:0;z-index:2;max-width:680px;padding:28px;color:#fff;transform:translateZ(52px)}
-    .service-number{display:inline-grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,255,255,.44);border-radius:50%;font-size:.69rem;font-weight:700;letter-spacing:.12em}.service-stage h3{margin:18px 0 0;font-family:var(--display);font-size:clamp(3rem,13vw,6rem);font-weight:500;line-height:.88;letter-spacing:-.045em}.service-stage p{max-width:540px;margin:15px 0 0;color:rgba(255,255,255,.72)}.service-stage .button{margin-top:22px}
-    .service-pills{position:absolute;right:18px;top:18px;z-index:3;display:grid;gap:8px;transform:translateZ(70px)}.service-pill{padding:8px 11px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(5,24,17,.28);color:#fff;font-size:.65rem;font-weight:600;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .menu-filters{display:flex;gap:8px;overflow-x:auto;padding:2px 1px var(--space-sm);scrollbar-width:none}
+    .menu-filters::-webkit-scrollbar{display:none}
+    .menu-filter{flex:0 0 auto;min-height:42px;padding:9px 16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.7);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;transition:background .2s ease,color .2s ease,border-color .2s ease}
+    .menu-filter:hover,.menu-filter[aria-pressed="true"]{background:#fff;color:var(--pine-900);border-color:#fff}
 
-    /* Clients */
-    .clients{overflow:hidden;padding:40px 0;border-block:1px solid var(--line);background:#fff}.clients__label{margin:0 0 22px;text-align:center;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}.logo-marquee{overflow:hidden}.logo-track{display:flex;width:max-content;gap:12px;animation:marquee 34s linear infinite}.logo-marquee:hover .logo-track{animation-play-state:paused}.logo-item{width:190px;height:90px;display:grid;place-items:center;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--cream);transition:transform .25s ease,box-shadow .25s ease}.logo-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-1)}.logo-item img{max-width:100%;max-height:54px;object-fit:contain;filter:none;opacity:1}@keyframes marquee{to{transform:translateX(calc(-50% - 6px))}}
+    .menu-grid{display:grid;grid-template-columns:1fr;gap:var(--space-md)}
+    .menu-card{display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-md);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+    .menu-card__media{aspect-ratio:4/3;overflow:hidden}
+    .menu-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+    .menu-card:hover .menu-card__media img{transform:scale(1.04)}
+    .menu-card__body{padding:var(--space-sm)}
+    .menu-card__label{display:block;margin-bottom:6px;color:#f0c48b;font-size:.64rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .menu-card h3{margin:0;color:#fff;font-family:var(--display);font-size:1.2rem;font-weight:500}
+    .menu-card p{margin:8px 0 0;color:rgba(255,255,255,.68);font-size:.88rem;line-height:1.55}
+    .menu-count{color:rgba(255,255,255,.5);font-size:.78rem}
 
-    /* Contact */
-    .contact{overflow:hidden;background:var(--cream)}
-    .contact-shell{position:relative;overflow:hidden;border-radius:36px;background:var(--pine-950);box-shadow:var(--shadow-2)}
-    .contact-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 14%,rgba(220,123,37,.22),transparent 25%),radial-gradient(circle at 7% 87%,rgba(255,255,255,.07),transparent 24%);pointer-events:none}
-    .contact-grid{position:relative;z-index:2;display:grid;gap:28px;padding:28px}
-    .contact-copy{color:#fff}.contact-copy .display-title{color:#f4eedc}.contact-copy .lead{color:rgba(255,255,255,.65)}
-    .contact-list{display:grid;gap:12px;margin-top:28px}.contact-list a,.contact-list span{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.78);font-size:.88rem}.contact-list svg{color:#ffaf62}
-    .quote-form{display:grid;gap:14px;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(255,255,255,.07);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-    .form-row{display:grid;gap:14px}.field{display:grid;gap:7px}.field label{color:rgba(255,255,255,.8);font-size:.68rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.08);padding:13px 14px;color:#fff;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease}.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}.field select option{color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:#ffb46a;outline:0;background:rgba(255,255,255,.12);box-shadow:0 0 0 4px rgba(220,123,37,.13)}.field textarea{min-height:120px;resize:vertical}.form-note{margin:0;color:rgba(255,255,255,.45);font-size:.72rem}
+    /* ==========================================================
+       8. SERVICES
+       ========================================================== */
+    .services{background:var(--sand)}
+    .services-head{margin-bottom:var(--space-lg)}
+    .service-explorer{display:grid;gap:var(--space-md)}
+    .service-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+    .service-tabs::-webkit-scrollbar{display:none}
+    .service-tab{flex:0 0 auto;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--pine-900);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s ease,color .2s ease}
+    .service-tab:hover,.service-tab[aria-pressed="true"]{background:var(--pine-900);color:#fff}
 
-    /* Footer */
-    .footer{background:var(--pine-1000);color:#fff}.footer-main{display:grid;gap:32px;padding:54px 0 36px}.footer .brand__name{color:#fff}.footer-about{max-width:420px;color:rgba(255,255,255,.58);font-size:.87rem}.footer h3{margin:0 0 14px;font-family:var(--display);font-size:1.35rem;font-weight:500}.footer-links{display:grid;gap:9px;color:rgba(255,255,255,.62);font-size:.84rem}.footer-links a:hover{color:#fff}.socials{display:flex;gap:9px;margin-top:18px}.socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:50%;transition:.25s ease}.socials a:hover{background:var(--tangerine);border-color:var(--tangerine);transform:translateY(-3px)}.footer-bottom{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-size:.72rem}
+    .service-stage{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:var(--pine-900);box-shadow:var(--shadow-2)}
+    .service-stage__media{position:relative;aspect-ratio:4/3}
+    .service-stage__media img{width:100%;height:100%;object-fit:cover;transition:opacity .25s ease}
+    .service-stage__media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,24,17,.86) 0%,rgba(5,24,17,.15) 55%,transparent 100%)}
+    .service-stage__content{position:absolute;left:0;right:0;bottom:0;padding:var(--space-md);color:#fff}
+    .service-stage h3{margin:0;font-family:var(--display);font-size:var(--fs-h3);font-weight:500}
+    .service-stage p{max-width:46ch;margin:10px 0 0;color:rgba(255,255,255,.76);font-size:.92rem}
+    .service-stage .btn{margin-top:var(--space-sm)}
 
-    .back-top{position:fixed;right:16px;bottom:16px;z-index:900;width:48px;height:48px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--tangerine);color:#fff;box-shadow:0 15px 32px rgba(0,0,0,.22);opacity:0;visibility:hidden;transform:translateY(14px) rotate(-8deg);transition:.25s ease}.back-top.show{opacity:1;visibility:visible;transform:none}.back-top:hover{transform:translateY(-3px)}
-    .toast{position:fixed;left:50%;bottom:80px;z-index:1300;max-width:calc(100% - 30px);padding:12px 16px;border-radius:999px;background:var(--pine-900);color:#fff;box-shadow:var(--shadow-2);font-size:.82rem;font-weight:600;opacity:0;visibility:hidden;transform:translate(-50%,15px);transition:.25s ease;text-align:center}.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:none}
+    /* ==========================================================
+       9. CLIENTS
+       ========================================================== */
+    .clients{padding-block:var(--space-xl);border-block:1px solid var(--line);background:#fff}
+    .clients__label{margin:0 0 var(--space-md);text-align:center;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+    .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-sm)}
+    .logo-item{display:grid;place-items:center;padding:var(--space-sm);border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--cream)}
+    .logo-item img{max-width:100%;max-height:44px;object-fit:contain}
 
+    /* ==========================================================
+       10. CONTACT
+       ========================================================== */
+    .contact{background:var(--cream)}
+    .contact-shell{position:relative;overflow:hidden;border-radius:var(--radius-lg);background:var(--pine-950);box-shadow:var(--shadow-2)}
+    .contact-grid{display:grid;gap:var(--space-lg);padding:var(--space-lg)}
+    .contact-copy{color:#fff}
+    .contact-copy .section-title{color:#f4efdd}
+    .contact-copy .lead{color:rgba(255,255,255,.66)}
+    .contact-list{display:grid;gap:11px;margin-top:var(--space-lg)}
+    .contact-list a,.contact-list span{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.82);font-size:.9rem;word-break:break-word}
+    .contact-list svg{color:#f0c48b;flex-shrink:0}
+
+    .quote-form{display:grid;gap:var(--space-sm);padding:var(--space-md);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-md);background:rgba(255,255,255,.06)}
+    .form-row{display:grid;gap:var(--space-sm)}
+    .field{display:grid;gap:6px}
+    .field label{color:rgba(255,255,255,.8);font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+    .field .required{color:#f0c48b}
+    .field input,.field select,.field textarea{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm);background:rgba(255,255,255,.08);padding:12px 14px;color:#fff}
+    .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.42)}
+    .field select option{color:var(--ink)}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:#f0c48b;outline:0;background:rgba(255,255,255,.12)}
+    .field textarea{min-height:110px;resize:vertical}
+    .field[data-invalid="true"] input,.field[data-invalid="true"] select{border-color:#ff9d8a}
+    .field-error{display:none;color:#ffcfc4;font-size:.76rem}
+    .field[data-invalid="true"] .field-error{display:block}
+    .form-status{margin:0;min-height:1.2em;color:#ffcfc4;font-size:.84rem}
+    .form-note{margin:0;color:rgba(255,255,255,.42);font-size:.72rem}
+
+    /* ==========================================================
+       11. FOOTER
+       ========================================================== */
+    .footer{background:var(--pine-1000,#061d15);color:#fff}
+    .footer-main{display:grid;gap:var(--space-lg);padding-block:var(--space-xl) var(--space-lg)}
+    .footer .brand__name{color:#fff}
+    .footer-about{max-width:34ch;margin-top:var(--space-sm);color:rgba(255,255,255,.6);font-size:.88rem}
+    .footer h3{margin:0 0 var(--space-xs);font-family:var(--display);font-size:1.15rem;font-weight:500}
+    .footer-links{display:grid;gap:9px;color:rgba(255,255,255,.62);font-size:.86rem}
+    .footer-links a:hover{color:#fff}
+    .socials{display:flex;gap:9px;margin-top:var(--space-sm)}
+    .socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:50%;transition:background .2s ease,border-color .2s ease}
+    .socials a:hover{background:var(--tangerine);border-color:var(--tangerine)}
+    .footer-bottom{display:flex;flex-direction:column;gap:6px;padding:var(--space-sm) 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-size:.72rem}
+
+    /* ==========================================================
+       12. FIXED UI
+       ========================================================== */
+    .back-top{position:fixed;right:16px;bottom:16px;z-index:900;width:46px;height:46px;display:grid;place-items:center;border-radius:50%;background:var(--tangerine);color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease}
+    .back-top.show{opacity:1;visibility:visible;transform:none}
+    .toast{position:fixed;left:50%;bottom:76px;z-index:1300;max-width:calc(100% - 28px);padding:11px 16px;border-radius:999px;background:var(--pine-900);color:#fff;box-shadow:var(--shadow-2);font-size:.82rem;font-weight:600;opacity:0;visibility:hidden;transform:translate(-50%,10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease;text-align:center}
+    .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+    .reveal.visible{opacity:1;transform:none}
+
+    /* ==========================================================
+       13. RESPONSIVE BREAKPOINTS
+       ========================================================== */
     @media (min-width:560px){
-      .hero__actions{flex-direction:row;align-items:center;max-width:none}.hero__trust{grid-template-columns:repeat(3,max-content);gap:18px}
       .about-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
-      .menu-thumbs{grid-auto-columns:48%}
       .form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
       .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}
     }
 
     @media (min-width:760px){
-      :root{--header-h:84px;--container:min(1280px,calc(100% - 48px))}
-      .section{padding:106px 0}
-      .brand__mark{width:50px;height:50px}.brand__name{font-size:1.48rem}
-      .hero{background-image:linear-gradient(90deg,rgba(4,18,13,.82) 0%,rgba(4,18,13,.61) 40%,rgba(4,18,13,.17) 72%,rgba(4,18,13,.03) 100%),url('./assets/hero.webp');background-position:center}
-      .hero__inner{padding:calc(var(--header-h) + 100px) 0 84px}.hero-prism{display:block}.scroll-cue{display:block}
-      .trust-rail__inner{grid-template-columns:repeat(3,minmax(0,1fr))}.trust-item{padding:20px 22px;border-right:1px solid var(--line);border-bottom:0}.trust-item:first-child{padding-left:0}.trust-item:last-child{padding-right:0;border-right:0}
-      .menu-thumbs{grid-auto-columns:34%}
-      .contact-grid{padding:40px}.quote-form{padding:28px}
+      :root{--header-h:80px;--container:min(1240px,calc(100% - 48px))}
+      .hero__media img{object-position:center}
+      .contact-grid{padding:var(--space-xl)}
     }
 
     @media (min-width:960px){
-      .desktop-nav{display:flex}.menu-toggle{display:none}.nav-actions>.button{display:inline-flex}
-      .about-grid{grid-template-columns:1.02fr .98fr;gap:88px}.about-copy{padding-left:20px}
-      .menu-head{grid-template-columns:1.15fr .85fr;align-items:end}.menu-head__aside{justify-self:end;max-width:520px}
-      .menu-showcase{grid-template-columns:minmax(0,1.45fr) minmax(330px,.55fr);align-items:stretch}.menu-feature{min-height:720px}.menu-browser{display:flex;flex-direction:column}.menu-thumbs{grid-auto-flow:row;grid-template-columns:1fr;grid-auto-columns:auto;overflow-y:auto;max-height:624px;padding-right:4px}.menu-thumb{grid-template-columns:94px 1fr}.menu-thumb img{width:94px;height:78px}
-      .services-head{grid-template-columns:1.1fr .9fr;align-items:end}.services-head>.lead{justify-self:end}.service-explorer{grid-template-columns:280px minmax(0,1fr);align-items:stretch}.service-tabs{display:grid;align-content:start;overflow:visible}.service-tab{text-align:left;border-radius:18px;padding:17px 18px}.service-stage{min-height:700px}
-      .contact-grid{grid-template-columns:.92fr 1.08fr;gap:48px;padding:52px}.footer-main{grid-template-columns:1.5fr .7fr .8fr 1fr;gap:44px}
+      .desktop-nav{display:flex}
+      .menu-toggle{display:none}
+      .nav-actions .btn{display:inline-flex}
+
+      .about-grid{grid-template-columns:.9fr 1.1fr;gap:var(--space-2xl)}
+
+      .menu-grid{grid-template-columns:repeat(3,1fr)}
+
+      .service-explorer{grid-template-columns:240px minmax(0,1fr)}
+      .service-tabs{display:grid;align-content:start;overflow:visible}
+      .service-tab{text-align:left;border-radius:var(--radius-sm)}
+      .service-stage__media{aspect-ratio:16/9}
+
+      .logo-grid{grid-template-columns:repeat(6,1fr)}
+
+      .contact-grid{grid-template-columns:.85fr 1.15fr;gap:var(--space-xl)}
+
+      .footer-main{grid-template-columns:1.4fr .8fr .8fr 1fr}
     }
 
     @media (min-width:1240px){
-      .hero-prism{right:3%}.team-token--top{right:-6%}.team-token--bottom{left:-7%}.service-stage__content{padding:42px}.menu-feature__content{padding:38px}
+      .service-stage__media{aspect-ratio:21/9}
     }
 
-    @media (hover:none){.team-stage__plane,.menu-feature,.service-stage{transform:none!important}}
+    /* ==========================================================
+       14. REDUCED MOTION
+       ========================================================== */
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-      .reveal{opacity:1;transform:none}.logo-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.team-stage__plane,.menu-feature,.service-stage{transform:none!important}
+      .reveal{opacity:1;transform:none}
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -281,33 +388,34 @@
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
     <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.5.3.5.5 0 .3-.2 1.4-.8 1.9-.6.5-1.3.8-2.2.7-1-.1-2.3-.6-4-1.7-1.6-1.1-2.7-2.5-3.3-3.6-.6-1.1-1.2-2.8-.5-3.9Z" fill="currentColor"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2Zm6 13 .9 3.1L22 19l-3.1.9L18 23l-.9-3.1L14 19l3.1-.9L18 15Z" fill="currentColor"/></symbol>
   </svg>
 
   <header class="site-header" id="siteHeader">
     <nav class="container nav" aria-label="Primary navigation">
       <a class="brand" href="#hero" aria-label="JVC Catering home">
-        <img class="brand__mark" src="./Logo/favicon.png" alt="JVC Catering logo" width="64" height="64">
+        <img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64">
         <span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span>
       </a>
       <div class="desktop-nav" aria-label="Desktop links">
-        <a href="#hero" class="active">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
+        <a href="#hero">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an Event</button>
+        <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an event</button>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileDrawer" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
       </div>
     </nav>
   </header>
 
-  <div class="drawer-scrim" id="drawerScrim" aria-hidden="true"></div>
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
     <div class="drawer-head">
-      <a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
+      <a class="brand" href="#hero" tabindex="-1"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
       <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
-    <nav class="mobile-links" aria-label="Mobile links"><a href="#hero">Home</a><a href="#about">Meet the Team</a><a href="#menu">Menu Explorer</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
-    <button class="button button--orange js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a Quotation</button>
+    <nav class="mobile-links" aria-label="Mobile links">
+      <a href="#hero">Home</a><a href="#about">Meet the team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a quotation</button>
     <div class="drawer-contact">
       <a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a>
       <a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
@@ -317,60 +425,58 @@
 
   <main id="main">
     <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero__media">
+        <picture>
+          <source srcset="./assets/hero.webp" media="(min-width:760px)">
+          <img src="./assets/hero-mobile.webp" alt="A beautifully set JVC Catering event table with Tanzanian dishes" width="1600" height="2000" fetchpriority="high">
+        </picture>
+      </div>
       <div class="container hero__inner">
         <div class="hero__copy">
           <p class="hero__kicker">Premium catering in Dar es Salaam</p>
-          <h1 id="heroTitle"><span>Tailored</span><span>tastes.</span><span>Warm moments.</span></h1>
+          <h1 id="heroTitle">Tailored tastes.<br>Warm moments.</h1>
           <div class="hero__actions">
-            <button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book Catering <svg class="icon"><use href="#i-arrow"/></svg></button>
-            <a class="button button--glass magnetic" href="#menu">Explore Menu</a>
+            <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book catering <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="btn btn--outline" href="#menu">Explore menu</a>
           </div>
-          <div class="hero__trust" aria-label="Service highlights">
+          <div class="hero__trust">
             <span><svg class="icon"><use href="#i-check"/></svg>Fresh ingredients</span>
             <span><svg class="icon"><use href="#i-check"/></svg>Custom menus</span>
             <span><svg class="icon"><use href="#i-check"/></svg>Professional service</span>
           </div>
         </div>
-        <aside class="hero-prism" aria-label="JVC Catering experience"><strong>25+</strong><span>Years of food passion</span></aside>
       </div>
-      <span class="scroll-cue" aria-hidden="true">Scroll to discover</span>
     </section>
 
     <div class="trust-rail" aria-label="JVC Catering service summary">
       <div class="container trust-rail__inner">
         <div class="trust-item"><strong>Based in</strong><span>Dar es Salaam</span></div>
         <div class="trust-item"><strong>Menus</strong><span>Designed around your event</span></div>
-        <div class="trust-item"><strong>Occasions</strong><span>Wedding · Corporate · Private</span></div>
+        <div class="trust-item"><strong>Occasions</strong><span>Wedding &middot; Corporate &middot; Private</span></div>
       </div>
     </div>
 
     <section class="section about" id="about">
       <div class="container about-grid">
-        <div class="team-stage reveal tilt-surface" data-tilt="team">
-          <div class="team-stage__plane">
-            <div class="team-orbit" aria-hidden="true"></div>
-            <div class="team-portrait"><img src="./assets/FOUNDER.jpg" alt="The JVC Catering team at a catered event" width="1600" height="1066" loading="lazy" decoding="async"></div>
-            <div class="team-token team-token--top"><span class="team-token__icon"><svg class="icon"><use href="#i-spark"/></svg></span><span><strong>Personal service</strong><span>From first call to final plate</span></span></div>
-            <div class="team-token team-token--bottom"><span class="team-token__icon"><svg class="icon"><use href="#i-map"/></svg></span><span><strong>Dar es Salaam</strong><span>Locally prepared, warmly served</span></span></div>
-            <div class="team-avatar-badge" aria-label="JVC Catering team identity"><img src="./Logo/favicon.png" alt="" width="64" height="64"></div>
-          </div>
+        <div class="about-media reveal">
+          <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async">
         </div>
 
         <div class="about-copy reveal">
           <p class="eyebrow">Meet the JVC team</p>
-          <h2 class="display-title">People who make every table feel personal.</h2>
-          <p class="lead">JVC Catering blends Tanzanian flavour, event experience and attentive service. Every gathering is planned with care, from the menu conversation to the final presentation.</p>
+          <h2 class="section-title">People who make every table feel personal.</h2>
+          <p class="lead">JVC Catering blends Tanzanian flavour, event experience and attentive service. Every gathering is planned with care, from the first menu conversation to the final presentation.</p>
           <div class="about-stats" aria-label="JVC Catering highlights">
-            <div class="about-stat"><strong>25+</strong><span>Years of food passion</span></div>
             <div class="about-stat"><strong>4</strong><span>Flexible service formats</span></div>
             <div class="about-stat"><strong>1:1</strong><span>Personal menu planning</span></div>
+            <div class="about-stat"><strong>DSM</strong><span>Locally prepared &amp; served</span></div>
           </div>
           <div class="about-list">
-            <article><b>01</b><div><strong>Menus built around your occasion</strong><span>Guest count, service style, preferences and budget are considered from the beginning.</span></div></article>
-            <article><b>02</b><div><strong>Authentic local flavour</strong><span>Familiar Tanzanian favourites prepared with thoughtful presentation and consistent quality.</span></div></article>
-            <article><b>03</b><div><strong>Clear event coordination</strong><span>Direct communication keeps setup, timing and expectations aligned.</span></div></article>
+            <article><strong>Menus built around your occasion</strong><span>Guest count, service style, preferences and budget are considered from the beginning.</span></article>
+            <article><strong>Authentic local flavour</strong><span>Familiar Tanzanian favourites prepared with thoughtful presentation and consistent quality.</span></article>
+            <article><strong>Clear event coordination</strong><span>Direct communication keeps setup, timing and expectations aligned.</span></article>
           </div>
-          <button class="button button--dark js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to Our Team</button>
+          <button class="btn btn--dark js-wa" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to our team</button>
         </div>
       </div>
     </section>
@@ -378,81 +484,115 @@
     <section class="section menu-section" id="menu">
       <div class="container">
         <div class="menu-head reveal">
-          <div><p class="eyebrow">Interactive menu explorer</p><h2 class="display-title">Choose a dish. Build a menu. Set the mood.</h2></div>
-          <div class="menu-head__aside"><p class="lead">Explore JVC favourites in an interactive food gallery, then request a customised menu for your guest count and event style.</p><div class="menu-head__actions"><a class="button button--paper magnetic" href="./JVC-Catering-Menu.pdf" download>Download Menu <svg class="icon"><use href="#i-download"/></svg></a><button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build My Menu</button></div></div>
-        </div>
-
-        <div class="menu-explorer">
-          <div class="menu-categories" id="menuCategories" role="group" aria-label="Filter menu dishes">
-            <button class="menu-category active" type="button" data-filter="all" aria-pressed="true">All dishes</button>
-            <button class="menu-category" type="button" data-filter="main" aria-pressed="false">Main meals</button>
-            <button class="menu-category" type="button" data-filter="grill" aria-pressed="false">Grills</button>
-            <button class="menu-category" type="button" data-filter="bites" aria-pressed="false">Fresh bites</button>
-            <button class="menu-category" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
-            <button class="menu-category" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
-          </div>
-
-          <div class="menu-showcase">
-            <article class="menu-feature tilt-surface" id="menuFeature" data-tilt="menu" aria-live="polite">
-              <div class="menu-feature__media"><img id="menuFeatureImage" src="./menu/pilau.webp" alt="Tanzanian signature pilau" width="1000" height="800"></div>
-              <div class="menu-feature__content">
-                <div class="menu-feature__meta"><span id="menuFeatureCategory">Main meal</span><span id="menuFeatureIndex">01 / 14</span></div>
-                <h3 id="menuFeatureTitle">Signature Pilau</h3>
-                <p id="menuFeatureDescription">Fragrant spiced rice prepared with tender meat and traditional aromatics.</p>
-                <div class="menu-feature__actions"><button class="button button--orange js-menu-order magnetic" type="button">Order this dish <svg class="icon"><use href="#i-arrow"/></svg></button><a class="button button--glass magnetic" href="./JVC-Catering-Menu.pdf" download>Full menu PDF</a></div>
-              </div>
-            </article>
-
-            <aside class="menu-browser" aria-label="Dish selector">
-              <div class="menu-browser__head"><strong>Dish collection</strong><span id="menuCount">14 dishes</span></div>
-              <div class="menu-thumbs" id="menuThumbs"></div>
-            </aside>
+          <p class="eyebrow">Menu</p>
+          <h2 class="section-title">Choose a dish. Build a menu.</h2>
+          <p class="lead">Browse JVC favourites, then request a menu customised for your guest count and event style.</p>
+          <div class="menu-head__actions">
+            <a class="btn btn--ghost" href="./JVC-Catering-Menu.pdf" download>Download menu <svg class="icon"><use href="#i-download"/></svg></a>
+            <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build my menu</button>
           </div>
         </div>
+
+        <div class="menu-filters" id="menuFilters" role="group" aria-label="Filter menu dishes">
+          <button class="menu-filter" type="button" data-filter="all" aria-pressed="true">All dishes</button>
+          <button class="menu-filter" type="button" data-filter="main" aria-pressed="false">Main meals</button>
+          <button class="menu-filter" type="button" data-filter="grill" aria-pressed="false">Grills</button>
+          <button class="menu-filter" type="button" data-filter="bites" aria-pressed="false">Fresh bites</button>
+          <button class="menu-filter" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
+          <button class="menu-filter" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
+        </div>
+        <p class="menu-count" id="menuCount" aria-live="polite">14 dishes</p>
+
+        <div class="menu-grid" id="menuGrid"></div>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="container">
-        <div class="services-head reveal"><div><p class="eyebrow">Services with depth</p><h2 class="display-title">One team. Four ways to serve your moment.</h2></div><p class="lead">Select a service to preview how JVC Catering adapts the food, setup and experience to the occasion.</p></div>
+        <div class="services-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 class="section-title">One team. Four ways to serve your moment.</h2>
+          <p class="lead">Select a service to see how JVC Catering adapts the food, setup and experience to your occasion.</p>
+        </div>
 
         <div class="service-explorer">
           <div class="service-tabs" id="serviceTabs" role="group" aria-label="Select catering service">
-            <button class="service-tab active" type="button" data-service="0" aria-pressed="true">01 · Wedding Catering</button>
-            <button class="service-tab" type="button" data-service="1" aria-pressed="false">02 · Corporate Events</button>
-            <button class="service-tab" type="button" data-service="2" aria-pressed="false">03 · Private Gatherings</button>
-            <button class="service-tab" type="button" data-service="3" aria-pressed="false">04 · Buffet & Delivery</button>
+            <button class="service-tab" type="button" data-service="0" aria-pressed="true">Wedding catering</button>
+            <button class="service-tab" type="button" data-service="1" aria-pressed="false">Corporate events</button>
+            <button class="service-tab" type="button" data-service="2" aria-pressed="false">Private gatherings</button>
+            <button class="service-tab" type="button" data-service="3" aria-pressed="false">Buffet &amp; delivery</button>
           </div>
 
-          <article class="service-stage tilt-surface" id="serviceStage" data-tilt="service" aria-live="polite">
-            <div class="service-stage__image"><img id="serviceImage" src="./assets/wedding.webp" alt="Wedding catering service" width="736" height="920" loading="lazy" decoding="async"></div>
-            <div class="service-pills" aria-hidden="true"><span class="service-pill">Tailored menu</span><span class="service-pill">Professional setup</span><span class="service-pill">Warm service</span></div>
-            <div class="service-stage__content"><span class="service-number" id="serviceNumber">01</span><h3 id="serviceTitle">Wedding Catering</h3><p id="serviceDescription">Elegant food service, coordinated setup and tailored menus designed around your celebration.</p><button class="button button--orange js-service-quote magnetic" type="button">Plan this service <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          <article class="service-stage" aria-live="polite">
+            <div class="service-stage__media">
+              <img id="serviceImage" src="./assets/wedding.webp" alt="Wedding catering service by JVC Catering" width="1280" height="960" decoding="async">
+            </div>
+            <div class="service-stage__content">
+              <h3 id="serviceTitle">Wedding catering</h3>
+              <p id="serviceDescription">Elegant food service, coordinated setup and tailored menus designed around your celebration.</p>
+              <button class="btn btn--primary js-service-quote" type="button">Plan this service <svg class="icon"><use href="#i-arrow"/></svg></button>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="clients" aria-label="Organisations served by JVC Catering">
-      <p class="clients__label">Trusted for professional gatherings and community events</p>
-      <div class="logo-marquee"><div class="logo-track" aria-hidden="true">
-        <div class="logo-item"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy"></div><div class="logo-item"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy"></div><div class="logo-item"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy"></div><div class="logo-item"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy"></div>
-        <div class="logo-item"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy"></div><div class="logo-item"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy"></div><div class="logo-item"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy"></div><div class="logo-item"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy"></div><div class="logo-item"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy"></div>
-      </div></div>
+    <section class="clients" aria-labelledby="clientsLabel">
+      <div class="container">
+        <p class="clients__label" id="clientsLabel">Trusted for professional gatherings and community events</p>
+        <ul class="logo-grid">
+          <li class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy"></li>
+          <li class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy"></li>
+        </ul>
+      </div>
     </section>
 
     <section class="section contact" id="contact">
       <div class="container contact-shell">
         <div class="contact-grid">
-          <div class="contact-copy reveal"><p class="eyebrow">Contact JVC Catering</p><h2 class="display-title">Let us design your table.</h2><p class="lead">Share your date, venue, guest count and preferred dishes. The form prepares a WhatsApp message so your enquiry reaches our team directly.</p><div class="contact-list"><a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a><a href="tel:+255715602509"><svg class="icon"><use href="#i-phone"/></svg>+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a><span><svg class="icon"><use href="#i-map"/></svg>Sinza Mori, Lagana Street, Dar es Salaam</span><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>@jvc.catering._tz</a></div></div>
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Contact JVC Catering</p>
+            <h2 class="section-title">Let us design your table.</h2>
+            <p class="lead">Share your date, venue, guest count and preferred dishes. The form prepares a WhatsApp message so your enquiry reaches our team directly.</p>
+            <div class="contact-list">
+              <a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a>
+              <a href="tel:+255715602509"><svg class="icon"><use href="#i-phone"/></svg>+255 715 602 509</a>
+              <a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
+              <span><svg class="icon"><use href="#i-map"/></svg>Sinza Mori, Lagana Street, Dar es Salaam</span>
+              <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>@jvc.catering._tz</a>
+            </div>
+          </div>
 
-          <form class="quote-form reveal" id="quoteForm" novalidate>
-            <div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div></div>
-            <div class="form-row"><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+255 7xx xxx xxx"></div><div class="field"><label for="eventType">Event type</label><select id="eventType" name="eventType" required><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select></div></div>
-            <div class="form-row"><div class="field"><label for="guestCount">Estimated guests</label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80"></div><div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div></div>
+          <form class="quote-form reveal" id="quoteForm" novalidate aria-describedby="formStatus">
+            <div class="form-row">
+              <div class="field" id="fieldName"><label for="name">Your name <span class="required" aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required placeholder="Full name" aria-required="true"><span class="field-error">Please enter your name.</span></div>
+              <div class="field" id="fieldEmail"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"><span class="field-error">Please enter a valid email.</span></div>
+            </div>
+            <div class="form-row">
+              <div class="field" id="fieldPhone"><label for="phone">Phone number <span class="required" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+255 7xx xxx xxx" aria-required="true"><span class="field-error">Please enter a phone number.</span></div>
+              <div class="field" id="fieldEventType"><label for="eventType">Event type <span class="required" aria-hidden="true">*</span></label>
+                <select id="eventType" name="eventType" required aria-required="true">
+                  <option value="">Select event</option>
+                  <option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option>
+                </select>
+                <span class="field-error">Please select an event type.</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field" id="fieldGuests"><label for="guestCount">Estimated guests <span class="required" aria-hidden="true">*</span></label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80" aria-required="true"><span class="field-error">Please estimate your guest count.</span></div>
+              <div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div>
+            </div>
             <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" placeholder="Event location"></div>
             <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" placeholder="Preferred dishes, service style or budget range"></textarea></div>
-            <button class="button button--orange magnetic" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
+            <p class="form-status" id="formStatus" role="alert"></p>
+            <button class="btn btn--primary" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
             <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
           </form>
         </div>
@@ -462,12 +602,20 @@
 
   <footer class="footer">
     <div class="container footer-main">
-      <div><a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a><p class="footer-about">Premium Tanzanian catering for weddings, corporate events, private celebrations and buffet service in Dar es Salaam.</p><div class="socials"><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a><a href="https://wa.me/255767620509" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a><a href="mailto:veronica.wlff@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a></div></div>
+      <div>
+        <a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
+        <p class="footer-about">Premium Tanzanian catering for weddings, corporate events, private celebrations and buffet service in Dar es Salaam.</p>
+        <div class="socials">
+          <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+          <a href="https://wa.me/255767620509" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a>
+          <a href="mailto:veronica.wlff@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
       <div><h3>Explore</h3><nav class="footer-links"><a href="#hero">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
-      <div><h3>Services</h3><div class="footer-links"><span>Wedding Catering</span><span>Corporate Events</span><span>Private Gatherings</span><span>Buffet & Delivery</span></div></div>
+      <div><h3>Services</h3><div class="footer-links"><span>Wedding catering</span><span>Corporate events</span><span>Private gatherings</span><span>Buffet &amp; delivery</span></div></div>
       <div><h3>Contact</h3><div class="footer-links"><a href="tel:+255767620509">+255 767 620 509</a><a href="tel:+255715602509">+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a><span>Dar es Salaam, Tanzania</span></div></div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> JVC Catering. All rights reserved.</span><span>Tailored Tastes. Warm Moments.</span></div>
+    <div class="container footer-bottom"><span>&copy; <span id="year"></span> JVC Catering. All rights reserved.</span><span>Tailored Tastes. Warm Moments.</span></div>
   </footer>
 
   <button class="back-top" id="backTop" type="button" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
@@ -477,11 +625,11 @@
     (() => {
       'use strict';
 
+      /* ---------- 1. Constants / helpers ---------- */
       const PHONE = '255767620509';
-      const $ = (selector, scope = document) => scope.querySelector(selector);
-      const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
+      const $ = (sel, scope = document) => scope.querySelector(sel);
+      const $$ = (sel, scope = document) => Array.from(scope.querySelectorAll(sel));
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const finePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
 
       const menuItems = [
         {title:'Signature Pilau',category:'main',label:'Main meal',image:'./menu/pilau.webp',alt:'Tanzanian signature pilau',description:'Fragrant spiced rice prepared with tender meat and traditional aromatics.'},
@@ -501,10 +649,10 @@
       ];
 
       const services = [
-        {number:'01',title:'Wedding Catering',image:'./assets/wedding.webp',alt:'Wedding catering service',description:'Elegant food service, coordinated setup and tailored menus designed around your celebration.',message:'Hello JVC Catering, I would like a wedding catering quotation.'},
-        {number:'02',title:'Corporate Events',image:'./assets/corporate.webp',alt:'Corporate event catering',description:'Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.',message:'Hello JVC Catering, I would like a corporate event catering quotation.'},
-        {number:'03',title:'Private Gatherings',image:'./assets/Private.webp',alt:'Private gathering catering',description:'Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.',message:'Hello JVC Catering, I would like catering for a private gathering.'},
-        {number:'04',title:'Buffet & Delivery',image:'./assets/Buffet.webp',alt:'Buffet and delivery service',description:'Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.',message:'Hello JVC Catering, I would like a buffet or delivery quotation.'}
+        {title:'Wedding catering',image:'./assets/wedding.webp',alt:'Wedding catering service by JVC Catering',description:'Elegant food service, coordinated setup and tailored menus designed around your celebration.',message:'Hello JVC Catering, I would like a wedding catering quotation.'},
+        {title:'Corporate events',image:'./assets/corporate.webp',alt:'Corporate event catering by JVC Catering',description:'Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.',message:'Hello JVC Catering, I would like a corporate event catering quotation.'},
+        {title:'Private gatherings',image:'./assets/Private.webp',alt:'Private gathering catering by JVC Catering',description:'Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.',message:'Hello JVC Catering, I would like catering for a private gathering.'},
+        {title:'Buffet & delivery',image:'./assets/Buffet.webp',alt:'Buffet and delivery service by JVC Catering',description:'Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.',message:'Hello JVC Catering, I would like a buffet or delivery quotation.'}
       ];
 
       const openWhatsApp = (message) => {
@@ -513,158 +661,157 @@
         if (!popup) window.location.href = url;
       };
 
-      $$('.js-wa').forEach((button) => button.addEventListener('click', () => openWhatsApp(button.dataset.message || 'Hello JVC Catering, I would like more information.')));
+      /* ---------- 2. WhatsApp buttons ---------- */
+      $$('.js-wa').forEach((button) => button.addEventListener('click', () => {
+        openWhatsApp(button.dataset.message || 'Hello JVC Catering, I would like more information.');
+      }));
 
+      /* ---------- 3. Header / scroll ---------- */
       const header = $('#siteHeader');
       const backTop = $('#backTop');
-      const progress = $('#scrollProgress');
-      const hero = $('#hero');
+      let ticking = false;
       const updateScrollUI = () => {
         const y = window.scrollY;
-        const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-        header.classList.toggle('scrolled', y > 40);
-        backTop.classList.toggle('show', y > 650);
-        progress.style.width = `${Math.min(100, (y / max) * 100)}%`;
-        if (!reduceMotion) hero.style.setProperty('--hero-shift', `${Math.min(34, y * .055)}px`);
+        header.classList.toggle('scrolled', y > 30);
+        backTop.classList.toggle('show', y > 600);
+        ticking = false;
       };
-      window.addEventListener('scroll', updateScrollUI, {passive:true});
+      window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(updateScrollUI); ticking = true; }
+      }, {passive:true});
       updateScrollUI();
+      backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
 
-      if (finePointer && !reduceMotion) {
-        hero.addEventListener('pointermove', (event) => {
-          const rect = hero.getBoundingClientRect();
-          hero.style.setProperty('--pointer-x', `${((event.clientX - rect.left) / rect.width) * 100}%`);
-          hero.style.setProperty('--pointer-y', `${((event.clientY - rect.top) / rect.height) * 100}%`);
-        });
-      }
-
+      /* ---------- 4. Navigation drawer ---------- */
       const drawer = $('#mobileDrawer');
       const scrim = $('#drawerScrim');
       const menuToggle = $('#menuToggle');
       const drawerClose = $('#drawerClose');
+      let lastFocused = null;
+
+      const getFocusable = () => $$('a[href], button:not([disabled])', drawer);
+
       const setDrawer = (open) => {
+        if (open) lastFocused = document.activeElement;
         drawer.classList.toggle('open', open);
-        scrim.classList.toggle('show', open);
+        scrim.hidden = !open;
+        requestAnimationFrame(() => scrim.classList.toggle('show', open));
         document.body.classList.toggle('menu-open', open);
         drawer.setAttribute('aria-hidden', String(!open));
         menuToggle.setAttribute('aria-expanded', String(open));
-        if (open) drawerClose.focus();
+        if (open) {
+          drawerClose.focus();
+        } else if (lastFocused) {
+          lastFocused.focus();
+        }
       };
+
       menuToggle.addEventListener('click', () => setDrawer(true));
       drawerClose.addEventListener('click', () => setDrawer(false));
       scrim.addEventListener('click', () => setDrawer(false));
-      $$('.mobile-links a').forEach((link) => link.addEventListener('click', () => setDrawer(false)));
-      document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false); });
+      $$('.mobile-links a', drawer).forEach((link) => link.addEventListener('click', () => setDrawer(false)));
 
-      const menuThumbs = $('#menuThumbs');
+      document.addEventListener('keydown', (event) => {
+        if (!drawer.classList.contains('open')) return;
+        if (event.key === 'Escape') { setDrawer(false); return; }
+        if (event.key === 'Tab') {
+          const focusable = getFocusable();
+          if (!focusable.length) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+          else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+        }
+      });
+
+      /* ---------- 5. Menu grid ---------- */
+      const menuGrid = $('#menuGrid');
       const menuCount = $('#menuCount');
-      const featureImage = $('#menuFeatureImage');
-      const featureCategory = $('#menuFeatureCategory');
-      const featureIndex = $('#menuFeatureIndex');
-      const featureTitle = $('#menuFeatureTitle');
-      const featureDescription = $('#menuFeatureDescription');
-      const menuOrderButton = $('.js-menu-order');
-      let visibleMenuItems = menuItems.slice();
-      let activeMenuItem = menuItems[0];
 
-      const updateMenuFeature = (item) => {
-        activeMenuItem = item;
-        const globalIndex = menuItems.indexOf(item);
-        featureImage.style.opacity = '0';
-        window.setTimeout(() => {
-          featureImage.src = item.image;
-          featureImage.alt = item.alt;
-          featureCategory.textContent = item.label;
-          featureIndex.textContent = `${String(globalIndex + 1).padStart(2,'0')} / ${menuItems.length}`;
-          featureTitle.textContent = item.title;
-          featureDescription.textContent = item.description;
-          featureImage.style.opacity = '1';
-        }, 150);
-        $$('.menu-thumb', menuThumbs).forEach((thumb) => thumb.classList.toggle('active', Number(thumb.dataset.index) === globalIndex));
+      const renderMenu = (filter = 'all') => {
+        const items = filter === 'all' ? menuItems : menuItems.filter((item) => item.category === filter);
+        menuCount.textContent = `${items.length} ${items.length === 1 ? 'dish' : 'dishes'}`;
+        menuGrid.innerHTML = items.map((item) => `
+          <article class="menu-card">
+            <div class="menu-card__media"><img src="${item.image}" alt="${item.alt}" width="480" height="360" loading="lazy" decoding="async"></div>
+            <div class="menu-card__body">
+              <span class="menu-card__label">${item.label}</span>
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+            </div>
+          </article>`).join('');
       };
+      renderMenu();
 
-      const renderMenuThumbs = (filter = 'all') => {
-        visibleMenuItems = filter === 'all' ? menuItems.slice() : menuItems.filter((item) => item.category === filter);
-        menuCount.textContent = `${visibleMenuItems.length} ${visibleMenuItems.length === 1 ? 'dish' : 'dishes'}`;
-        menuThumbs.innerHTML = visibleMenuItems.map((item) => {
-          const index = menuItems.indexOf(item);
-          return `<button class="menu-thumb${item === activeMenuItem ? ' active' : ''}" type="button" data-index="${index}" aria-label="View ${item.title}"><img src="${item.image}" alt="" width="180" height="150" loading="lazy"><span><strong>${item.title}</strong><span>${item.label}</span></span></button>`;
-        }).join('');
-        $$('.menu-thumb', menuThumbs).forEach((thumb) => thumb.addEventListener('click', () => updateMenuFeature(menuItems[Number(thumb.dataset.index)])));
-        if (!visibleMenuItems.includes(activeMenuItem)) updateMenuFeature(visibleMenuItems[0]);
-      };
-      renderMenuThumbs();
-
-      $$('.menu-category').forEach((button) => button.addEventListener('click', () => {
-        $$('.menu-category').forEach((item) => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
-        renderMenuThumbs(button.dataset.filter);
+      $$('.menu-filter').forEach((button) => button.addEventListener('click', () => {
+        $$('.menu-filter').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        renderMenu(button.dataset.filter);
       }));
-      menuOrderButton.addEventListener('click', () => openWhatsApp(`Hello JVC Catering, I am interested in ${activeMenuItem.title} for my event.`));
 
+      /* ---------- 6. Services ---------- */
       const serviceImage = $('#serviceImage');
-      const serviceNumber = $('#serviceNumber');
       const serviceTitle = $('#serviceTitle');
       const serviceDescription = $('#serviceDescription');
       const serviceQuote = $('.js-service-quote');
       let activeService = services[0];
+      let serviceSwapTimer = null;
+
       const updateService = (index) => {
         activeService = services[index];
+        clearTimeout(serviceSwapTimer);
         serviceImage.style.opacity = '0';
-        window.setTimeout(() => {
+        serviceSwapTimer = window.setTimeout(() => {
           serviceImage.src = activeService.image;
           serviceImage.alt = activeService.alt;
-          serviceNumber.textContent = activeService.number;
           serviceTitle.textContent = activeService.title;
           serviceDescription.textContent = activeService.description;
           serviceImage.style.opacity = '1';
-        }, 150);
-        $$('.service-tab').forEach((tab, tabIndex) => { tab.classList.toggle('active', tabIndex === index); tab.setAttribute('aria-pressed', String(tabIndex === index)); });
+        }, 140);
+        $$('.service-tab').forEach((tab, tabIndex) => tab.setAttribute('aria-pressed', String(tabIndex === index)));
       };
       $$('.service-tab').forEach((tab, index) => tab.addEventListener('click', () => updateService(index)));
       serviceQuote.addEventListener('click', () => openWhatsApp(activeService.message));
 
-      const applyTilt = (element, xVar, yVar, max = 6) => {
-        if (!finePointer || reduceMotion) return;
-        element.addEventListener('pointermove', (event) => {
-          const rect = element.getBoundingClientRect();
-          const x = ((event.clientX - rect.left) / rect.width - .5) * 2;
-          const y = ((event.clientY - rect.top) / rect.height - .5) * 2;
-          element.style.setProperty(xVar, `${(-y * max).toFixed(2)}deg`);
-          element.style.setProperty(yVar, `${(x * max).toFixed(2)}deg`);
-        });
-        element.addEventListener('pointerleave', () => { element.style.setProperty(xVar, '0deg'); element.style.setProperty(yVar, '0deg'); });
-      };
-      applyTilt($('.team-stage'), '--tilt-x', '--tilt-y', 5);
-      applyTilt($('#menuFeature'), '--menu-tilt-x', '--menu-tilt-y', 3.5);
-      applyTilt($('#serviceStage'), '--service-tilt-x', '--service-tilt-y', 3.5);
-
-      if (finePointer && !reduceMotion) {
-        $$('.magnetic').forEach((button) => {
-          button.addEventListener('pointermove', (event) => {
-            const rect = button.getBoundingClientRect();
-            const x = (event.clientX - rect.left - rect.width / 2) * .13;
-            const y = (event.clientY - rect.top - rect.height / 2) * .13;
-            button.style.transform = `translate(${x}px,${y}px)`;
-          });
-          button.addEventListener('pointerleave', () => { button.style.transform = ''; });
-        });
-      }
-
+      /* ---------- 7. Form ---------- */
       const quoteForm = $('#quoteForm');
+      const formStatus = $('#formStatus');
       const toast = $('#toast');
       let toastTimer;
       const showToast = (message) => {
         toast.textContent = message;
         toast.classList.add('show');
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
       };
+
+      const requiredFields = [
+        {id:'fieldName', input:'name', test:(v) => v.trim().length > 0},
+        {id:'fieldPhone', input:'phone', test:(v) => v.trim().length > 0},
+        {id:'fieldEventType', input:'eventType', test:(v) => v.trim().length > 0},
+        {id:'fieldGuests', input:'guestCount', test:(v) => Number(v) > 0}
+      ];
+
       quoteForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); showToast('Please complete the required fields.'); return; }
         const data = new FormData(quoteForm);
+        let firstInvalid = null;
+        requiredFields.forEach(({id, input, test}) => {
+          const field = $('#' + id);
+          const valid = test(String(data.get(input) || ''));
+          field.setAttribute('data-invalid', String(!valid));
+          if (!valid && !firstInvalid) firstInvalid = $('#' + input, field);
+        });
+
+        if (firstInvalid) {
+          formStatus.textContent = 'Please complete the required fields before sending.';
+          showToast('Please complete the required fields.');
+          firstInvalid.focus();
+          return;
+        }
+        formStatus.textContent = '';
+
         const message = [
-          'Hello JVC Catering, I would like a catering quotation.','',
+          'Hello JVC Catering, I would like a catering quotation.', '',
           `Name: ${data.get('name')}`,
           `Email: ${data.get('email') || 'Not provided'}`,
           `Phone: ${data.get('phone')}`,
@@ -677,31 +824,45 @@
         openWhatsApp(message);
       });
 
-      backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
-
+      /* ---------- 8. Active navigation ---------- */
       const sections = $$('main section[id]');
       const navLinks = $$('.desktop-nav a');
       const setActiveLink = () => {
         const marker = window.scrollY + window.innerHeight * .35;
         let activeId = 'hero';
         sections.forEach((section) => { if (section.offsetTop <= marker) activeId = section.id; });
-        navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`));
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute('href') === `#${activeId}`;
+          if (isActive) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
+        });
       };
-      window.addEventListener('scroll', setActiveLink, {passive:true});
+      window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(setActiveLink); }
+      }, {passive:true});
       setActiveLink();
 
+      /* ---------- 9. Reveal observer ---------- */
       if ('IntersectionObserver' in window && !reduceMotion) {
         const observer = new IntersectionObserver((entries, obs) => {
-          entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
-        }, {threshold:.08,rootMargin:'0px 0px -40px 0px'});
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); }
+          });
+        }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
         $$('.reveal').forEach((item) => observer.observe(item));
       } else {
         $$('.reveal').forEach((item) => item.classList.add('visible'));
       }
 
-      const fallbackSvg = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f5eadb"/><text x="400" y="285" text-anchor="middle" font-family="Georgia" font-size="44" fill="#0b2f22">JVC Catering</text><text x="400" y="338" text-anchor="middle" font-family="Arial" font-size="20" fill="#bb5c14">Freshly prepared</text></svg>')}`;
-      $$('img').forEach((image) => image.addEventListener('error', () => { if (image.dataset.fallbackApplied) return; image.dataset.fallbackApplied='true'; image.removeAttribute('srcset'); image.src=fallbackSvg; }));
+      /* ---------- 10. Image fallback ---------- */
+      $$('img').forEach((image) => image.addEventListener('error', () => {
+        if (image.dataset.fallbackApplied) return;
+        image.dataset.fallbackApplied = 'true';
+        image.removeAttribute('srcset');
+        image.style.background = '#f1e7d6';
+        image.style.minHeight = '160px';
+      }));
 
+      /* ---------- 11. Misc initialisation ---------- */
       $('#year').textContent = new Date().getFullYear();
     })();
   </script>
