@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#123c2c">
-  <meta name="description" content="JVC Catering provides tailored Tanzanian catering for weddings, corporate events, private gatherings, buffets and delivery in Dar es Salaam.">
+  <meta name="theme-color" content="#0a2c20">
+  <meta name="description" content="JVC Catering creates tailored Tanzanian menus for weddings, corporate events, private gatherings, buffets and delivery in Dar es Salaam.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
 
@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://jvccatering.vercel.app/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:700px)" fetchpriority="high">
   <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:699px)" fetchpriority="high">
 
@@ -40,305 +40,233 @@
 
   <style>
     :root{
-      --green-950:#082419;
-      --green-900:#0d3022;
-      --green-800:#123c2c;
-      --green-700:#1b523d;
-      --orange-600:#cf741f;
-      --orange-500:#e1872d;
-      --cream-50:#fffdf8;
-      --cream-100:#faf4e9;
-      --cream-200:#f0e5d4;
-      --ink:#172019;
-      --muted:#626a64;
-      --line:rgba(18,60,44,.15);
+      --pine-1000:#061d15;
+      --pine-950:#08251a;
+      --pine-900:#0b2f22;
+      --pine-800:#124330;
+      --pine-700:#1b5c42;
+      --tangerine:#dc7b25;
+      --tangerine-deep:#bb5c14;
+      --cream:#fffaf1;
+      --sand:#f5eadb;
+      --sand-2:#ead9c4;
+      --ink:#152019;
+      --muted:#6b706b;
+      --line:rgba(11,47,34,.15);
       --white:#fff;
-      --display:"Libre Caslon Display","Iowan Old Style","Baskerville","Palatino Linotype",serif;
-      --sans:"Manrope","Avenir Next","Segoe UI",sans-serif;
-      --container:min(1240px,calc(100% - 32px));
-      --header-h:76px;
-      --ease:cubic-bezier(.2,.72,.22,1);
-      --shadow:0 24px 70px rgba(8,36,25,.12);
-      --shadow-soft:0 14px 38px rgba(8,36,25,.08);
+      --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
+      --ui:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
+      --container:min(1280px,calc(100% - 30px));
+      --header-h:74px;
+      --ease:cubic-bezier(.19,.75,.24,1);
+      --shadow-1:0 18px 48px rgba(6,29,21,.12);
+      --shadow-2:0 34px 90px rgba(6,29,21,.2);
+      --radius-xl:34px;
     }
 
     *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 18px)}
-    body{margin:0;background:var(--cream-50);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 20px)}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
     body.menu-open{overflow:hidden}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     button,input,select,textarea{font:inherit}
     button{cursor:pointer}
-    ::selection{background:var(--orange-500);color:#fff}
-    :focus-visible{outline:3px solid rgba(225,135,45,.55);outline-offset:4px}
+    ::selection{background:var(--tangerine);color:#fff}
+    :focus-visible{outline:3px solid rgba(220,123,37,.55);outline-offset:4px}
     [hidden]{display:none!important}
 
-    .skip-link{position:fixed;left:16px;top:-80px;z-index:3000;padding:10px 14px;border-radius:10px;background:#fff;color:var(--green-900);font-weight:800;transition:top .2s ease}
-    .skip-link:focus{top:16px}
+    .skip-link{position:fixed;left:16px;top:-80px;z-index:4000;padding:10px 14px;border-radius:12px;background:#fff;color:var(--pine-900);font-weight:700;transition:top .2s ease}.skip-link:focus{top:16px}
     .container{width:var(--container);margin-inline:auto}
-    .section{padding:76px 0}
-    .section-kicker{margin:0 0 12px;color:var(--orange-600);font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
-    .section-title{margin:0;color:var(--green-900);font-family:var(--display);font-size:clamp(2.7rem,10vw,5.4rem);font-weight:400;line-height:.95;letter-spacing:-.045em}
-    .section-copy{max-width:640px;margin:18px 0 0;color:var(--muted);font-size:clamp(.98rem,2.5vw,1.1rem)}
-
-    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 19px;border:1px solid transparent;border-radius:999px;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transition:transform .25s var(--ease),background .25s ease,border-color .25s ease,color .25s ease,box-shadow .25s ease}
-    .button:hover{transform:translateY(-2px)}
-    .button--primary{background:var(--orange-600);color:#fff;box-shadow:0 12px 28px rgba(207,116,31,.24)}
-    .button--primary:hover{background:#b95f14;box-shadow:0 17px 34px rgba(207,116,31,.3)}
-    .button--outline{border-color:rgba(255,255,255,.58);background:rgba(8,36,25,.18);color:#fff;backdrop-filter:blur(5px)}
-    .button--outline:hover{background:#fff;color:var(--green-900);border-color:#fff}
-    .button--dark{background:var(--green-900);color:#fff}
-    .button--dark:hover{background:var(--green-700)}
-    .button--paper{background:#fff;color:var(--green-900);border-color:var(--line)}
-    .button--paper:hover{border-color:var(--green-700);box-shadow:var(--shadow-soft)}
+    .section{position:relative;padding:64px 0}
+    .eyebrow{margin:0 0 14px;color:var(--tangerine-deep);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+    .display-title{margin:0;color:var(--pine-900);font-family:var(--display);font-size:clamp(3rem,11vw,6.6rem);font-weight:500;line-height:.9;letter-spacing:-.055em;text-wrap:balance}
+    .lead{max-width:650px;margin:20px 0 0;color:var(--muted);font-size:clamp(1rem,2.5vw,1.12rem)}
     .icon{width:18px;height:18px;flex:0 0 auto}
 
+    .button{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 20px;border:1px solid transparent;border-radius:999px;overflow:hidden;font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;transition:transform .28s var(--ease),box-shadow .28s ease,border-color .28s ease,color .28s ease,background .28s ease}
+    .button::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-105%);background:rgba(255,255,255,.18);transition:transform .45s var(--ease)}
+    .button:hover::before{transform:translateX(0)}
+    .button:hover{transform:translateY(-3px)}
+    .button--orange{background:var(--tangerine);color:#fff;box-shadow:0 13px 32px rgba(220,123,37,.27)}
+    .button--orange:hover{background:var(--tangerine-deep);box-shadow:0 18px 42px rgba(220,123,37,.34)}
+    .button--dark{background:var(--pine-900);color:#fff;box-shadow:0 14px 32px rgba(6,29,21,.2)}
+    .button--dark:hover{background:var(--pine-700)}
+    .button--glass{border-color:rgba(255,255,255,.5);background:rgba(5,25,18,.22);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .button--glass:hover{background:#fff;color:var(--pine-900);border-color:#fff}
+    .button--paper{background:#fff;color:var(--pine-900);border-color:var(--line)}
+    .button--paper:hover{border-color:var(--pine-700);box-shadow:var(--shadow-1)}
+
+    .scroll-progress{position:fixed;top:0;left:0;z-index:3000;width:0;height:3px;background:var(--tangerine);box-shadow:0 0 16px rgba(220,123,37,.65)}
+
     /* Header */
-    .site-header{position:fixed;inset:0 0 auto;z-index:1000;height:var(--header-h);border-bottom:1px solid rgba(255,255,255,.18);background:rgba(7,29,20,.17);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:height .3s var(--ease),background .3s ease,border-color .3s ease,box-shadow .3s ease}
-    .site-header.scrolled{background:rgba(255,253,248,.96);border-color:var(--line);box-shadow:0 8px 30px rgba(8,36,25,.07)}
+    .site-header{position:fixed;inset:0 0 auto;z-index:1100;height:var(--header-h);border-bottom:1px solid rgba(255,255,255,.15);background:rgba(6,29,21,.11);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:height .32s var(--ease),background .3s ease,border-color .3s ease,box-shadow .3s ease}
+    .site-header.scrolled{background:rgba(255,250,241,.94);border-color:var(--line);box-shadow:0 10px 35px rgba(6,29,21,.08)}
     .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:inline-flex;align-items:center;gap:10px;min-width:0}
-    .brand__mark{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,0,0,.16))}
+    .brand__mark{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 6px 16px rgba(0,0,0,.18))}
     .brand__text{display:grid;line-height:1}
-    .brand__name{font-family:var(--display);font-size:1.28rem;letter-spacing:.035em;color:#fff;white-space:nowrap;transition:color .25s ease}
-    .brand__tag{margin-top:5px;color:#f5ab64;font-size:.52rem;font-weight:800;letter-spacing:.19em;text-transform:uppercase;transition:color .25s ease}
-    .site-header.scrolled .brand__name{color:var(--green-900)}
-    .site-header.scrolled .brand__tag{color:var(--orange-600)}
-    .desktop-nav{display:none;align-items:center;gap:27px}
-    .desktop-nav a{position:relative;padding:10px 0;color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:color .25s ease}
-    .desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--orange-500);transition:right .25s var(--ease)}
-    .desktop-nav a:hover::after,.desktop-nav a.active::after{right:0}
-    .site-header.scrolled .desktop-nav a{color:var(--green-900)}
+    .brand__name{color:#fff;font-family:var(--display);font-size:1.32rem;font-weight:600;letter-spacing:.02em;white-space:nowrap;transition:color .25s ease}
+    .brand__tag{margin-top:5px;color:#ffb871;font-size:.49rem;font-weight:700;letter-spacing:.21em;text-transform:uppercase;transition:color .25s ease}
+    .site-header.scrolled .brand__name{color:var(--pine-900)}
+    .site-header.scrolled .brand__tag{color:var(--tangerine-deep)}
+    .desktop-nav{display:none;align-items:center;gap:6px;padding:5px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(5,25,18,.13)}
+    .desktop-nav a{position:relative;padding:10px 15px;border-radius:999px;color:#fff;font-size:.69rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:background .25s ease,color .25s ease,transform .25s ease}
+    .desktop-nav a:hover,.desktop-nav a.active{background:rgba(255,255,255,.15);transform:translateY(-1px)}
+    .site-header.scrolled .desktop-nav{border-color:var(--line);background:#fff}
+    .site-header.scrolled .desktop-nav a{color:var(--pine-900)}
+    .site-header.scrolled .desktop-nav a:hover,.site-header.scrolled .desktop-nav a.active{background:var(--sand)}
     .nav-actions{display:flex;align-items:center;gap:8px}
-    .nav-actions>.button{display:none;min-height:44px;padding:10px 16px}
-    .menu-toggle{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(8,36,25,.2);color:#fff;transition:background .25s ease,color .25s ease,border-color .25s ease}
-    .site-header.scrolled .menu-toggle{background:#fff;color:var(--green-900);border-color:var(--line)}
+    .nav-actions>.button{display:none;min-height:43px;padding:10px 16px}
+    .menu-toggle{width:45px;height:45px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.32);border-radius:50%;background:rgba(6,29,21,.2);color:#fff;transition:background .25s ease,color .25s ease,border-color .25s ease,transform .25s ease}.menu-toggle:hover{transform:rotate(4deg)}
+    .site-header.scrolled .menu-toggle{background:#fff;color:var(--pine-900);border-color:var(--line)}
 
-    .drawer-scrim{position:fixed;inset:0;z-index:1040;background:rgba(4,19,13,.62);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
-    .drawer-scrim.show{opacity:1;visibility:visible}
-    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1050;width:min(88vw,390px);height:100dvh;padding:24px;background:var(--cream-50);transform:translateX(105%);transition:transform .38s var(--ease);overflow:auto;box-shadow:-25px 0 80px rgba(0,0,0,.2)}
-    .mobile-drawer.open{transform:none}
-    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line)}
-    .mobile-drawer .brand__name{color:var(--green-900)}
-    .mobile-drawer .brand__tag{color:var(--orange-600)}
-    .drawer-close{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--green-900)}
-    .mobile-links{display:grid;margin:24px 0}
-    .mobile-links a{display:flex;align-items:center;justify-content:space-between;padding:16px 2px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.65rem;color:var(--green-900)}
-    .mobile-links a::after{content:"↗";font-family:var(--sans);font-size:.85rem;color:var(--orange-600)}
-    .drawer-contact{display:grid;gap:12px;margin-top:26px;color:var(--muted);font-size:.88rem}
-    .drawer-contact a,.drawer-contact span{display:flex;gap:10px;align-items:flex-start}
-    .drawer-contact svg{color:var(--orange-600);margin-top:3px}
+    .drawer-scrim{position:fixed;inset:0;z-index:1150;background:rgba(2,14,10,.65);opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}.drawer-scrim.show{opacity:1;visibility:visible}
+    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(89vw,405px);height:100dvh;padding:25px;background:var(--cream);transform:translateX(105%);transition:transform .4s var(--ease);overflow:auto;box-shadow:-28px 0 90px rgba(0,0,0,.24)}.mobile-drawer.open{transform:translateX(0)}
+    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid var(--line)}
+    .mobile-drawer .brand__name{color:var(--pine-900)}.mobile-drawer .brand__tag{color:var(--tangerine-deep)}
+    .drawer-close{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--pine-900)}
+    .mobile-links{display:grid;margin:24px 0}.mobile-links a{display:flex;align-items:center;justify-content:space-between;padding:16px 3px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.75rem;font-weight:500}.mobile-links a::after{content:"↗";color:var(--tangerine);font-family:var(--ui);font-size:1rem}
+    .mobile-drawer>.button{width:100%}
+    .drawer-contact{display:grid;gap:12px;margin-top:26px;color:var(--muted);font-size:.88rem}.drawer-contact a,.drawer-contact span{display:flex;align-items:center;gap:10px}.drawer-contact svg{color:var(--tangerine)}
 
     /* Hero */
-    .hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background-color:var(--green-950);background-image:linear-gradient(90deg,rgba(5,22,15,.83) 0%,rgba(5,22,15,.65) 42%,rgba(5,22,15,.22) 72%,rgba(5,22,15,.08) 100%),url('./assets/hero-mobile.webp');background-position:center;background-size:cover}
-    .hero::after{content:"";position:absolute;inset:0;background:rgba(8,36,25,.06);pointer-events:none}
-    .hero__inner{position:relative;z-index:1;width:100%;padding:calc(var(--header-h) + 70px) 0 62px}
-    .hero__copy{max-width:690px;color:#fff}
-    .hero__kicker{margin:0 0 18px;color:#f6a65d;font-size:.7rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-    .hero h1{margin:0;color:#eff4d9;font-family:var(--display);font-size:clamp(4rem,17vw,8.7rem);font-weight:400;line-height:.78;letter-spacing:-.06em;text-wrap:balance}
+    .hero{position:relative;min-height:100svh;display:grid;align-items:center;overflow:hidden;background-color:var(--pine-1000);background-image:linear-gradient(90deg,rgba(4,18,13,.82) 0%,rgba(4,18,13,.63) 44%,rgba(4,18,13,.18) 76%,rgba(4,18,13,.03) 100%),url('./assets/hero-mobile.webp');background-size:cover;background-position:center;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--pointer-x,75%) var(--pointer-y,30%),rgba(255,190,118,.14),transparent 25%),linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.18));pointer-events:none}
+    .hero::after{content:"";position:absolute;inset:auto -14% -34% auto;width:62vw;aspect-ratio:1;border:1px solid rgba(255,255,255,.1);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.02),0 0 0 80px rgba(255,255,255,.015);pointer-events:none}
+    .hero__inner{position:relative;z-index:2;width:100%;padding:calc(var(--header-h) + 34px) 0 34px}
+    .hero__copy{width:min(100%,820px);padding-inline:4px;color:#fff;transform:translate3d(0,var(--hero-shift,0),0);transition:transform .1s linear}
+    .hero__kicker{margin:0 0 16px;color:#ffad60;font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+    .hero h1{max-width:8.2ch;margin:0;padding-left:.035em;color:#edf2d9;font-family:var(--display);font-size:clamp(3.55rem,15.5vw,6.6rem);font-weight:500;line-height:.82;letter-spacing:-.058em;text-shadow:0 20px 60px rgba(0,0,0,.38);text-wrap:balance}
     .hero h1 span{display:block}
-    .hero__actions{display:flex;flex-direction:column;align-items:stretch;gap:11px;margin-top:34px;max-width:340px}
-    .hero__trust{display:grid;gap:8px;margin-top:26px;color:rgba(255,255,255,.88);font-size:.78rem;font-weight:700}
-    .hero__trust span{display:flex;align-items:center;gap:8px}
-    .hero__trust svg{color:#f6a65d}
+    .hero h1 span:nth-child(n+3){font-size:.82em;font-style:italic;letter-spacing:-.045em}
+    .hero__actions{display:flex;flex-direction:column;align-items:stretch;gap:11px;max-width:350px;margin-top:30px}
+    .hero-prism{display:none;position:absolute;right:0;bottom:54px;width:215px;padding:22px;border:1px solid rgba(255,255,255,.22);border-radius:26px;background:rgba(7,31,22,.26);color:#fff;box-shadow:0 24px 60px rgba(0,0,0,.28);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transform:perspective(700px) rotateY(-8deg) rotateX(4deg)}
+    .hero-prism strong{display:block;font-family:var(--display);font-size:3rem;font-weight:500;line-height:1}.hero-prism span{display:block;margin-top:8px;color:rgba(255,255,255,.72);font-size:.69rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
+    .scroll-cue{display:none;position:absolute;left:50%;bottom:18px;z-index:3;transform:translateX(-50%);color:rgba(255,255,255,.72);font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.scroll-cue::after{content:"";display:block;width:1px;height:28px;margin:7px auto 0;background:linear-gradient(#fff,transparent);animation:scrollPulse 1.8s ease-in-out infinite}
+    @keyframes scrollPulse{0%,100%{opacity:.35;transform:scaleY(.7)}50%{opacity:1;transform:scaleY(1)}}
 
-    .trust-rail{border-bottom:1px solid var(--line);background:#fff}
-    .trust-rail__inner{display:grid;grid-template-columns:1fr;gap:0}
-    .trust-item{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
-    .trust-item:last-child{border-bottom:0}
-    .trust-item strong{color:var(--green-900);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
-    .trust-item span{color:var(--muted);font-size:.82rem;text-align:right}
+    /* Team / About */
+    .about{overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--cream) 100%)}
+    .about::before{content:"JVC";position:absolute;right:-3vw;top:4%;color:rgba(11,47,34,.035);font-family:var(--display);font-size:clamp(12rem,32vw,32rem);font-weight:600;line-height:.7;pointer-events:none}
+    .about-grid{display:grid;gap:58px;align-items:center}
+    .team-stage{position:relative;max-width:680px;margin-inline:auto;perspective:1300px;isolation:isolate}
+    .team-stage__plane{position:relative;transform:rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transform-style:preserve-3d;transition:transform .18s ease-out}
+    .team-orbit{position:absolute;inset:-7%;z-index:-1;border:1px solid rgba(11,47,34,.19);border-radius:48% 52% 59% 41% / 38% 44% 56% 62%;transform:translateZ(-30px) rotate(-8deg);animation:orbit 16s linear infinite}
+    .team-orbit::before,.team-orbit::after{content:"";position:absolute;border-radius:50%;background:var(--tangerine);box-shadow:0 8px 20px rgba(220,123,37,.32)}.team-orbit::before{width:15px;height:15px;left:16%;top:-7px}.team-orbit::after{width:10px;height:10px;right:11%;bottom:7%}
+    @keyframes orbit{to{transform:translateZ(-30px) rotate(352deg)}}
+    .team-portrait{position:relative;overflow:hidden;aspect-ratio:1.02/1;border:1px solid rgba(255,255,255,.82);border-radius:44% 56% 38% 62% / 43% 39% 61% 57%;background:var(--sand);box-shadow:0 34px 85px rgba(6,29,21,.2),inset 0 0 0 8px rgba(255,255,255,.34);transform:translateZ(35px)}
+    .team-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.22),transparent 28%,transparent 72%,rgba(4,25,17,.18));pointer-events:none}
+    .team-portrait img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.025);transition:transform .8s var(--ease)}.team-stage:hover .team-portrait img{transform:scale(1.07)}
+    .team-token{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;padding:12px 15px;border:1px solid rgba(255,255,255,.68);border-radius:999px;background:rgba(255,255,255,.82);box-shadow:0 14px 38px rgba(6,29,21,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateZ(75px)}
+    .team-token--top{right:-2%;top:9%}.team-token--bottom{left:-3%;bottom:8%}
+    .team-token__icon{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--pine-900);color:#fff}.team-token strong{display:block;color:var(--pine-900);font-size:.84rem}.team-token span{display:block;color:var(--muted);font-size:.69rem}
+    .team-avatar-badge{position:absolute;right:7%;bottom:-2%;z-index:4;width:104px;aspect-ratio:1;display:grid;place-items:center;border:7px solid var(--cream);border-radius:50%;background:var(--tangerine);box-shadow:0 18px 36px rgba(6,29,21,.2);transform:translateZ(95px) rotate(5deg)}.team-avatar-badge img{width:62%;height:62%;object-fit:contain;filter:brightness(0) invert(1)}
+    .about-copy{position:relative;z-index:2;max-width:690px}
+    .about-copy .display-title{font-size:clamp(3.2rem,11vw,6rem)}
+    .about-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:30px}.about-stat{padding:17px 0;border-top:1px solid var(--line)}.about-stat strong{display:block;color:var(--pine-900);font-family:var(--display);font-size:2.3rem;font-weight:500;line-height:1}.about-stat span{display:block;margin-top:7px;color:var(--muted);font-size:.76rem}
+    .about-list{display:grid;gap:0;margin-top:26px;border-top:1px solid var(--line)}.about-list article{display:grid;grid-template-columns:35px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.about-list b{color:var(--tangerine-deep);font-size:.7rem;letter-spacing:.12em}.about-list strong{display:block;color:var(--pine-900);font-size:.94rem}.about-list span{display:block;margin-top:4px;color:var(--muted);font-size:.84rem}.about-copy .button{margin-top:26px}
 
-    /* About */
-    .about{background:#fff}
-    .about-grid{display:grid;gap:48px;align-items:center}
-    .team-portrait{position:relative;max-width:660px;margin:auto;isolation:isolate}
-    .team-portrait::before,.team-portrait::after{content:"";position:absolute;border-radius:50%;z-index:-1}
-    .team-portrait::before{width:44%;aspect-ratio:1;left:-7%;top:-5%;background:var(--cream-200)}
-    .team-portrait::after{width:34%;aspect-ratio:1;right:-3%;bottom:-6%;background:rgba(207,116,31,.18)}
-    .team-portrait__bubble{overflow:hidden;aspect-ratio:1.04/1;border-radius:43% 57% 62% 38% / 41% 40% 60% 59%;box-shadow:var(--shadow);background:var(--cream-100)}
-    .team-portrait__bubble img{width:100%;height:100%;object-fit:cover;object-position:center}
-    .about-copy{max-width:650px}
-    .about-copy .section-title{font-size:clamp(2.8rem,10vw,5.2rem)}
-    .about-points{display:grid;gap:0;margin-top:30px;border-top:1px solid var(--line)}
-    .about-point{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
-    .about-point__no{color:var(--orange-600);font-size:.72rem;font-weight:800;letter-spacing:.12em}
-    .about-point strong{display:block;color:var(--green-900);font-size:.96rem}
-    .about-point span{display:block;margin-top:4px;color:var(--muted);font-size:.86rem}
-    .about-copy .button{margin-top:26px}
-
-    /* Menu */
-    .menu-section{background:var(--cream-100)}
-    .menu-intro{display:grid;gap:26px;margin-bottom:36px}
-    .menu-intro__aside{max-width:540px}
-    .menu-intro__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .menu-tabs{position:sticky;top:var(--header-h);z-index:80;display:flex;gap:24px;overflow-x:auto;margin:0 -16px 28px;padding:14px 16px;border-block:1px solid var(--line);background:rgba(250,244,233,.95);backdrop-filter:blur(12px);scrollbar-width:none}
-    .menu-tabs::-webkit-scrollbar{display:none}
-    .menu-tab{position:relative;flex:0 0 auto;padding:8px 0;border:0;background:transparent;color:#71766f;font-size:.76rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
-    .menu-tab::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:2px;background:var(--orange-600);transition:right .25s var(--ease)}
-    .menu-tab:hover,.menu-tab.active{color:var(--green-900)}
-    .menu-tab.active::after{right:0}
-
-    .menu-grid{display:grid;grid-template-columns:1fr;gap:20px}
-    .menu-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(8,36,25,.04);transition:transform .32s var(--ease),box-shadow .32s ease,border-color .32s ease}
-    .menu-card:hover{transform:translateY(-5px);border-color:rgba(18,60,44,.32);box-shadow:var(--shadow-soft)}
-    .menu-card.is-hidden{display:none}
-    .menu-card__image{overflow:hidden;aspect-ratio:1.25/1;background:#ece8df}
-    .menu-card__image img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
-    .menu-card:hover .menu-card__image img{transform:scale(1.04)}
-    .menu-card__body{display:grid;gap:14px;padding:20px}
-    .menu-card__meta{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--orange-600);font-size:.68rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-    .menu-card__body h3{margin:0;color:var(--green-900);font-family:var(--display);font-size:clamp(1.65rem,6vw,2.25rem);font-weight:400;line-height:1}
-    .menu-card__body p{margin:0;color:var(--muted);font-size:.88rem}
-    .menu-card__footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
-    .menu-card__note{color:var(--muted);font-size:.75rem}
-    .order-button{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--green-900);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-    .order-button svg{transition:transform .2s ease}
-    .order-button:hover svg{transform:translateX(4px)}
-
-    .menu-download{position:relative;overflow:hidden;display:grid;gap:24px;margin-top:42px;padding:28px;border-radius:24px;background:var(--green-900);color:#fff;box-shadow:var(--shadow)}
-    .menu-download::after{content:"MENU";position:absolute;right:-12px;bottom:-50px;color:rgba(255,255,255,.045);font-family:var(--display);font-size:9rem;line-height:1;pointer-events:none}
-    .menu-download__copy{position:relative;z-index:1}
-    .menu-download__copy .section-kicker{color:#f4a45c}
-    .menu-download h3{max-width:700px;margin:0;font-family:var(--display);font-size:clamp(2.25rem,8vw,4rem);font-weight:400;line-height:.98}
-    .menu-download p{max-width:650px;margin:14px 0 0;color:rgba(255,255,255,.72)}
-    .menu-download__actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;align-self:end}
+    /* Menu explorer */
+    .menu-section{overflow:hidden;background:var(--pine-950);color:#fff;padding:68px 0}
+    .menu-section::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 10% 8%,rgba(220,123,37,.14),transparent 24%),radial-gradient(circle at 92% 78%,rgba(255,255,255,.055),transparent 24%);pointer-events:none}
+    .menu-head{position:relative;z-index:2;display:grid;gap:22px;margin-bottom:26px}.menu-head .display-title{max-width:930px;color:#f4eedc;font-size:clamp(2.9rem,10vw,6rem)}.menu-head .lead{color:rgba(255,255,255,.68)}.menu-head__actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .menu-explorer{position:relative;z-index:2}
+    .menu-toolbar{position:sticky;top:calc(var(--header-h) + 8px);z-index:20;display:grid;gap:12px;margin-bottom:18px;padding:12px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(6,29,21,.88);box-shadow:0 16px 34px rgba(0,0,0,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+    .menu-categories{display:flex;gap:8px;overflow-x:auto;padding:1px 0 4px;scrollbar-width:none}.menu-categories::-webkit-scrollbar{display:none}
+    .menu-category{flex:0 0 auto;min-height:40px;padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.72);font-size:.67rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;transition:background .22s ease,color .22s ease,border-color .22s ease,transform .22s ease}.menu-category:hover,.menu-category.active{border-color:#fff;background:#fff;color:var(--pine-900);transform:translateY(-1px)}
+    .menu-count{margin:0;color:rgba(255,255,255,.55);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+    .menu-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+    .menu-card{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:#fff;color:var(--ink);box-shadow:0 20px 50px rgba(0,0,0,.16);transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease}
+    .menu-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.42);box-shadow:0 30px 72px rgba(0,0,0,.24)}
+    .menu-card__media{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--sand)}
+    .menu-card__media::after{content:"";position:absolute;inset:0;border:1px solid rgba(255,255,255,.2);pointer-events:none}
+    .menu-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}.menu-card:hover .menu-card__media img{transform:scale(1.045)}
+    .menu-card__body{display:grid;gap:12px;padding:18px}
+    .menu-card__meta{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--tangerine-deep);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .menu-card h3{margin:0;color:var(--pine-900);font-family:var(--display);font-size:clamp(1.9rem,7vw,2.8rem);font-weight:500;line-height:.95;letter-spacing:-.035em}
+    .menu-card p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .menu-card__footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:3px}
+    .menu-card__order{display:inline-flex;align-items:center;gap:8px;border:0;background:transparent;color:var(--pine-900);font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.menu-card__order:hover{color:var(--tangerine-deep)}
+    .menu-card__number{color:#a4aaa5;font-family:var(--display);font-size:1rem}
+    .menu-empty{grid-column:1/-1;margin:0;padding:36px 18px;border:1px dashed rgba(255,255,255,.24);border-radius:22px;color:rgba(255,255,255,.72);text-align:center}
 
     /* Services */
-    .services{background:#fff}
-    .services-head{display:grid;gap:22px;margin-bottom:36px}
-    .services-grid{display:grid;gap:22px}
-    .service-card{overflow:hidden;border-radius:22px;background:var(--cream-100);border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s ease}
-    .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft)}
-    .service-card__media{overflow:hidden;aspect-ratio:1.15/1}
-    .service-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .75s var(--ease)}
-    .service-card:hover img{transform:scale(1.04)}
-    .service-card__body{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:22px}
-    .service-card__number{color:var(--orange-600);font-size:.72rem;font-weight:800;letter-spacing:.12em}
-    .service-card h3{margin:0;color:var(--green-900);font-family:var(--display);font-size:2rem;font-weight:400;line-height:1}
-    .service-card p{margin:9px 0 0;color:var(--muted);font-size:.88rem}
+    .services{overflow:hidden;background:var(--sand)}
+    .services::after{content:"";position:absolute;left:-14%;bottom:-38%;width:58vw;aspect-ratio:1;border:1px solid rgba(11,47,34,.12);border-radius:50%;box-shadow:0 0 0 46px rgba(11,47,34,.025),0 0 0 92px rgba(11,47,34,.018);pointer-events:none}
+    .services-head{position:relative;z-index:2;display:grid;gap:22px;margin-bottom:36px}
+    .service-explorer{position:relative;z-index:2;display:grid;gap:16px}
+    .service-tabs{display:flex;gap:9px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.service-tabs::-webkit-scrollbar{display:none}
+    .service-tab{flex:0 0 auto;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.52);color:var(--pine-900);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.25s ease}.service-tab:hover,.service-tab.active{background:var(--pine-900);color:#fff;transform:translateY(-2px);box-shadow:0 12px 24px rgba(6,29,21,.16)}
+    .service-stage{position:relative;overflow:hidden;min-height:600px;border:1px solid rgba(255,255,255,.72);border-radius:34px;background:var(--pine-900);box-shadow:var(--shadow-2);perspective:1300px;transform:rotateX(var(--service-tilt-x,0deg)) rotateY(var(--service-tilt-y,0deg));transform-style:preserve-3d;transition:transform .18s ease-out}
+    .service-stage__image{position:absolute;inset:0}.service-stage__image img{width:100%;height:100%;object-fit:cover;transition:opacity .28s ease,transform .8s var(--ease)}.service-stage:hover .service-stage__image img{transform:scale(1.045)}
+    .service-stage__image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,24,17,.88) 0%,rgba(5,24,17,.6) 45%,rgba(5,24,17,.16) 80%),linear-gradient(180deg,transparent 45%,rgba(5,24,17,.66) 100%)}
+    .service-stage__content{position:absolute;left:0;bottom:0;z-index:2;max-width:680px;padding:28px;color:#fff;transform:translateZ(52px)}
+    .service-number{display:inline-grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,255,255,.44);border-radius:50%;font-size:.69rem;font-weight:700;letter-spacing:.12em}.service-stage h3{margin:18px 0 0;font-family:var(--display);font-size:clamp(3rem,13vw,6rem);font-weight:500;line-height:.88;letter-spacing:-.045em}.service-stage p{max-width:540px;margin:15px 0 0;color:rgba(255,255,255,.72)}.service-stage .button{margin-top:22px}
+    .service-pills{position:absolute;right:18px;top:18px;z-index:3;display:grid;gap:8px;transform:translateZ(70px)}.service-pill{padding:8px 11px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(5,24,17,.28);color:#fff;font-size:.65rem;font-weight:600;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 
     /* Clients */
-    .clients{overflow:hidden;padding:36px 0;border-block:1px solid var(--line);background:var(--cream-50)}
-    .clients__label{margin:0 0 22px;text-align:center;color:var(--muted);font-size:.67rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
-    .logo-marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-    .logo-track{display:flex;width:max-content;gap:18px;animation:logo-scroll 32s linear infinite}
-    .logo-track:hover{animation-play-state:paused}
-    .logo-item{width:150px;height:76px;display:grid;place-items:center;padding:13px 20px;border:1px solid var(--line);border-radius:999px;background:#fff}
-    .logo-item img{max-width:100%;max-height:46px;object-fit:contain}
-    @keyframes logo-scroll{to{transform:translateX(-50%)}}
+    .clients{overflow:hidden;padding:40px 0;border-block:1px solid var(--line);background:#fff}.clients__label{margin:0 0 22px;text-align:center;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}.logo-marquee{overflow:hidden}.logo-track{display:flex;width:max-content;gap:12px;animation:marquee 34s linear infinite}.logo-marquee:hover .logo-track{animation-play-state:paused}.logo-item{width:190px;height:90px;display:grid;place-items:center;padding:16px;border:1px solid var(--line);border-radius:18px;background:var(--cream);transition:transform .25s ease,box-shadow .25s ease}.logo-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-1)}.logo-item img{max-width:100%;max-height:54px;object-fit:contain;filter:none;opacity:1}@keyframes marquee{to{transform:translateX(calc(-50% - 6px))}}
 
     /* Contact */
-    .contact{position:relative;overflow:hidden;background:var(--green-950);color:#fff}
-    .contact::before{content:"";position:absolute;inset:0;background:url('./assets/Buffet.webp') center/cover no-repeat;opacity:.08}
-    .contact-grid{position:relative;z-index:1;display:grid;gap:36px}
-    .contact-copy .section-kicker{color:#f4a45c}
-    .contact-copy .section-title{color:#fff}
-    .contact-copy .section-copy{color:rgba(255,255,255,.7)}
-    .contact-list{display:grid;gap:12px;margin-top:28px}
-    .contact-list a,.contact-list span{display:flex;gap:11px;align-items:flex-start;color:rgba(255,255,255,.88)}
-    .contact-list svg{color:#f4a45c;margin-top:4px}
-    .quote-form{display:grid;gap:15px;padding:24px;border:1px solid rgba(255,255,255,.15);border-radius:24px;background:rgba(255,255,255,.08);backdrop-filter:blur(12px)}
-    .form-row{display:grid;gap:15px}
-    .field{display:grid;gap:7px}
-    .field label{font-size:.69rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78)}
-    .field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.1);padding:13px 14px;color:#fff;outline:0;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease}
-    .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.46)}
-    .field select{color:#fff}
-    .field select option{color:var(--ink)}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:#f4a45c;background:rgba(255,255,255,.14);box-shadow:0 0 0 4px rgba(244,164,92,.12)}
-    .field textarea{min-height:120px;resize:vertical}
-    .form-note{margin:0;color:rgba(255,255,255,.52);font-size:.75rem}
+    .contact{overflow:hidden;background:var(--cream)}
+    .contact-shell{position:relative;overflow:hidden;border-radius:36px;background:var(--pine-950);box-shadow:var(--shadow-2)}
+    .contact-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 14%,rgba(220,123,37,.22),transparent 25%),radial-gradient(circle at 7% 87%,rgba(255,255,255,.07),transparent 24%);pointer-events:none}
+    .contact-grid{position:relative;z-index:2;display:grid;gap:28px;padding:28px}
+    .contact-copy{color:#fff}.contact-copy .display-title{color:#f4eedc}.contact-copy .lead{color:rgba(255,255,255,.65)}
+    .contact-list{display:grid;gap:12px;margin-top:28px}.contact-list a,.contact-list span{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.78);font-size:.88rem}.contact-list svg{color:#ffaf62}
+    .quote-form{display:grid;gap:14px;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(255,255,255,.07);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+    .form-row{display:grid;gap:14px}.field{display:grid;gap:7px}.field label{color:rgba(255,255,255,.8);font-size:.68rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.08);padding:13px 14px;color:#fff;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease}.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}.field select option{color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus{border-color:#ffb46a;outline:0;background:rgba(255,255,255,.12);box-shadow:0 0 0 4px rgba(220,123,37,.13)}.field textarea{min-height:120px;resize:vertical}.form-note{margin:0;color:rgba(255,255,255,.45);font-size:.72rem}
 
-    /* Footer and utilities */
-    .footer{background:#061910;color:#fff}
-    .footer-main{display:grid;gap:30px;padding:48px 0 34px}
-    .footer .brand__name{color:#fff}
-    .footer .brand__tag{color:#f4a45c}
-    .footer-about{max-width:420px;margin:17px 0 0;color:rgba(255,255,255,.58);font-size:.88rem}
-    .footer h3{margin:0 0 13px;font-family:var(--display);font-size:1.25rem;font-weight:400}
-    .footer-links{display:grid;gap:8px;color:rgba(255,255,255,.62);font-size:.86rem}
-    .footer-links a:hover{color:#fff}
-    .socials{display:flex;gap:9px;margin-top:18px}
-    .socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.15);border-radius:50%;transition:background .2s ease,border-color .2s ease}
-    .socials a:hover{background:var(--orange-600);border-color:var(--orange-600)}
-    .footer-bottom{display:flex;flex-direction:column;gap:6px;padding:17px 0;border-top:1px solid rgba(255,255,255,.09);color:rgba(255,255,255,.42);font-size:.72rem}
-    .back-top{position:fixed;right:16px;bottom:16px;z-index:900;width:48px;height:48px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--orange-600);color:#fff;box-shadow:0 14px 32px rgba(0,0,0,.22);opacity:0;visibility:hidden;transform:translateY(12px);transition:.25s ease}
-    .back-top.show{opacity:1;visibility:visible;transform:none}
-    .toast{position:fixed;left:50%;bottom:82px;z-index:1300;max-width:calc(100% - 32px);padding:12px 16px;border-radius:999px;background:#fff;color:var(--green-900);box-shadow:var(--shadow);font-size:.8rem;font-weight:800;text-align:center;opacity:0;visibility:hidden;transform:translate(-50%,12px);transition:.25s ease}
-    .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-    .reveal.visible{opacity:1;transform:none}
+    /* Footer */
+    .footer{background:var(--pine-1000);color:#fff}.footer-main{display:grid;gap:32px;padding:54px 0 36px}.footer .brand__name{color:#fff}.footer-about{max-width:420px;color:rgba(255,255,255,.58);font-size:.87rem}.footer h3{margin:0 0 14px;font-family:var(--display);font-size:1.35rem;font-weight:500}.footer-links{display:grid;gap:9px;color:rgba(255,255,255,.62);font-size:.84rem}.footer-links a:hover{color:#fff}.socials{display:flex;gap:9px;margin-top:18px}.socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:50%;transition:.25s ease}.socials a:hover{background:var(--tangerine);border-color:var(--tangerine);transform:translateY(-3px)}.footer-bottom{display:flex;flex-direction:column;gap:7px;padding:17px 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-size:.72rem}
+
+    .back-top{position:fixed;right:16px;bottom:16px;z-index:900;width:48px;height:48px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--tangerine);color:#fff;box-shadow:0 15px 32px rgba(0,0,0,.22);opacity:0;visibility:hidden;transform:translateY(14px) rotate(-8deg);transition:.25s ease}.back-top.show{opacity:1;visibility:visible;transform:none}.back-top:hover{transform:translateY(-3px)}
+    .toast{position:fixed;left:50%;bottom:80px;z-index:1300;max-width:calc(100% - 30px);padding:12px 16px;border-radius:999px;background:var(--pine-900);color:#fff;box-shadow:var(--shadow-2);font-size:.82rem;font-weight:600;opacity:0;visibility:hidden;transform:translate(-50%,15px);transition:.25s ease;text-align:center}.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.visible{opacity:1;transform:none}
 
     @media (min-width:560px){
-      .hero__actions{flex-direction:row;max-width:none}
-      .hero__trust{grid-template-columns:repeat(3,max-content);gap:18px}
-      .trust-rail__inner{grid-template-columns:repeat(3,1fr)}
-      .trust-item{padding:20px 22px;border-bottom:0;border-right:1px solid var(--line)}
-      .trust-item:first-child{padding-left:0}
-      .trust-item:last-child{border-right:0;padding-right:0}
+      .hero__actions{flex-direction:row;align-items:center;max-width:none}
       .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .about-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
       .form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .footer-bottom{flex-direction:row;align-items:center;justify-content:space-between}
+      .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}
     }
 
     @media (min-width:760px){
-      :root{--header-h:84px;--container:min(1240px,calc(100% - 48px))}
-      .section{padding:96px 0}
-      .brand__mark{width:49px;height:49px}
-      .brand__name{font-size:1.48rem}
-      .hero{background-image:linear-gradient(90deg,rgba(5,22,15,.84) 0%,rgba(5,22,15,.62) 38%,rgba(5,22,15,.18) 70%,rgba(5,22,15,.04) 100%),url('./assets/hero.webp');background-position:center}
-      .hero__inner{padding-bottom:72px}
-      .hero h1{font-size:clamp(5.6rem,12vw,8.8rem)}
-      .about-grid{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:64px}
-      .menu-intro{grid-template-columns:1.08fr .92fr;align-items:end}
-      .menu-intro__aside{justify-self:end}
-      .services-head{grid-template-columns:1fr .85fr;align-items:end}
-      .services-head .section-copy{justify-self:end}
-      .services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .contact-grid{grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
-      .quote-form{padding:32px}
-      .footer-main{grid-template-columns:1.5fr .7fr .8fr 1fr;gap:44px}
+      :root{--header-h:84px;--container:min(1280px,calc(100% - 48px))}
+      .section{padding:88px 0}
+      .brand__mark{width:50px;height:50px}.brand__name{font-size:1.48rem}
+      .hero{background-image:linear-gradient(90deg,rgba(4,18,13,.80) 0%,rgba(4,18,13,.58) 42%,rgba(4,18,13,.15) 74%,rgba(4,18,13,.02) 100%),url('./assets/hero.webp');background-position:center}
+      .hero__inner{padding:calc(var(--header-h) + 50px) 0 48px}.hero h1{font-size:clamp(5rem,10vw,8.2rem)}.hero-prism{display:block}.scroll-cue{display:block}
+      .contact-grid{padding:40px}.quote-form{padding:28px}
     }
 
-    @media (min-width:1024px){
-      .desktop-nav{display:flex}
-      .nav-actions>.button{display:inline-flex}
-      .menu-toggle{display:none}
-      .hero__inner{padding-bottom:76px}
-      .hero__copy{max-width:760px}
-      .menu-tabs{position:relative;top:auto;margin:0 0 34px;padding:0 0 14px;background:transparent;backdrop-filter:none}
-      .menu-grid{grid-template-columns:repeat(12,minmax(0,1fr));align-items:start}
-      .menu-card{grid-column:span 4}
-      .menu-card:nth-child(1){grid-column:span 7}
-      .menu-card:nth-child(2){grid-column:span 5}
-      .menu-card:nth-child(1) .menu-card__image{aspect-ratio:1.55/1}
-      .menu-card:nth-child(2) .menu-card__image{aspect-ratio:1.05/1}
-      .menu-card:nth-child(6),.menu-card:nth-child(10){grid-column:span 8}
-      .menu-card:nth-child(6) .menu-card__image,.menu-card:nth-child(10) .menu-card__image{aspect-ratio:1.75/1}
-      .menu-download{grid-template-columns:1fr auto;align-items:end;padding:38px}
-      .services-grid{grid-template-columns:repeat(12,minmax(0,1fr))}
-      .service-card:nth-child(1),.service-card:nth-child(4){grid-column:span 7}
-      .service-card:nth-child(2),.service-card:nth-child(3){grid-column:span 5}
-      .service-card:nth-child(1) .service-card__media,.service-card:nth-child(4) .service-card__media{aspect-ratio:1.7/1}
-      .service-card:nth-child(2) .service-card__media,.service-card:nth-child(3) .service-card__media{aspect-ratio:1.2/1}
+    @media (min-width:960px){
+      .desktop-nav{display:flex}.menu-toggle{display:none}.nav-actions>.button{display:inline-flex}
+      .about-grid{grid-template-columns:1.02fr .98fr;gap:88px}.about-copy{padding-left:20px}
+      .menu-head{grid-template-columns:1.12fr .88fr;align-items:end}.menu-head__aside{justify-self:end;max-width:520px}
+      .menu-toolbar{grid-template-columns:minmax(0,1fr) auto;align-items:center;padding:10px 12px}.menu-count{text-align:right;white-space:nowrap}
+      .menu-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.menu-card__body{padding:20px}
+      .services-head{grid-template-columns:1.1fr .9fr;align-items:end}.services-head>.lead{justify-self:end}.service-explorer{grid-template-columns:280px minmax(0,1fr);align-items:stretch}.service-tabs{display:grid;align-content:start;overflow:visible}.service-tab{text-align:left;border-radius:18px;padding:17px 18px}.service-stage{min-height:700px}
+      .contact-grid{grid-template-columns:.92fr 1.08fr;gap:48px;padding:52px}.footer-main{grid-template-columns:1.5fr .7fr .8fr 1fr;gap:44px}
     }
 
-    @media (min-width:1320px){
-      :root{--container:min(1320px,calc(100% - 80px))}
+    @media (min-width:1240px){
+      .hero-prism{right:3%}.team-token--top{right:-6%}.team-token--bottom{left:-7%}.service-stage__content{padding:42px}
     }
 
+    @media (hover:none){.team-stage__plane,.service-stage{transform:none!important}}
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-      .reveal{opacity:1;transform:none}
-      .logo-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}
+      .reveal{opacity:1;transform:none}.logo-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.team-stage__plane,.service-stage{transform:none!important}
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -352,6 +280,7 @@
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
     <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.5.3.5.5 0 .3-.2 1.4-.8 1.9-.6.5-1.3.8-2.2.7-1-.1-2.3-.6-4-1.7-1.6-1.1-2.7-2.5-3.3-3.6-.6-1.1-1.2-2.8-.5-3.9Z" fill="currentColor"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2Zm6 13 .9 3.1L22 19l-3.1.9L18 23l-.9-3.1L14 19l3.1-.9L18 15Z" fill="currentColor"/></symbol>
   </svg>
 
   <header class="site-header" id="siteHeader">
@@ -360,15 +289,11 @@
         <img class="brand__mark" src="./Logo/favicon.png" alt="JVC Catering logo" width="64" height="64">
         <span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span>
       </a>
-      <div class="desktop-nav">
-        <a href="#hero" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <div class="desktop-nav" aria-label="Desktop links">
+        <a href="#hero" class="active">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="button button--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an Event</button>
+        <button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an Event</button>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileDrawer" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
       </div>
     </nav>
@@ -380,10 +305,8 @@
       <a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
       <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
-    <nav class="mobile-links" aria-label="Mobile links">
-      <a href="#hero">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="button button--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a Quotation</button>
+    <nav class="mobile-links" aria-label="Mobile links"><a href="#hero">Home</a><a href="#about">Meet the Team</a><a href="#menu">Menu Explorer</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+    <button class="button button--orange js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a Quotation</button>
     <div class="drawer-contact">
       <a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a>
       <a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
@@ -396,99 +319,98 @@
       <div class="container hero__inner">
         <div class="hero__copy">
           <p class="hero__kicker">Premium catering in Dar es Salaam</p>
-          <h1 id="heroTitle"><span>Tailored</span><span>tastes.</span><span>Warm moments.</span></h1>
+          <h1 id="heroTitle"><span>Tailored</span><span>tastes.</span><span>Warm</span><span>moments.</span></h1>
           <div class="hero__actions">
-            <button class="button button--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book Catering <svg class="icon"><use href="#i-arrow"/></svg></button>
-            <a class="button button--outline" href="#menu">Explore Menu</a>
-          </div>
-          <div class="hero__trust" aria-label="Service highlights">
-            <span><svg class="icon"><use href="#i-check"/></svg>Fresh ingredients</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Custom menus</span>
-            <span><svg class="icon"><use href="#i-check"/></svg>Professional service</span>
+            <button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book Catering <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="button button--glass magnetic" href="#menu">Explore Menu</a>
           </div>
         </div>
+        <aside class="hero-prism" aria-label="JVC Catering experience"><strong>25+</strong><span>Years of food passion</span></aside>
       </div>
+      <span class="scroll-cue" aria-hidden="true">Scroll to discover</span>
     </section>
-
-    <div class="trust-rail" aria-label="JVC Catering service summary">
-      <div class="container trust-rail__inner">
-        <div class="trust-item"><strong>Based in</strong><span>Dar es Salaam</span></div>
-        <div class="trust-item"><strong>Menus</strong><span>Designed around your event</span></div>
-        <div class="trust-item"><strong>Occasions</strong><span>Wedding · Corporate · Private</span></div>
-      </div>
-    </div>
 
     <section class="section about" id="about">
       <div class="container about-grid">
-        <div class="team-portrait reveal">
-          <div class="team-portrait__bubble"><img src="./assets/FOUNDER.jpg" alt="The JVC Catering team at a catered event" width="1600" height="1066" loading="lazy" decoding="async"></div>
-        </div>
-        <div class="about-copy reveal">
-          <p class="section-kicker">Meet the JVC team</p>
-          <h2 class="section-title">Food prepared with heart and purpose.</h2>
-          <p class="section-copy">JVC Catering brings together Tanzanian flavour, practical event experience and a personal approach. Our goal is simple: serve food that feels generous, looks inviting and helps every gathering run smoothly.</p>
-          <div class="about-points">
-            <div class="about-point"><span class="about-point__no">01</span><div><strong>Menus designed around your event</strong><span>Guest count, service style and food preferences are considered from the start.</span></div></div>
-            <div class="about-point"><span class="about-point__no">02</span><div><strong>Authentic local flavours</strong><span>Familiar Tanzanian favourites prepared with care and consistent quality.</span></div></div>
-            <div class="about-point"><span class="about-point__no">03</span><div><strong>Clear communication</strong><span>Direct coordination before the event keeps timing and expectations aligned.</span></div></div>
+        <div class="team-stage reveal tilt-surface" data-tilt="team">
+          <div class="team-stage__plane">
+            <div class="team-orbit" aria-hidden="true"></div>
+            <div class="team-portrait"><img src="./assets/FOUNDER.jpg" alt="The JVC Catering team at a catered event" width="1600" height="1066" loading="lazy" decoding="async"></div>
+            <div class="team-token team-token--top"><span class="team-token__icon"><svg class="icon"><use href="#i-spark"/></svg></span><span><strong>Personal service</strong><span>From first call to final plate</span></span></div>
+            <div class="team-token team-token--bottom"><span class="team-token__icon"><svg class="icon"><use href="#i-map"/></svg></span><span><strong>Dar es Salaam</strong><span>Locally prepared, warmly served</span></span></div>
+            <div class="team-avatar-badge" aria-label="JVC Catering team identity"><img src="./Logo/favicon.png" alt="" width="64" height="64"></div>
           </div>
-          <button class="button button--dark js-wa" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to Our Team</button>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="eyebrow">Meet the JVC team</p>
+          <h2 class="display-title">People who make every table feel personal.</h2>
+          <p class="lead">JVC Catering blends Tanzanian flavour, event experience and attentive service. Every gathering is planned with care, from the menu conversation to the final presentation.</p>
+          <div class="about-stats" aria-label="JVC Catering highlights">
+            <div class="about-stat"><strong>25+</strong><span>Years of food passion</span></div>
+            <div class="about-stat"><strong>4</strong><span>Flexible service formats</span></div>
+            <div class="about-stat"><strong>1:1</strong><span>Personal menu planning</span></div>
+          </div>
+          <div class="about-list">
+            <article><b>01</b><div><strong>Menus built around your occasion</strong><span>Guest count, service style, preferences and budget are considered from the beginning.</span></div></article>
+            <article><b>02</b><div><strong>Authentic local flavour</strong><span>Familiar Tanzanian favourites prepared with thoughtful presentation and consistent quality.</span></div></article>
+            <article><b>03</b><div><strong>Clear event coordination</strong><span>Direct communication keeps setup, timing and expectations aligned.</span></div></article>
+          </div>
+          <button class="button button--dark js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to Our Team</button>
         </div>
       </div>
     </section>
 
-    <section class="section menu-section" id="menu">
+    <section class="section menu-section" id="menu" aria-labelledby="menuTitle">
       <div class="container">
-        <div class="menu-intro reveal">
+        <div class="menu-head reveal">
           <div>
-            <p class="section-kicker">The JVC menu journal</p>
-            <h2 class="section-title">Tanzanian classics, curated for gatherings.</h2>
+            <p class="eyebrow">JVC food collection</p>
+            <h2 class="display-title" id="menuTitle">A menu arranged for effortless browsing.</h2>
           </div>
-          <div class="menu-intro__aside">
-            <p class="section-copy">Browse guest favourites, then speak with our team about portions, service style and a menu that fits your occasion.</p>
-            <div class="menu-intro__actions"><a class="button button--paper" href="./JVC-Catering-Menu.pdf" download>Download Menu <svg class="icon"><use href="#i-download"/></svg></a><button class="button button--dark js-wa" type="button" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build My Menu</button></div>
+          <div class="menu-head__aside">
+            <p class="lead">Browse every dish in a clear, balanced gallery. Filter by category, order a favourite directly, or download the complete event menu.</p>
+            <div class="menu-head__actions">
+              <a class="button button--paper magnetic" href="./JVC-Catering-Menu.pdf" download>Download Menu <svg class="icon"><use href="#i-download"/></svg></a>
+              <button class="button button--orange js-wa magnetic" type="button" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build My Menu</button>
+            </div>
           </div>
         </div>
 
-        <div class="menu-tabs" role="tablist" aria-label="Filter dishes by category">
-          <button class="menu-tab active" type="button" data-filter="all" aria-pressed="true">All dishes</button>
-          <button class="menu-tab" type="button" data-filter="main" aria-pressed="false">Main meals</button>
-          <button class="menu-tab" type="button" data-filter="grill" aria-pressed="false">From the grill</button>
-          <button class="menu-tab" type="button" data-filter="bites" aria-pressed="false">Fresh bites</button>
-          <button class="menu-tab" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
-          <button class="menu-tab" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
-        </div>
-
-        <div class="menu-grid" id="menuGrid">
-          <article class="menu-card reveal" data-category="main"><div class="menu-card__image"><img src="./menu/pilau.webp" alt="Tanzanian signature pilau" width="1000" height="800" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Main meal</span><span>Guest favourite</span></div><h3>Signature Pilau</h3><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p><div class="menu-card__footer"><span class="menu-card__note">Available for events</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Signature Pilau for my event.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="main"><div class="menu-card__image"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="1000" height="800" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Main meal</span><span>Coastal</span></div><h3>Wali wa Nazi</h3><p>Coconut rice served with flavourful chicken and warm coastal spices.</p><div class="menu-card__footer"><span class="menu-card__note">Custom portions</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Wali wa Nazi for my event.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="grill"><div class="menu-card__image"><img src="./menu/nyamachoma.webp" alt="Nyama choma grilled meat" width="740" height="493" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>From the grill</span><span>Freshly grilled</span></div><h3>Nyama Choma</h3><p>Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.</p><div class="menu-card__footer"><span class="menu-card__note">Event service</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Nyama Choma catering.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="grill"><div class="menu-card__image"><img src="./menu/mshikaki.webp" alt="Tanzanian mishkaki skewers" width="1000" height="1000" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>From the grill</span><span>Skewers</span></div><h3>Mishkaki</h3><p>Seasoned meat skewers grilled over heat and served fresh from the flame.</p><div class="menu-card__footer"><span class="menu-card__note">Ideal for receptions</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Mishkaki for my event.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="bites"><div class="menu-card__image"><img src="./menu/maandazi.webp" alt="Fresh mandazi" width="1000" height="667" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Fresh bite</span><span>Tea service</span></div><h3>Classic Mandazi</h3><p>Soft, golden and lightly sweetened pastries for breakfast or event tea service.</p><div class="menu-card__footer"><span class="menu-card__note">Prepared fresh</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Classic Mandazi.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="bites"><div class="menu-card__image"><img src="./menu/kitumbua.webp" alt="Kitumbua rice cakes" width="1000" height="667" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Fresh bite</span><span>Traditional</span></div><h3>Kitumbua</h3><p>Traditional rice cakes with a delicately crisp outside and soft centre.</p><div class="menu-card__footer"><span class="menu-card__note">Breakfast & tea</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Kitumbua.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="dessert"><div class="menu-card__image"><img src="./menu/coconutpudding.webp" alt="Coconut pudding dessert" width="300" height="168" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Dessert</span><span>Tropical</span></div><h3>Coconut Pudding</h3><p>A creamy coconut dessert with a smooth texture and gentle tropical flavour.</p><div class="menu-card__footer"><span class="menu-card__note">Sweet finish</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Coconut Pudding.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="dessert"><div class="menu-card__image"><img src="./menu/halwa.webp" alt="Traditional halwa dessert" width="750" height="1000" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Dessert</span><span>Celebration</span></div><h3>Traditional Halwa</h3><p>Rich, aromatic halwa prepared for celebrations and special gatherings.</p><div class="menu-card__footer"><span class="menu-card__note">Celebration favourite</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Traditional Halwa.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="drink"><div class="menu-card__image"><img src="./menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="1000" height="667" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Cold drink</span><span>Freshly pressed</span></div><h3>Sugarcane Juice</h3><p>Freshly pressed sugarcane with a bright, naturally refreshing finish.</p><div class="menu-card__footer"><span class="menu-card__note">Serve chilled</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Fresh Sugarcane Juice.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="drink"><div class="menu-card__image"><img src="./menu/cocktail.webp" alt="Colourful event mocktails" width="1000" height="667" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Cold drink</span><span>Event bar</span></div><h3>Event Mocktails</h3><p>Colourful non-alcoholic drinks tailored to your event theme and guest profile.</p><div class="menu-card__footer"><span class="menu-card__note">Custom flavours</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Event Mocktails.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="main"><div class="menu-card__image"><img src="./menu/maharage.webp" alt="Tanzanian beans dish" width="1000" height="430" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Main meal</span><span>Vegetarian option</span></div><h3>Maharage</h3><p>Slow-cooked beans seasoned for a comforting, satisfying side or vegetarian meal.</p><div class="menu-card__footer"><span class="menu-card__note">Flexible pairing</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Maharage.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-          <article class="menu-card reveal" data-category="drink"><div class="menu-card__image"><img src="./menu/chai.webp" alt="Spiced chai tea" width="1000" height="667" loading="lazy" decoding="async"></div><div class="menu-card__body"><div class="menu-card__meta"><span>Hot drink</span><span>Warm service</span></div><h3>Spiced Chai</h3><p>Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.</p><div class="menu-card__footer"><span class="menu-card__note">Meeting favourite</span><button class="order-button js-wa" type="button" data-message="Hello JVC Catering, I am interested in Spiced Chai service.">Order <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
-        </div>
-
-        <div class="menu-download reveal">
-          <div class="menu-download__copy"><p class="section-kicker">Complete catering brochure</p><h3>Take the JVC menu with you.</h3><p>Download our food and event-service guide, then send us your guest count, venue and preferred menu so we can prepare a tailored quotation.</p></div>
-          <div class="menu-download__actions"><a class="button button--primary" href="./JVC-Catering-Menu.pdf" download>Download PDF <svg class="icon"><use href="#i-download"/></svg></a><button class="button button--outline js-wa" type="button" data-message="Hello JVC Catering, I have reviewed the menu and would like a custom quotation.">Request a Quote</button></div>
+        <div class="menu-explorer">
+          <div class="menu-toolbar">
+            <div class="menu-categories" id="menuCategories" role="group" aria-label="Filter menu dishes">
+              <button class="menu-category active" type="button" data-filter="all" aria-pressed="true">All dishes</button>
+              <button class="menu-category" type="button" data-filter="main" aria-pressed="false">Main meals</button>
+              <button class="menu-category" type="button" data-filter="grill" aria-pressed="false">Grills</button>
+              <button class="menu-category" type="button" data-filter="bites" aria-pressed="false">Fresh bites</button>
+              <button class="menu-category" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
+              <button class="menu-category" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
+            </div>
+            <p class="menu-count" id="menuCount" aria-live="polite">14 dishes</p>
+          </div>
+          <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
         </div>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="container">
-        <div class="services-head reveal"><div><p class="section-kicker">Catering for meaningful moments</p><h2 class="section-title">Service shaped around the occasion.</h2></div><p class="section-copy">From intimate tables to large guest lists, JVC Catering adapts the menu, presentation and service style to your event.</p></div>
-        <div class="services-grid">
-          <article class="service-card reveal"><div class="service-card__media"><img src="./assets/wedding.webp" alt="Wedding guests being served from a catered buffet" width="736" height="920" loading="lazy" decoding="async"></div><div class="service-card__body"><span class="service-card__number">01</span><div><h3>Wedding Catering</h3><p>Elegant food service and tailored menus for your celebration.</p></div></div></article>
-          <article class="service-card reveal"><div class="service-card__media"><img src="./assets/corporate.webp" alt="Corporate catering buffet prepared for a professional gathering" width="736" height="1107" loading="lazy" decoding="async"></div><div class="service-card__body"><span class="service-card__number">02</span><div><h3>Corporate Events</h3><p>Reliable breakfast, lunch, refreshment and meeting packages.</p></div></div></article>
-          <article class="service-card reveal"><div class="service-card__media"><img src="./assets/Private.webp" alt="Prepared catering dishes for a private gathering" width="736" height="1308" loading="lazy" decoding="async"></div><div class="service-card__body"><span class="service-card__number">03</span><div><h3>Private Gatherings</h3><p>Warm, personal catering for birthdays, family events and celebrations.</p></div></div></article>
-          <article class="service-card reveal"><div class="service-card__media"><img src="./assets/Buffet.webp" alt="Decorated buffet service with multiple freshly prepared dishes" width="736" height="881" loading="lazy" decoding="async"></div><div class="service-card__body"><span class="service-card__number">04</span><div><h3>Buffet & Delivery</h3><p>Freshly prepared dishes delivered or arranged as a complete buffet.</p></div></div></article>
+        <div class="services-head reveal"><div><p class="eyebrow">Services with depth</p><h2 class="display-title">One team. Four ways to serve your moment.</h2></div><p class="lead">Select a service to preview how JVC Catering adapts the food, setup and experience to the occasion.</p></div>
+
+        <div class="service-explorer">
+          <div class="service-tabs" id="serviceTabs" role="group" aria-label="Select catering service">
+            <button class="service-tab active" type="button" data-service="0" aria-pressed="true">01 · Wedding Catering</button>
+            <button class="service-tab" type="button" data-service="1" aria-pressed="false">02 · Corporate Events</button>
+            <button class="service-tab" type="button" data-service="2" aria-pressed="false">03 · Private Gatherings</button>
+            <button class="service-tab" type="button" data-service="3" aria-pressed="false">04 · Buffet & Delivery</button>
+          </div>
+
+          <article class="service-stage tilt-surface" id="serviceStage" data-tilt="service" aria-live="polite">
+            <div class="service-stage__image"><img id="serviceImage" src="./assets/wedding.webp" alt="Wedding catering service" width="736" height="920" loading="lazy" decoding="async"></div>
+            <div class="service-pills" aria-hidden="true"><span class="service-pill">Tailored menu</span><span class="service-pill">Professional setup</span><span class="service-pill">Warm service</span></div>
+            <div class="service-stage__content"><span class="service-number" id="serviceNumber">01</span><h3 id="serviceTitle">Wedding Catering</h3><p id="serviceDescription">Elegant food service, coordinated setup and tailored menus designed around your celebration.</p><button class="button button--orange js-service-quote magnetic" type="button">Plan this service <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+          </article>
         </div>
       </div>
     </section>
@@ -502,17 +424,20 @@
     </section>
 
     <section class="section contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy reveal"><p class="section-kicker">Contact JVC Catering</p><h2 class="section-title">Let us plan your menu.</h2><p class="section-copy">Share your date, venue, guest count and preferred dishes. The form prepares a WhatsApp message so you can send your enquiry directly to our team.</p><div class="contact-list"><a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a><a href="tel:+255715602509"><svg class="icon"><use href="#i-phone"/></svg>+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a><span><svg class="icon"><use href="#i-map"/></svg>Sinza Mori, Lagana Street, Dar es Salaam</span><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>@jvc.catering._tz</a></div></div>
-        <form class="quote-form reveal" id="quoteForm" novalidate>
-          <div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div></div>
-          <div class="form-row"><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+255 7xx xxx xxx"></div><div class="field"><label for="eventType">Event type</label><select id="eventType" name="eventType" required><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select></div></div>
-          <div class="form-row"><div class="field"><label for="guestCount">Estimated guests</label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80"></div><div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div></div>
-          <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" placeholder="Event location"></div>
-          <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" placeholder="Preferred dishes, service style or budget range"></textarea></div>
-          <button class="button button--primary" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
-          <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
-        </form>
+      <div class="container contact-shell">
+        <div class="contact-grid">
+          <div class="contact-copy reveal"><p class="eyebrow">Contact JVC Catering</p><h2 class="display-title">Let us design your table.</h2><p class="lead">Share your date, venue, guest count and preferred dishes. The form prepares a WhatsApp message so your enquiry reaches our team directly.</p><div class="contact-list"><a href="tel:+255767620509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 620 509</a><a href="tel:+255715602509"><svg class="icon"><use href="#i-phone"/></svg>+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a><span><svg class="icon"><use href="#i-map"/></svg>Sinza Mori, Lagana Street, Dar es Salaam</span><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>@jvc.catering._tz</a></div></div>
+
+          <form class="quote-form reveal" id="quoteForm" novalidate>
+            <div class="form-row"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Full name"></div><div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div></div>
+            <div class="form-row"><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+255 7xx xxx xxx"></div><div class="field"><label for="eventType">Event type</label><select id="eventType" name="eventType" required><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select></div></div>
+            <div class="form-row"><div class="field"><label for="guestCount">Estimated guests</label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80"></div><div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div></div>
+            <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" placeholder="Event location"></div>
+            <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" placeholder="Preferred dishes, service style or budget range"></textarea></div>
+            <button class="button button--orange magnetic" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
+            <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -520,7 +445,7 @@
   <footer class="footer">
     <div class="container footer-main">
       <div><a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a><p class="footer-about">Premium Tanzanian catering for weddings, corporate events, private celebrations and buffet service in Dar es Salaam.</p><div class="socials"><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a><a href="https://wa.me/255767620509" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a><a href="mailto:veronica.wlff@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a></div></div>
-      <div><h3>Explore</h3><nav class="footer-links"><a href="#hero">Home</a><a href="#about">About</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
+      <div><h3>Explore</h3><nav class="footer-links"><a href="#hero">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
       <div><h3>Services</h3><div class="footer-links"><span>Wedding Catering</span><span>Corporate Events</span><span>Private Gatherings</span><span>Buffet & Delivery</span></div></div>
       <div><h3>Contact</h3><div class="footer-links"><a href="tel:+255767620509">+255 767 620 509</a><a href="tel:+255715602509">+255 715 602 509</a><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a><span>Dar es Salaam, Tanzania</span></div></div>
     </div>
@@ -533,10 +458,36 @@
   <script>
     (() => {
       'use strict';
+
       const PHONE = '255767620509';
       const $ = (selector, scope = document) => scope.querySelector(selector);
       const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const finePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+      const menuItems = [
+        {title:'Signature Pilau',category:'main',label:'Main meal',image:'./menu/pilau.webp',alt:'Tanzanian signature pilau',description:'Fragrant spiced rice prepared with tender meat and traditional aromatics.'},
+        {title:'Wali wa Nazi',category:'main',label:'Main meal',image:'./menu/walinazi.webp',alt:'Coconut rice with chicken',description:'Coconut rice served with flavourful chicken and warm coastal spices.'},
+        {title:'Ndizi na Nyama',category:'main',label:'Main meal',image:'./menu/ndizinyama.webp',alt:'Plantain and meat stew',description:'Tender plantain and meat simmered into a comforting Tanzanian classic.'},
+        {title:'Maharage',category:'main',label:'Main meal',image:'./menu/maharage.webp',alt:'Slow cooked beans',description:'Slow-cooked beans seasoned for a satisfying side or vegetarian meal.'},
+        {title:'Nyama Choma',category:'grill',label:'From the grill',image:'./menu/nyamachoma.webp',alt:'Nyama choma grilled meat',description:'Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.'},
+        {title:'Mishkaki',category:'grill',label:'From the grill',image:'./menu/mshikaki.webp',alt:'Tanzanian mishkaki skewers',description:'Seasoned meat skewers grilled over heat and served fresh from the flame.'},
+        {title:'Classic Mandazi',category:'bites',label:'Fresh bite',image:'./menu/maandazi.webp',alt:'Fresh mandazi',description:'Soft, golden and lightly sweetened pastries for breakfast or event tea service.'},
+        {title:'Kitumbua',category:'bites',label:'Fresh bite',image:'./menu/kitumbua.webp',alt:'Kitumbua rice cakes',description:'Traditional rice cakes with a delicately crisp outside and soft centre.'},
+        {title:'Kachori',category:'bites',label:'Fresh bite',image:'./menu/kachori.webp',alt:'Kachori snack',description:'Crisp savoury bites filled with aromatic spices for receptions and tea service.'},
+        {title:'Coconut Pudding',category:'dessert',label:'Dessert',image:'./menu/coconutpudding.webp',alt:'Coconut pudding dessert',description:'A creamy coconut dessert with a smooth texture and gentle tropical flavour.'},
+        {title:'Traditional Halwa',category:'dessert',label:'Dessert',image:'./menu/halwa.webp',alt:'Traditional halwa dessert',description:'Rich, aromatic halwa prepared for celebrations and special gatherings.'},
+        {title:'Sugarcane Juice',category:'drink',label:'Cold drink',image:'./menu/sugarcanejuice.webp',alt:'Fresh sugarcane juice',description:'Freshly pressed sugarcane with a bright and naturally refreshing finish.'},
+        {title:'Event Mocktails',category:'drink',label:'Cold drink',image:'./menu/cocktail.webp',alt:'Event mocktails',description:'Colourful non-alcoholic drinks tailored to your event theme and guest profile.'},
+        {title:'Spiced Chai',category:'drink',label:'Hot drink',image:'./menu/chai.webp',alt:'Spiced tea',description:'Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.'}
+      ];
+
+      const services = [
+        {number:'01',title:'Wedding Catering',image:'./assets/wedding.webp',alt:'Wedding catering service',description:'Elegant food service, coordinated setup and tailored menus designed around your celebration.',message:'Hello JVC Catering, I would like a wedding catering quotation.'},
+        {number:'02',title:'Corporate Events',image:'./assets/corporate.webp',alt:'Corporate event catering',description:'Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.',message:'Hello JVC Catering, I would like a corporate event catering quotation.'},
+        {number:'03',title:'Private Gatherings',image:'./assets/Private.webp',alt:'Private gathering catering',description:'Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.',message:'Hello JVC Catering, I would like catering for a private gathering.'},
+        {number:'04',title:'Buffet & Delivery',image:'./assets/Buffet.webp',alt:'Buffet and delivery service',description:'Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.',message:'Hello JVC Catering, I would like a buffet or delivery quotation.'}
+      ];
 
       const openWhatsApp = (message) => {
         const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
@@ -548,13 +499,26 @@
 
       const header = $('#siteHeader');
       const backTop = $('#backTop');
+      const progress = $('#scrollProgress');
+      const hero = $('#hero');
       const updateScrollUI = () => {
-        const scrolled = window.scrollY > 36;
-        header.classList.toggle('scrolled', scrolled);
-        backTop.classList.toggle('show', window.scrollY > 650);
+        const y = window.scrollY;
+        const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        header.classList.toggle('scrolled', y > 40);
+        backTop.classList.toggle('show', y > 650);
+        progress.style.width = `${Math.min(100, (y / max) * 100)}%`;
+        if (!reduceMotion) hero.style.setProperty('--hero-shift', `${Math.min(34, y * .055)}px`);
       };
-      window.addEventListener('scroll', updateScrollUI, { passive: true });
+      window.addEventListener('scroll', updateScrollUI, {passive:true});
       updateScrollUI();
+
+      if (finePointer && !reduceMotion) {
+        hero.addEventListener('pointermove', (event) => {
+          const rect = hero.getBoundingClientRect();
+          hero.style.setProperty('--pointer-x', `${((event.clientX - rect.left) / rect.width) * 100}%`);
+          hero.style.setProperty('--pointer-y', `${((event.clientY - rect.top) / rect.height) * 100}%`);
+        });
+      }
 
       const drawer = $('#mobileDrawer');
       const scrim = $('#drawerScrim');
@@ -574,17 +538,90 @@
       $$('.mobile-links a').forEach((link) => link.addEventListener('click', () => setDrawer(false)));
       document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false); });
 
-      const tabs = $$('.menu-tab');
-      const menuCards = $$('.menu-card');
-      tabs.forEach((tab) => tab.addEventListener('click', () => {
-        const filter = tab.dataset.filter;
-        tabs.forEach((item) => { const active = item === tab; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
-        menuCards.forEach((card) => {
-          const visible = filter === 'all' || card.dataset.category === filter;
-          card.classList.toggle('is-hidden', !visible);
-          card.setAttribute('aria-hidden', String(!visible));
+      const menuGrid = $('#menuGrid');
+      const menuCount = $('#menuCount');
+
+      const renderMenuCards = (filter = 'all') => {
+        const visibleItems = filter === 'all' ? menuItems : menuItems.filter((item) => item.category === filter);
+        menuCount.textContent = `${visibleItems.length} ${visibleItems.length === 1 ? 'dish' : 'dishes'}`;
+        menuGrid.innerHTML = visibleItems.length ? visibleItems.map((item) => {
+          const index = menuItems.indexOf(item);
+          return `<article class="menu-card reveal visible">
+            <div class="menu-card__media"><img src="${item.image}" alt="${item.alt}" width="1000" height="800" loading="lazy" decoding="async"></div>
+            <div class="menu-card__body">
+              <div class="menu-card__meta"><span>${item.label}</span><span>JVC favourite</span></div>
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+              <div class="menu-card__footer">
+                <button class="menu-card__order" type="button" data-index="${index}" aria-label="Order ${item.title}">Order this dish <svg class="icon"><use href="#i-arrow"/></svg></button>
+                <span class="menu-card__number">${String(index + 1).padStart(2,'0')}</span>
+              </div>
+            </div>
+          </article>`;
+        }).join('') : '<p class="menu-empty">No dishes are available in this category.</p>';
+
+        $$('.menu-card__order', menuGrid).forEach((button) => button.addEventListener('click', () => {
+          const item = menuItems[Number(button.dataset.index)];
+          openWhatsApp(`Hello JVC Catering, I am interested in ${item.title} for my event.`);
+        }));
+      };
+
+      renderMenuCards();
+      $$('.menu-category').forEach((button) => button.addEventListener('click', () => {
+        $$('.menu-category').forEach((item) => {
+          item.classList.toggle('active', item === button);
+          item.setAttribute('aria-pressed', String(item === button));
         });
+        renderMenuCards(button.dataset.filter);
       }));
+
+      const serviceImage = $('#serviceImage');
+      const serviceNumber = $('#serviceNumber');
+      const serviceTitle = $('#serviceTitle');
+      const serviceDescription = $('#serviceDescription');
+      const serviceQuote = $('.js-service-quote');
+      let activeService = services[0];
+      const updateService = (index) => {
+        activeService = services[index];
+        serviceImage.style.opacity = '0';
+        window.setTimeout(() => {
+          serviceImage.src = activeService.image;
+          serviceImage.alt = activeService.alt;
+          serviceNumber.textContent = activeService.number;
+          serviceTitle.textContent = activeService.title;
+          serviceDescription.textContent = activeService.description;
+          serviceImage.style.opacity = '1';
+        }, 150);
+        $$('.service-tab').forEach((tab, tabIndex) => { tab.classList.toggle('active', tabIndex === index); tab.setAttribute('aria-pressed', String(tabIndex === index)); });
+      };
+      $$('.service-tab').forEach((tab, index) => tab.addEventListener('click', () => updateService(index)));
+      serviceQuote.addEventListener('click', () => openWhatsApp(activeService.message));
+
+      const applyTilt = (element, xVar, yVar, max = 6) => {
+        if (!finePointer || reduceMotion) return;
+        element.addEventListener('pointermove', (event) => {
+          const rect = element.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - .5) * 2;
+          const y = ((event.clientY - rect.top) / rect.height - .5) * 2;
+          element.style.setProperty(xVar, `${(-y * max).toFixed(2)}deg`);
+          element.style.setProperty(yVar, `${(x * max).toFixed(2)}deg`);
+        });
+        element.addEventListener('pointerleave', () => { element.style.setProperty(xVar, '0deg'); element.style.setProperty(yVar, '0deg'); });
+      };
+      applyTilt($('.team-stage'), '--tilt-x', '--tilt-y', 5);
+      applyTilt($('#serviceStage'), '--service-tilt-x', '--service-tilt-y', 3.5);
+
+      if (finePointer && !reduceMotion) {
+        $$('.magnetic').forEach((button) => {
+          button.addEventListener('pointermove', (event) => {
+            const rect = button.getBoundingClientRect();
+            const x = (event.clientX - rect.left - rect.width / 2) * .13;
+            const y = (event.clientY - rect.top - rect.height / 2) * .13;
+            button.style.transform = `translate(${x}px,${y}px)`;
+          });
+          button.addEventListener('pointerleave', () => { button.style.transform = ''; });
+        });
+      }
 
       const quoteForm = $('#quoteForm');
       const toast = $('#toast');
@@ -593,19 +630,14 @@
         toast.textContent = message;
         toast.classList.add('show');
         clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
       };
       quoteForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        if (!quoteForm.checkValidity()) {
-          quoteForm.reportValidity();
-          showToast('Please complete the required fields.');
-          return;
-        }
+        if (!quoteForm.checkValidity()) { quoteForm.reportValidity(); showToast('Please complete the required fields.'); return; }
         const data = new FormData(quoteForm);
         const message = [
-          'Hello JVC Catering, I would like a catering quotation.',
-          '',
+          'Hello JVC Catering, I would like a catering quotation.','',
           `Name: ${data.get('name')}`,
           `Email: ${data.get('email') || 'Not provided'}`,
           `Phone: ${data.get('phone')}`,
@@ -618,40 +650,32 @@
         openWhatsApp(message);
       });
 
+      backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+
       const sections = $$('main section[id]');
       const navLinks = $$('.desktop-nav a');
-      if ('IntersectionObserver' in window) {
-        const navObserver = new IntersectionObserver((entries) => {
-          const visible = entries.filter((entry) => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-          if (!visible) return;
-          navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${visible.target.id}`));
-        }, { rootMargin: '-25% 0px -60% 0px', threshold: [0,.2,.5] });
-        sections.forEach((section) => navObserver.observe(section));
-      }
+      const setActiveLink = () => {
+        const marker = window.scrollY + window.innerHeight * .35;
+        let activeId = 'hero';
+        sections.forEach((section) => { if (section.offsetTop <= marker) activeId = section.id; });
+        navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`));
+      };
+      window.addEventListener('scroll', setActiveLink, {passive:true});
+      setActiveLink();
 
       if ('IntersectionObserver' in window && !reduceMotion) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          });
-        }, { threshold: .08, rootMargin: '0px 0px -40px 0px' });
-        $$('.reveal').forEach((item) => revealObserver.observe(item));
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+        }, {threshold:.08,rootMargin:'0px 0px -40px 0px'});
+        $$('.reveal').forEach((item) => observer.observe(item));
       } else {
         $$('.reveal').forEach((item) => item.classList.add('visible'));
       }
 
-      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
-      $('#year').textContent = new Date().getFullYear();
+      const fallbackSvg = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f5eadb"/><text x="400" y="285" text-anchor="middle" font-family="Georgia" font-size="44" fill="#0b2f22">JVC Catering</text><text x="400" y="338" text-anchor="middle" font-family="Arial" font-size="20" fill="#bb5c14">Freshly prepared</text></svg>')}`;
+      $$('img').forEach((image) => image.addEventListener('error', () => { if (image.dataset.fallbackApplied) return; image.dataset.fallbackApplied='true'; image.removeAttribute('srcset'); image.src=fallbackSvg; }));
 
-      const fallbackSvg = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect width="800" height="600" fill="#faf4e9"/><text x="400" y="285" text-anchor="middle" font-family="serif" font-size="50" fill="#123c2c">JVC Catering</text><text x="400" y="338" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#cf741f">Freshly prepared</text></svg>')}`;
-      $$('img').forEach((image) => image.addEventListener('error', () => {
-        if (image.dataset.fallbackApplied) return;
-        image.dataset.fallbackApplied = 'true';
-        image.removeAttribute('srcset');
-        image.src = fallbackSvg;
-      }));
+      $('#year').textContent = new Date().getFullYear();
     })();
   </script>
 </body>
