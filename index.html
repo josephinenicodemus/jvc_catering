@@ -202,8 +202,16 @@
        ========================================================== */
     .about{background:#fff}
     .about-grid{display:grid;gap:var(--space-xl);align-items:center}
-    .about-media{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--sand);box-shadow:var(--shadow-1)}
-    .about-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%}
+    .about-media{position:relative;isolation:isolate;max-width:420px;margin-inline:auto}
+    .about-media::before{content:"";position:absolute;inset:-14px 18px 18px -14px;z-index:-1;border:1.5px solid var(--tangerine);border-radius:44% 56% 58% 42% / 42% 46% 54% 58%;transition:transform .6s var(--ease),border-radius .6s var(--ease)}
+    .about-media::after{content:"";position:absolute;right:-12px;bottom:-12px;width:72px;height:72px;border-radius:50%;background:var(--tangerine);opacity:.12;z-index:-1}
+    .about-media__frame{overflow:hidden;border-radius:38% 62% 63% 37% / 45% 40% 60% 55%;background:var(--sand);box-shadow:var(--shadow-2);transition:border-radius .6s var(--ease)}
+    .about-media__frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;transition:transform .7s var(--ease)}
+    @media (hover:hover){
+      .about-media:hover::before{transform:translate(6px,-6px)}
+      .about-media:hover .about-media__frame{border-radius:46% 54% 50% 50% / 52% 46% 54% 48%}
+      .about-media:hover .about-media__frame img{transform:scale(1.05)}
+    }
     .about-copy .section-title{max-width:16ch}
     .about-list{display:grid;margin-top:var(--space-lg);border-top:1px solid var(--line)}
     .about-list article{display:grid;grid-template-columns:1fr;gap:6px;padding:var(--space-sm) 0;border-bottom:1px solid var(--line)}
@@ -259,11 +267,18 @@
     /* ==========================================================
        9. CLIENTS
        ========================================================== */
-    .clients{padding-block:var(--space-xl);border-block:1px solid var(--line);background:#fff}
+    .clients{padding-block:var(--space-xl);border-block:1px solid var(--line);background:#fff;overflow:hidden}
     .clients__label{margin:0 0 var(--space-md);text-align:center;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}
-    .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-sm)}
-    .logo-item{display:grid;place-items:center;padding:var(--space-sm);border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--cream)}
-    .logo-item img{max-width:100%;max-height:44px;object-fit:contain}
+
+    .logo-marquee{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+    .logo-track{display:flex;align-items:center;gap:var(--space-sm);width:max-content;animation:marqueeLeft 36s linear infinite}
+    .logo-track:hover,.logo-track:focus-within{animation-play-state:paused}
+    @keyframes marqueeLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .logo-item{display:grid;place-items:center;flex:0 0 auto;width:150px;min-height:84px;padding:var(--space-sm);border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--cream)}
+    .logo-item img{max-width:100%;max-height:40px;object-fit:contain}
+
+    @media (min-width:760px){.logo-item{width:170px}}
+    @media (min-width:960px){.logo-item{width:190px}}
 
     /* ==========================================================
        10. CONTACT
@@ -351,8 +366,6 @@
       .service-stage{grid-template-columns:minmax(0,1.45fr) minmax(280px,.55fr)}
       .service-stage__media{aspect-ratio:auto;min-height:480px}
 
-      .logo-grid{grid-template-columns:repeat(6,1fr)}
-
       .contact-grid{grid-template-columns:.85fr 1.15fr;gap:var(--space-xl)}
 
       .footer-main{grid-template-columns:1.4fr .8fr .8fr 1fr}
@@ -368,6 +381,9 @@
       .js .reveal{opacity:1;transform:none}
       .hero__media{transform:none!important;transition:none!important}
       .hero__media img{animation:none!important;transform:scale(1.02)!important}
+      .logo-track{animation:none!important;transform:none!important;flex-wrap:wrap;justify-content:center;width:auto!important}
+      .logo-marquee{overflow:visible;-webkit-mask-image:none;mask-image:none}
+      .logo-track [aria-hidden="true"]{display:none}
     }
   </style>
 </head>
@@ -443,7 +459,9 @@
     <section class="section about" id="about">
       <div class="container about-grid">
         <div class="about-media reveal">
-          <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async">
+          <div class="about-media__frame">
+            <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async">
+          </div>
         </div>
 
         <div class="about-copy reveal">
@@ -518,17 +536,28 @@
     <section class="clients" aria-labelledby="clientsLabel">
       <div class="container">
         <p class="clients__label" id="clientsLabel">Trusted for professional gatherings and community events</p>
-        <ul class="logo-grid">
-          <li class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy"></li>
-          <li class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy"></li>
-        </ul>
+        <div class="logo-marquee" aria-label="Organisations JVC Catering has worked with">
+          <div class="logo-track">
+            <div class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy" decoding="async"></div>
+            <div class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy" decoding="async"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -766,6 +795,23 @@
         renderMenu(button.dataset.filter || 'main');
       }));
 
+      /* ---------- 5b. Roving arrow-key navigation for button groups ---------- */
+      const enableArrowNav = (container, selector) => {
+        if (!container) return;
+        container.addEventListener('keydown', (event) => {
+          if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(event.key)) return;
+          const items = $$(selector, container);
+          const currentIndex = items.indexOf(document.activeElement);
+          if (currentIndex === -1) return;
+          event.preventDefault();
+          const direction = (event.key === 'ArrowRight' || event.key === 'ArrowDown') ? 1 : -1;
+          const nextIndex = (currentIndex + direction + items.length) % items.length;
+          items[nextIndex].focus();
+        });
+      };
+      enableArrowNav($('#menuFilters'), '.menu-filter');
+      enableArrowNav($('#serviceTabs'), '.service-tab');
+
       /* ---------- 6. Services ---------- */
       const serviceImage = $('#serviceImage');
       const serviceTitle = $('#serviceTitle');
@@ -851,15 +897,24 @@
         formStatus.textContent = '';
 
         const message = [
-          'Hello JVC Catering, I would like a catering quotation.', '',
-          `Name: ${data.get('name')}`,
-          `Email: ${data.get('email') || 'Not provided'}`,
-          `Phone: ${data.get('phone')}`,
-          `Event: ${data.get('eventType')}`,
-          `Guests: ${data.get('guestCount')}`,
-          `Date: ${data.get('eventDate') || 'To be confirmed'}`,
-          `Location: ${data.get('location') || 'To be confirmed'}`,
-          `Menu preferences: ${data.get('message') || 'Please advise me'}`
+          'Hello JVC Catering! 👋',
+          'I would like to request a catering quotation.',
+          '',
+          '*Event details*',
+          `🍽️ Type: ${data.get('eventType')}`,
+          `👥 Guests: ${data.get('guestCount')}`,
+          `📅 Date: ${data.get('eventDate') || 'To be confirmed'}`,
+          `📍 Location: ${data.get('location') || 'To be confirmed'}`,
+          '',
+          '*Contact details*',
+          `🙋 Name: ${data.get('name')}`,
+          `📞 Phone: ${data.get('phone')}`,
+          `✉️ Email: ${data.get('email') || 'Not provided'}`,
+          '',
+          '*Menu preferences*',
+          `📝 ${data.get('message') || 'Please advise me on suitable options'}`,
+          '',
+          'Looking forward to hearing from you!'
         ].join('\n');
         openWhatsApp(message);
       });
