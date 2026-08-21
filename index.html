@@ -1,43 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Production SEO: official domain only -->
   <meta name="theme-color" content="#0b2f22">
   <meta name="description" content="JVC Catering creates tailored Tanzanian menus for weddings, corporate events, private gatherings, buffets and delivery in Dar es Salaam.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
 
+  <link rel="canonical" href="https://jvccatering.co.tz/">
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./Logo/favicon.png">
-  <link rel="canonical" href="https://jvccatering.vercel.app/">
+
+  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:760px)" fetchpriority="high">
   <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:759px)" fetchpriority="high">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JVC Catering">
+  <meta property="og:locale" content="en_TZ">
   <meta property="og:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
   <meta property="og:description" content="Premium Tanzanian catering for memorable gatherings in Dar es Salaam.">
-  <meta property="og:image" content="https://jvccatering.vercel.app/assets/hero.webp">
-  <meta property="og:url" content="https://jvccatering.vercel.app/">
+  <meta property="og:url" content="https://jvccatering.co.tz/">
+  <meta property="og:image" content="https://jvccatering.co.tz/assets/hero.webp">
+  <meta property="og:image:alt" content="JVC Catering event presentation with Tanzanian dishes">
 
+  <!-- Social sharing -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
+  <meta name="twitter:description" content="Premium Tanzanian catering for memorable gatherings in Dar es Salaam.">
+  <meta name="twitter:image" content="https://jvccatering.co.tz/assets/hero.webp">
+
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"CateringBusiness",
-    "name":"JVC Catering",
-    "url":"https://jvccatering.vercel.app/",
-    "image":"https://jvccatering.vercel.app/assets/hero.webp",
-    "description":"Tailored Tanzanian catering for weddings, corporate events, private gatherings, buffets and delivery.",
-    "telephone":["+255767602509","+255688407366"],
-    "email":"veronica.wlff@gmail.com",
-    "address":{"@type":"PostalAddress","streetAddress":"Lagana Street, Mori Road","addressLocality":"Dar es Salaam","postalCode":"16102","addressCountry":"TZ"},
-    "sameAs":["https://instagram.com/jvc.catering._tz"]
+    "@context": "https://schema.org",
+    "@type": "CateringBusiness",
+    "@id": "https://jvccatering.co.tz/#business",
+    "name": "JVC Catering",
+    "url": "https://jvccatering.co.tz/",
+    "image": "https://jvccatering.co.tz/assets/hero.webp",
+    "description": "Tailored Tanzanian catering for weddings, corporate events, private gatherings, buffets and delivery.",
+    "telephone": ["+255767602509", "+255688407366"],
+    "email": "veronica.wlff@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lagana Street, Mori Road",
+      "addressLocality": "Dar es Salaam",
+      "postalCode": "16102",
+      "addressCountry": "TZ"
+    },
+    "sameAs": ["https://instagram.com/jvc.catering._tz"]
   }
   </script>
+
+
 
   <style>
     /* ==========================================================
