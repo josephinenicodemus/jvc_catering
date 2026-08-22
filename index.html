@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-TZ">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(() => {
+      if (!document.documentElement.classList.contains('js-ready')) {
+        document.documentElement.classList.add('js-failsafe');
+      }
+    }, 2500);
+  </script>
 
   <!-- Production SEO: official domain only -->
   <meta name="theme-color" content="#0b2f22">
@@ -12,13 +19,14 @@
   <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
 
   <link rel="canonical" href="https://jvccatering.co.tz/">
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/png" href="./Logo/favicon.png">
   <link rel="apple-touch-icon" href="./Logo/favicon.png">
 
   <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&amp;display=swap"></noscript>
   <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:760px)" fetchpriority="high">
   <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:759px)" fetchpriority="high">
 
@@ -75,6 +83,8 @@
       --pine-700:#1c5a41;
       --tangerine:#c9772f;
       --tangerine-deep:#a85f21;
+      --action:#9b551c;
+      --action-hover:#814515;
       --cream:#faf6ec;
       --sand:#f1e7d6;
       --ink:#1a231d;
@@ -116,7 +126,7 @@
        ========================================================== */
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 18px)}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     body.menu-open{overflow:hidden;touch-action:none}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
@@ -124,7 +134,7 @@
     button{cursor:pointer;background:none;border:0}
     ul{margin:0;padding:0;list-style:none}
     ::selection{background:var(--tangerine);color:#fff}
-    :focus-visible{outline:2.5px solid var(--tangerine);outline-offset:3px}
+    :focus-visible{outline:2.5px solid var(--tangerine-deep);outline-offset:3px}
     [hidden]{display:none!important}
     section[id]{scroll-margin-top:calc(var(--header-h) + 18px)}
 
@@ -148,8 +158,8 @@
     .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border:1px solid transparent;border-radius:999px;font-family:var(--ui);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .22s var(--ease),box-shadow .22s ease,background .22s ease,color .22s ease,border-color .22s ease}
     @media (hover:hover){.btn:hover{transform:translateY(-2px)}}
     .btn:active{transform:translateY(0) scale(.985)}
-    .btn--primary{background:var(--tangerine);color:#fff;box-shadow:0 10px 24px rgba(201,119,47,.24)}
-    .btn--primary:hover{background:var(--tangerine-deep)}
+    .btn--primary{background:var(--action);color:#fff;box-shadow:0 10px 24px rgba(155,85,28,.22)}
+    .btn--primary:hover{background:var(--action-hover)}
     .btn--dark{background:var(--pine-900);color:#fff;box-shadow:0 10px 24px rgba(8,37,26,.20)}
     .btn--dark:hover{background:var(--pine-700)}
     .btn--outline{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(8,37,26,.18)}
@@ -185,7 +195,7 @@
 
     .drawer-scrim{position:fixed;inset:0;z-index:1150;background:rgba(2,14,10,.6);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
     .drawer-scrim.show{opacity:1;visibility:visible}
-    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(88vw,360px);height:100dvh;padding:var(--space-md);background:var(--cream);transform:translateX(102%);transition:transform .32s var(--ease);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-shadow:-20px 0 60px rgba(0,0,0,.2)}
+    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(88vw,360px);height:100vh;height:100dvh;padding:var(--space-md);background:var(--cream);transform:translateX(102%);transition:transform .32s var(--ease);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-shadow:-20px 0 60px rgba(0,0,0,.2)}
     .mobile-drawer.open{transform:translateX(0)}
     .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:var(--space-sm);border-bottom:1px solid var(--line)}
     .mobile-drawer .brand__name{color:var(--pine-900)}
@@ -204,7 +214,7 @@
     /* ==========================================================
        5. HERO
        ========================================================== */
-    .hero{position:relative;min-height:clamp(520px,86svh,860px);display:flex;align-items:flex-end;background:var(--pine-950);isolation:isolate;overflow:hidden}
+    .hero{position:relative;min-height:520px;min-height:clamp(520px,86svh,860px);display:flex;align-items:flex-end;background:var(--pine-950);isolation:isolate;overflow:hidden}
     .hero__media{position:absolute;inset:0;overflow:hidden;z-index:-2}
     .hero__media picture{position:absolute;inset:0;display:block}
     .hero__media img{width:100%;height:100%;object-fit:cover;object-position:center 36%}
@@ -365,6 +375,13 @@
       max-height:70px;
     }
 
+
+    .clients__meta{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:clamp(.7rem,1.8vw,1rem)}
+    .clients__meta .clients__label{margin:0}
+    .marquee-toggle{min-height:34px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--cream);color:var(--pine-900);font-size:.68rem;font-weight:700;letter-spacing:.04em}
+    .marquee-toggle:hover{background:var(--sand)}
+    .logo-marquee:focus-within .logo-track{animation-play-state:paused}
+
     /* ==========================================================
        10. CONTACT / FORM + SEPARATE MAP
        ========================================================== */
@@ -386,10 +403,11 @@
     .field{display:grid;gap:6px}
     .field label{color:rgba(255,255,255,.82);font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
     .field .required{color:#f0c48b}
-    .field input,.field select,.field textarea{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm);background:rgba(255,255,255,.08);padding:11px 13px;color:#fff;outline:0;transition:border-color .18s ease,background .18s ease}
+    .field input,.field select,.field textarea{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm);background:rgba(255,255,255,.08);padding:11px 13px;color:#fff;transition:border-color .18s ease,background .18s ease}
     .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.42)}
     .field select option{color:var(--ink)}
     .field input:focus,.field select:focus,.field textarea:focus{border-color:#f0c48b;background:rgba(255,255,255,.12)}
+    .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid #f0c48b;outline-offset:2px}
     .field textarea{min-height:96px;resize:vertical}
     .field[data-invalid="true"] input,.field[data-invalid="true"] select{border-color:#ff9d8a}
     .field-error{display:none;margin:0;color:#ffcfc4;font-size:.76rem}
@@ -421,7 +439,7 @@
     .socials{display:flex;gap:9px;margin-top:var(--space-sm)}
     .socials a{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:50%;transition:background .2s ease,border-color .2s ease}
     .socials a:hover{background:var(--tangerine);border-color:var(--tangerine)}
-    .footer-bottom{display:flex;flex-direction:column;gap:6px;padding:var(--space-sm) 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.4);font-size:.72rem}
+    .footer-bottom{display:flex;flex-direction:column;gap:6px;padding:var(--space-sm) 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.72rem}
 
     /* ==========================================================
        12. FIXED UI / REVEALS
@@ -432,7 +450,7 @@
     .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
     .reveal{opacity:1;transform:none}
     .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .46s var(--ease),transform .46s var(--ease)}
-    .js .reveal.visible{opacity:1;transform:none}
+    .js .reveal.visible,.js-failsafe .reveal{opacity:1;transform:none}
 
     /* ==========================================================
        13. RESPONSIVE BREAKPOINTS
@@ -494,6 +512,7 @@
       .logo-track{animation:none!important;transform:none!important;flex-wrap:wrap;justify-content:center;width:auto!important}
       .logo-marquee{overflow:visible}
       .logo-track [aria-hidden="true"]{display:none}
+      .marquee-toggle{display:none}
     }
   </style>
 </head>
@@ -528,14 +547,14 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an event</button>
+        <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an event</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileDrawer" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
       </div>
     </nav>
   </header>
 
   <div class="drawer-scrim" id="drawerScrim" aria-hidden="true" hidden></div>
-  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true">
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
     <div class="drawer-head">
       <a class="brand" href="#hero" tabindex="-1"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
       <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation"><svg class="icon"><use href="#i-x"/></svg></button>
@@ -547,7 +566,7 @@
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a quotation</button>
+    <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a quotation</a>
     <div class="drawer-contact">
       <a href="tel:+255767602509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 602 509</a>
       <a href="tel:+255688407366"><svg class="icon"><use href="#i-phone"/></svg>+255 688 407 366</a>
@@ -569,7 +588,7 @@
           <p class="hero__kicker">Premium catering in Dar es Salaam</p>
           <h1 id="heroTitle">Tailored tastes.<br>Warm moments.</h1>
           <div class="hero__actions">
-            <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like to book catering for my event.">Book catering <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to book catering for my event.">Book catering <svg class="icon"><use href="#i-arrow"/></svg></a>
             <a class="btn btn--outline" href="#menu">Explore menu</a>
           </div>
         </div>
@@ -580,7 +599,7 @@
       <div class="container about-grid">
         <div class="about-media reveal">
           <div class="about-media__frame">
-            <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async">
+            <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
           </div>
         </div>
 
@@ -593,7 +612,7 @@
             <article><strong>Authentic local flavour</strong><span>Familiar Tanzanian favourites prepared with thoughtful presentation and consistent quality.</span></article>
             <article><strong>Clear event coordination</strong><span>Direct communication keeps setup, timing and expectations aligned.</span></article>
           </div>
-          <button class="btn btn--dark js-wa" type="button" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to our team</button>
+          <a class="btn btn--dark js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to our team</a>
         </div>
       </div>
     </section>
@@ -606,7 +625,7 @@
           <p class="lead">Browse JVC favourites, then request a menu customised for your guest count and event style.</p>
           <div class="menu-head__actions">
             <a class="btn btn--ghost" href="./JVC-Catering-Menu.pdf" download>Download menu <svg class="icon"><use href="#i-download"/></svg></a>
-            <button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build my menu</button>
+            <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build my menu</a>
           </div>
         </div>
 
@@ -618,7 +637,24 @@
           <button class="menu-filter" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
         </div>
         <p class="menu-count" id="menuCount" aria-live="polite">4 dishes</p>
-        <div class="menu-grid" id="menuGrid"></div>
+        <div class="menu-grid" id="menuGrid">
+          <article class="menu-card">
+            <div class="menu-card__media"><img src="./menu/pilau.webp" alt="Tanzanian signature pilau" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Signature Pilau</h3><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__media"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Wali wa Nazi</h3><p>Coconut rice served with flavourful chicken and warm coastal spices.</p></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__media"><img src="./menu/ndizinyama.webp" alt="Plantain and meat stew" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Ndizi na Nyama</h3><p>Tender plantain and meat simmered into a comforting Tanzanian classic.</p></div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card__media"><img src="./menu/maharage.webp" alt="Slow cooked beans" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Maharage</h3><p>Slow-cooked beans seasoned for a satisfying side or vegetarian meal.</p></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -632,20 +668,20 @@
 
         <div class="service-grid">
           <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/wedding.webp" alt="Wedding catering service by JVC Catering" width="720" height="480" loading="lazy" decoding="async"></div>
-            <div class="service-card__body"><h3>Wedding catering</h3><p>Elegant food service, coordinated setup and tailored menus designed around your celebration.</p><div class="service-card__action"><button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a wedding catering quotation.">Plan service <svg class="icon"><use href="#i-arrow"/></svg></button></div></div>
+            <div class="service-card__media"><img src="./assets/wedding.webp" alt="Wedding catering service by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="service-card__body"><h3>Wedding catering</h3><p>Elegant food service, coordinated setup and tailored menus designed around your celebration.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a wedding catering quotation." aria-label="Plan wedding catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
           </article>
           <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/corporate.webp" alt="Corporate event catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async"></div>
-            <div class="service-card__body"><h3>Corporate events</h3><p>Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.</p><div class="service-card__action"><button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a corporate event catering quotation.">Plan service <svg class="icon"><use href="#i-arrow"/></svg></button></div></div>
+            <div class="service-card__media"><img src="./assets/corporate.webp" alt="Corporate event catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="service-card__body"><h3>Corporate events</h3><p>Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a corporate event catering quotation." aria-label="Plan corporate event catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
           </article>
           <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/Private.webp" alt="Private gathering catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async"></div>
-            <div class="service-card__body"><h3>Private gatherings</h3><p>Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.</p><div class="service-card__action"><button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like catering for a private gathering.">Plan service <svg class="icon"><use href="#i-arrow"/></svg></button></div></div>
+            <div class="service-card__media"><img src="./assets/Private.webp" alt="Private gathering catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="service-card__body"><h3>Private gatherings</h3><p>Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like catering for a private gathering." aria-label="Plan private gathering catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
           </article>
           <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/Buffet.webp" alt="Buffet and delivery service by JVC Catering" width="720" height="480" loading="lazy" decoding="async"></div>
-            <div class="service-card__body"><h3>Buffet &amp; delivery</h3><p>Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.</p><div class="service-card__action"><button class="btn btn--primary js-wa" type="button" data-message="Hello JVC Catering, I would like a buffet or delivery quotation.">Plan service <svg class="icon"><use href="#i-arrow"/></svg></button></div></div>
+            <div class="service-card__media"><img src="./assets/Buffet.webp" alt="Buffet and delivery service by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="service-card__body"><h3>Buffet &amp; delivery</h3><p>Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a buffet or delivery quotation." aria-label="Plan buffet or delivery catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
           </article>
         </div>
       </div>
@@ -653,27 +689,30 @@
 
     <section class="clients" aria-labelledby="clientsLabel">
       <div class="container">
-        <p class="clients__label" id="clientsLabel">Trusted for professional gatherings and community events</p>
+        <div class="clients__meta">
+          <p class="clients__label" id="clientsLabel">Trusted for professional gatherings and community events</p>
+          <button class="marquee-toggle" id="marqueeToggle" type="button" aria-pressed="false" aria-controls="logoTrack">Pause logos</button>
+        </div>
         <div class="logo-marquee" aria-label="Organisations JVC Catering has worked with">
-          <div class="logo-track">
-            <div class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy" decoding="async"></div>
-            <div class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy" decoding="async"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy" decoding="async"></div>
+          <div class="logo-track" id="logoTrack">
+            <div class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy" decoding="async" fetchpriority="low"></div>
+            <div class="logo-item" aria-hidden="true"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy" decoding="async" fetchpriority="low"></div>
           </div>
         </div>
       </div>
@@ -703,22 +742,23 @@
 
             <form class="quote-form" id="quoteForm" novalidate aria-describedby="formStatus">
               <div class="form-row">
-                <div class="field" id="fieldName"><label for="name">Your name <span class="required" aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" required placeholder="Full name" aria-required="true" aria-invalid="false" aria-describedby="errorName"><span class="field-error" id="errorName">Please enter your name.</span></div>
-                <div class="field" id="fieldEmail"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-invalid="false" aria-describedby="errorEmail"><span class="field-error" id="errorEmail">Please enter a valid email.</span></div>
+                <div class="field" id="fieldName"><label for="name">Your name <span class="required" aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Full name" aria-required="true" aria-invalid="false" aria-describedby="errorName"><span class="field-error" id="errorName">Please enter your name.</span></div>
+                <div class="field" id="fieldEmail"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" aria-invalid="false" aria-describedby="errorEmail"><span class="field-error" id="errorEmail">Please enter a valid email.</span></div>
               </div>
               <div class="form-row">
-                <div class="field" id="fieldPhone"><label for="phone">Phone number <span class="required" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+255 7xx xxx xxx" aria-required="true" aria-invalid="false" aria-describedby="errorPhone"><span class="field-error" id="errorPhone">Please enter a phone number.</span></div>
+                <div class="field" id="fieldPhone"><label for="phone">Phone number <span class="required" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required placeholder="+255 7xx xxx xxx" aria-required="true" aria-invalid="false" aria-describedby="errorPhone"><span class="field-error" id="errorPhone">Please enter a phone number.</span></div>
                 <div class="field" id="fieldEventType"><label for="eventType">Event type <span class="required" aria-hidden="true">*</span></label><select id="eventType" name="eventType" required aria-required="true" aria-invalid="false" aria-describedby="errorEventType"><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select><span class="field-error" id="errorEventType">Please select an event type.</span></div>
               </div>
               <div class="form-row">
                 <div class="field" id="fieldGuests"><label for="guestCount">Estimated guests <span class="required" aria-hidden="true">*</span></label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80" aria-required="true" aria-invalid="false" aria-describedby="errorGuests"><span class="field-error" id="errorGuests">Please estimate your guest count.</span></div>
                 <div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div>
               </div>
-              <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" placeholder="Event location"></div>
-              <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" placeholder="Preferred dishes, service style or budget range"></textarea></div>
+              <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" maxlength="160" placeholder="Event location"></div>
+              <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" maxlength="700" placeholder="Preferred dishes, service style or budget range"></textarea></div>
               <p class="form-status" id="formStatus" role="alert"></p>
               <button class="btn btn--primary" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
               <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
+              <noscript><p class="form-note">JavaScript is unavailable. Please use the WhatsApp, phone or email contact links shown on this page.</p></noscript>
             </form>
           </div>
         </div>
@@ -729,7 +769,7 @@
             <p class="map-card__address">Lagana Street, Mori Road, Dar es Salaam 16102, Tanzania</p>
           </div>
           <div class="map-card__frame">
-            <iframe title="JVC Catering location — satellite map" src="https://www.google.com/maps?q=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania&t=k&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <iframe title="JVC Catering location — satellite map" src="https://www.google.com/maps?q=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania&t=k&z=17&output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" fetchpriority="low" allowfullscreen></iframe>
           </div>
           <a class="map-card__link" href="https://www.google.com/maps/dir/?api=1&destination=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania" target="_blank" rel="noopener">Get directions <svg class="icon"><use href="#i-navigate"/></svg></a>
         </div>
@@ -762,11 +802,187 @@
     (() => {
       'use strict';
 
+      const doc = document;
+      const root = doc.documentElement;
+      const $ = (selector, scope = doc) => scope.querySelector(selector);
+      const $$ = (selector, scope = doc) => Array.from(scope.querySelectorAll(selector));
       const PHONE = '255767602509';
-      const $ = (selector, scope = document) => scope.querySelector(selector);
-      const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const waUrl = (message = '') => `https://wa.me/${PHONE}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
 
+      /* Reveal setup runs first so a later module failure cannot leave content hidden. */
+      const revealItems = $$('.reveal');
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        }, {threshold:.08, rootMargin:'0px 0px -36px 0px'});
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('visible'));
+      }
+      root.classList.add('js-ready');
+
+      /* WhatsApp links remain functional without JavaScript; JS only adds the preset message. */
+      $$('.js-wa').forEach((link) => {
+        const message = link.dataset.message || 'Hello JVC Catering, I would like more information.';
+        link.href = waUrl(message);
+      });
+
+      /* Header, back-to-top, and section navigation. Section offsets are cached. */
+      const header = $('#siteHeader');
+      const backTop = $('#backTop');
+      const sections = $$('main section[id]');
+      const navLinks = $$('.desktop-nav a, .mobile-links a');
+      let sectionOffsets = [];
+      let scrollTicking = false;
+
+      const refreshSectionOffsets = () => {
+        sectionOffsets = sections.map((section) => ({id:section.id, top:section.offsetTop}));
+      };
+
+      const setActiveLink = (marker) => {
+        let activeId = 'hero';
+        for (const section of sectionOffsets) {
+          if (section.top <= marker) activeId = section.id;
+          else break;
+        }
+        navLinks.forEach((link) => {
+          const active = link.getAttribute('href') === `#${activeId}`;
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      };
+
+      const updateScrollUI = () => {
+        const y = window.scrollY || 0;
+        header?.classList.toggle('scrolled', y > 24);
+        backTop?.classList.toggle('show', y > 600);
+        setActiveLink(y + window.innerHeight * .34);
+        scrollTicking = false;
+      };
+
+      refreshSectionOffsets();
+      updateScrollUI();
+
+      window.addEventListener('scroll', () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        window.requestAnimationFrame(updateScrollUI);
+      }, {passive:true});
+
+      backTop?.addEventListener('click', () => {
+        window.scrollTo({top:0, behavior:reduceMotion ? 'auto' : 'smooth'});
+      });
+
+      /* Accessible mobile drawer. */
+      const drawer = $('#mobileDrawer');
+      const scrim = $('#drawerScrim');
+      const menuToggle = $('#menuToggle');
+      const drawerClose = $('#drawerClose');
+      const pageRegions = [header, $('#main'), $('.footer'), backTop].filter(Boolean);
+      let lastFocused = null;
+      let scrimTimer = 0;
+
+      const getFocusable = () => drawer ? $$('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])', drawer).filter((el) => el.tabIndex !== -1) : [];
+      const setPageInert = (value) => pageRegions.forEach((region) => { region.inert = value; });
+
+      const setDrawer = (open, restoreFocus = true) => {
+        if (!drawer || !scrim || !menuToggle || !drawerClose) return;
+        window.clearTimeout(scrimTimer);
+        drawer.inert = !open;
+
+        if (open) {
+          lastFocused = doc.activeElement;
+          scrim.hidden = false;
+          window.requestAnimationFrame(() => scrim.classList.add('show'));
+        } else {
+          scrim.classList.remove('show');
+          scrimTimer = window.setTimeout(() => { scrim.hidden = true; }, reduceMotion ? 0 : 250);
+        }
+
+        drawer.classList.toggle('open', open);
+        doc.body.classList.toggle('menu-open', open);
+        setPageInert(open);
+        drawer.setAttribute('aria-hidden', String(!open));
+        menuToggle.setAttribute('aria-expanded', String(open));
+
+        if (open) drawerClose.focus({preventScroll:true});
+        else if (restoreFocus && lastFocused instanceof HTMLElement) lastFocused.focus({preventScroll:true});
+      };
+
+      if (drawer) drawer.inert = true;
+      menuToggle?.addEventListener('click', () => setDrawer(true));
+      drawerClose?.addEventListener('click', () => setDrawer(false));
+      scrim?.addEventListener('click', () => setDrawer(false));
+
+      doc.addEventListener('keydown', (event) => {
+        if (!drawer?.classList.contains('open')) return;
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          setDrawer(false);
+          return;
+        }
+        if (event.key !== 'Tab') return;
+        const focusable = getFocusable();
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && doc.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && doc.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+      /* One delegated internal-navigation listener instead of one listener per link. */
+      doc.addEventListener('click', (event) => {
+        const link = event.target.closest?.('a[href^="#"]:not(.skip-link)');
+        if (!link) return;
+        const hash = link.getAttribute('href');
+        if (!hash || hash === '#') return;
+        let target;
+        try { target = $(hash); } catch { return; }
+        if (!target) return;
+        event.preventDefault();
+        if (drawer?.classList.contains('open')) setDrawer(false, false);
+        window.requestAnimationFrame(() => {
+          target.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'start'});
+          if (history.replaceState) history.replaceState(null, '', hash);
+        });
+      });
+
+      const desktopQuery = window.matchMedia('(min-width:960px)');
+      const handleDesktopChange = () => {
+        if (desktopQuery.matches && drawer?.classList.contains('open')) setDrawer(false, false);
+        refreshSectionOffsets();
+        updateScrollUI();
+      };
+      if (desktopQuery.addEventListener) desktopQuery.addEventListener('change', handleDesktopChange);
+      else desktopQuery.addListener?.(handleDesktopChange);
+
+      let resizeTimer = 0;
+      window.addEventListener('resize', () => {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(() => {
+          refreshSectionOffsets();
+          updateScrollUI();
+        }, 140);
+      }, {passive:true});
+
+      if (doc.fonts?.ready) {
+        doc.fonts.ready.then(() => {
+          refreshSectionOffsets();
+          updateScrollUI();
+        }).catch(() => {});
+      }
+
+      /* Menu data; default main meals are already in HTML for no-JS reliability and SEO. */
       const menuItems = [
         {title:'Signature Pilau',category:'main',label:'Main meal',image:'./menu/pilau.webp',alt:'Tanzanian signature pilau',description:'Fragrant spiced rice prepared with tender meat and traditional aromatics.'},
         {title:'Wali wa Nazi',category:'main',label:'Main meal',image:'./menu/walinazi.webp',alt:'Coconut rice with chicken',description:'Coconut rice served with flavourful chicken and warm coastal spices.'},
@@ -784,160 +1000,32 @@
         {title:'Spiced Chai',category:'drink',label:'Hot drink',image:'./menu/chai.webp',alt:'Spiced tea',description:'Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.'}
       ];
 
-      const openWhatsApp = (message) => {
-        const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
-        const popup = window.open(url, '_blank', 'noopener,noreferrer');
-        if (!popup) window.location.href = url;
-      };
-
-      /* ---------- WhatsApp actions ---------- */
-      $$('.js-wa').forEach((button) => {
-        button.addEventListener('click', () => {
-          openWhatsApp(button.dataset.message || 'Hello JVC Catering, I would like more information.');
-        });
-      });
-
-      /* ---------- Header / scroll state ---------- */
-      const header = $('#siteHeader');
-      const backTop = $('#backTop');
-      const sections = $$('main section[id]');
-      const navLinks = $$('.desktop-nav a, .mobile-links a');
-      let scrollTicking = false;
-
-      const setActiveLink = () => {
-        const marker = window.scrollY + window.innerHeight * .34;
-        let activeId = 'hero';
-        for (const section of sections) {
-          if (section.offsetTop <= marker) activeId = section.id;
-          else break;
-        }
-        navLinks.forEach((link) => {
-          const active = link.getAttribute('href') === `#${activeId}`;
-          if (active) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      };
-
-      const updateScrollUI = () => {
-        const y = window.scrollY;
-        header.classList.toggle('scrolled', y > 24);
-        backTop.classList.toggle('show', y > 600);
-        setActiveLink();
-        scrollTicking = false;
-      };
-
-      window.addEventListener('scroll', () => {
-        if (scrollTicking) return;
-        scrollTicking = true;
-        window.requestAnimationFrame(updateScrollUI);
-      }, {passive:true});
-
-      backTop.addEventListener('click', () => {
-        window.scrollTo({top:0, behavior:reduceMotion ? 'auto' : 'smooth'});
-      });
-
-      /* ---------- Mobile navigation drawer ---------- */
-      const drawer = $('#mobileDrawer');
-      const scrim = $('#drawerScrim');
-      const menuToggle = $('#menuToggle');
-      const drawerClose = $('#drawerClose');
-      const pageRegions = [header, $('#main'), $('.footer'), backTop].filter(Boolean);
-      let lastFocused = null;
-      let scrimTimer = null;
-
-      const getFocusable = () => $$('a[href], button:not([disabled])', drawer).filter((element) => element.tabIndex !== -1);
-      const setPageInert = (inert) => pageRegions.forEach((region) => { region.inert = inert; });
-
-      const setDrawer = (open, restoreFocus = true) => {
-        clearTimeout(scrimTimer);
-        if (open) {
-          lastFocused = document.activeElement;
-          scrim.hidden = false;
-          requestAnimationFrame(() => scrim.classList.add('show'));
-        } else {
-          scrim.classList.remove('show');
-          scrimTimer = window.setTimeout(() => { scrim.hidden = true; }, reduceMotion ? 0 : 250);
-        }
-
-        drawer.classList.toggle('open', open);
-        document.body.classList.toggle('menu-open', open);
-        setPageInert(open);
-        drawer.setAttribute('aria-hidden', String(!open));
-        menuToggle.setAttribute('aria-expanded', String(open));
-
-        if (open) drawerClose.focus();
-        else if (restoreFocus && lastFocused instanceof HTMLElement) lastFocused.focus({preventScroll:true});
-      };
-
-      menuToggle.addEventListener('click', () => setDrawer(true));
-      drawerClose.addEventListener('click', () => setDrawer(false));
-      scrim.addEventListener('click', () => setDrawer(false));
-
-      document.addEventListener('keydown', (event) => {
-        if (!drawer.classList.contains('open')) return;
-        if (event.key === 'Escape') {
-          setDrawer(false);
-          return;
-        }
-        if (event.key !== 'Tab') return;
-        const focusable = getFocusable();
-        if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      });
-
-      /* ---------- Smooth internal navigation ---------- */
-      $$('a[href^="#"]:not(.skip-link)').forEach((link) => {
-        link.addEventListener('click', (event) => {
-          const hash = link.getAttribute('href');
-          if (!hash || hash === '#') return;
-          const target = $(hash);
-          if (!target) return;
-          event.preventDefault();
-          const drawerWasOpen = drawer.classList.contains('open');
-          if (drawerWasOpen) setDrawer(false, false);
-          window.requestAnimationFrame(() => {
-            target.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'start'});
-            if (history.replaceState) history.replaceState(null, '', hash);
-          });
-        });
-      });
-
-      let resizeTimer;
-      window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = window.setTimeout(() => {
-          if (window.innerWidth >= 960 && drawer.classList.contains('open')) setDrawer(false, false);
-          updateScrollUI();
-        }, 120);
-      }, {passive:true});
-
-      /* ---------- Menu filter / rendering ---------- */
       const menuGrid = $('#menuGrid');
       const menuCount = $('#menuCount');
       const menuFilterButtons = $$('.menu-filter');
       const menuFilters = new Set(menuFilterButtons.map((button) => button.dataset.filter));
+      let currentFilter = 'main';
 
       const renderMenu = (filter = 'main') => {
+        if (!menuGrid || !menuCount) return;
         const safeFilter = menuFilters.has(filter) ? filter : 'main';
+        if (safeFilter === currentFilter && menuGrid.children.length) return;
+        currentFilter = safeFilter;
         const items = menuItems.filter((item) => item.category === safeFilter);
         menuCount.textContent = `${items.length} ${items.length === 1 ? 'dish' : 'dishes'}`;
         menuGrid.innerHTML = items.map((item) => `
           <article class="menu-card">
-            <div class="menu-card__media"><img src="${item.image}" alt="${item.alt}" width="480" height="360" loading="lazy" decoding="async"></div>
+            <div class="menu-card__media"><img src="${item.image}" alt="${item.alt}" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
             <div class="menu-card__body">
               <span class="menu-card__label">${item.label}</span>
               <h3>${item.title}</h3>
               <p>${item.description}</p>
             </div>
           </article>`).join('');
+        window.requestAnimationFrame(() => {
+          refreshSectionOffsets();
+          updateScrollUI();
+        });
       };
 
       menuFilterButtons.forEach((button) => {
@@ -947,140 +1035,157 @@
         });
       });
 
-      const enableArrowNav = (container, selector) => {
-        if (!container) return;
-        container.addEventListener('keydown', (event) => {
-          if (!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(event.key)) return;
-          const items = $$(selector, container);
-          const currentIndex = items.indexOf(document.activeElement);
-          if (currentIndex === -1) return;
-          event.preventDefault();
-          const direction = (event.key === 'ArrowRight' || event.key === 'ArrowDown') ? 1 : -1;
-          items[(currentIndex + direction + items.length) % items.length].focus();
-        });
-      };
+      const menuFiltersEl = $('#menuFilters');
+      menuFiltersEl?.addEventListener('keydown', (event) => {
+        if (!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(event.key)) return;
+        const items = $$('.menu-filter', menuFiltersEl);
+        const currentIndex = items.indexOf(doc.activeElement);
+        if (currentIndex === -1) return;
+        event.preventDefault();
+        const direction = (event.key === 'ArrowRight' || event.key === 'ArrowDown') ? 1 : -1;
+        items[(currentIndex + direction + items.length) % items.length].focus();
+      });
 
-      enableArrowNav($('#menuFilters'), '.menu-filter');
-      renderMenu('main');
-
-      /* ---------- Quote form ---------- */
+      /* Quote form: guarded initialization and bounded fields prevent oversized WhatsApp URLs. */
       const quoteForm = $('#quoteForm');
       const formStatus = $('#formStatus');
       const toast = $('#toast');
-      let toastTimer;
+      let toastTimer = 0;
 
       const showToast = (message) => {
+        if (!toast) return;
         toast.textContent = message;
         toast.classList.add('show');
-        clearTimeout(toastTimer);
+        window.clearTimeout(toastTimer);
         toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2600);
       };
 
-      const validatedFields = [
-        {id:'fieldName', input:'name', test:(value) => value.trim().length > 0},
-        {id:'fieldEmail', input:'email', test:(value) => !value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())},
-        {id:'fieldPhone', input:'phone', test:(value) => value.trim().length > 0},
-        {id:'fieldEventType', input:'eventType', test:(value) => value.trim().length > 0},
-        {id:'fieldGuests', input:'guestCount', test:(value) => Number(value) > 0}
-      ];
-
-      const setFieldValidity = (fieldId, inputName, valid) => {
-        const field = $('#' + fieldId);
-        const input = $('#' + inputName, field);
-        field.setAttribute('data-invalid', String(!valid));
-        input.setAttribute('aria-invalid', String(!valid));
-        return input;
-      };
-
-      validatedFields.forEach(({id,input,test}) => {
-        const field = $('#' + id);
-        const fieldInput = $('#' + input, field);
-        const eventName = fieldInput.tagName === 'SELECT' ? 'change' : 'input';
-        fieldInput.addEventListener(eventName, () => {
-          const valid = test(String(fieldInput.value || ''));
-          setFieldValidity(id, input, valid);
-          if (valid && !$$('.field[data-invalid="true"]', quoteForm).length) formStatus.textContent = '';
-        });
-      });
-
-      quoteForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const data = new FormData(quoteForm);
-        let firstInvalid = null;
-
-        validatedFields.forEach(({id,input,test}) => {
-          const valid = test(String(data.get(input) || ''));
-          const fieldInput = setFieldValidity(id, input, valid);
-          if (!valid && !firstInvalid) firstInvalid = fieldInput;
-        });
-
-        if (firstInvalid) {
-          formStatus.textContent = 'Please complete the required fields before sending.';
-          showToast('Please complete the required fields.');
-          firstInvalid.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'center'});
-          firstInvalid.focus({preventScroll:true});
-          return;
+      if (quoteForm) {
+        const eventDate = $('#eventDate', quoteForm);
+        if (eventDate) {
+          const now = new Date();
+          const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+          eventDate.min = localDate;
         }
 
-        formStatus.textContent = '';
-        const message = [
-          'Hello JVC Catering! 👋',
-          'I would like to request a catering quotation.',
-          '',
-          '*Event details*',
-          `🍽️ Type: ${data.get('eventType')}`,
-          `👥 Guests: ${data.get('guestCount')}`,
-          `📅 Date: ${data.get('eventDate') || 'To be confirmed'}`,
-          `📍 Location: ${data.get('location') || 'To be confirmed'}`,
-          '',
-          '*Contact details*',
-          `🙋 Name: ${data.get('name')}`,
-          `📞 Phone: ${data.get('phone')}`,
-          `✉️ Email: ${data.get('email') || 'Not provided'}`,
-          '',
-          '*Menu preferences*',
-          `📝 ${data.get('message') || 'Please advise me on suitable options'}`,
-          '',
-          'Looking forward to hearing from you!'
-        ].join('\n');
-        openWhatsApp(message);
-      });
+        const validatedFields = [
+          {id:'fieldName', input:'name', test:(value) => value.trim().length > 0},
+          {id:'fieldEmail', input:'email', test:(value, el) => !value.trim() || el.validity.valid},
+          {id:'fieldPhone', input:'phone', test:(value) => value.trim().length >= 7},
+          {id:'fieldEventType', input:'eventType', test:(value) => value.trim().length > 0},
+          {id:'fieldGuests', input:'guestCount', test:(value) => Number(value) > 0}
+        ];
 
-      /* ---------- Reveal observer ---------- */
-      if ('IntersectionObserver' in window && !reduceMotion) {
-        const observer = new IntersectionObserver((entries, instance) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('visible');
-            instance.unobserve(entry.target);
+        const setFieldValidity = (fieldId, inputId, valid) => {
+          const field = $('#' + fieldId, quoteForm);
+          const input = $('#' + inputId, field || quoteForm);
+          if (!field || !input) return null;
+          field.setAttribute('data-invalid', String(!valid));
+          input.setAttribute('aria-invalid', String(!valid));
+          return input;
+        };
+
+        validatedFields.forEach(({id,input,test}) => {
+          const field = $('#' + id, quoteForm);
+          const fieldInput = field ? $('#' + input, field) : null;
+          if (!fieldInput) return;
+          const eventName = fieldInput.tagName === 'SELECT' ? 'change' : 'input';
+          fieldInput.addEventListener(eventName, () => {
+            const valid = test(String(fieldInput.value || ''), fieldInput);
+            setFieldValidity(id, input, valid);
+            if (valid && !$('.field[data-invalid="true"]', quoteForm)) formStatus && (formStatus.textContent = '');
           });
-        }, {threshold:.08, rootMargin:'0px 0px -36px 0px'});
-        $$('.reveal').forEach((item) => observer.observe(item));
-      } else {
-        $$('.reveal').forEach((item) => item.classList.add('visible'));
+        });
+
+        quoteForm.addEventListener('submit', (event) => {
+          event.preventDefault();
+          const data = new FormData(quoteForm);
+          let firstInvalid = null;
+
+          validatedFields.forEach(({id,input,test}) => {
+            const inputEl = $('#' + input, quoteForm);
+            const valid = inputEl ? test(String(data.get(input) || ''), inputEl) : false;
+            const fieldInput = setFieldValidity(id, input, valid);
+            if (!valid && !firstInvalid && fieldInput) firstInvalid = fieldInput;
+          });
+
+          if (firstInvalid) {
+            if (formStatus) formStatus.textContent = 'Please complete the required fields before sending.';
+            showToast('Please complete the required fields.');
+            firstInvalid.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'center'});
+            firstInvalid.focus({preventScroll:true});
+            return;
+          }
+
+          if (formStatus) formStatus.textContent = '';
+          const message = [
+            'Hello JVC Catering! 👋',
+            'I would like to request a catering quotation.',
+            '',
+            '*Event details*',
+            `🍽️ Type: ${data.get('eventType')}`,
+            `👥 Guests: ${data.get('guestCount')}`,
+            `📅 Date: ${data.get('eventDate') || 'To be confirmed'}`,
+            `📍 Location: ${data.get('location') || 'To be confirmed'}`,
+            '',
+            '*Contact details*',
+            `🙋 Name: ${data.get('name')}`,
+            `📞 Phone: ${data.get('phone')}`,
+            `✉️ Email: ${data.get('email') || 'Not provided'}`,
+            '',
+            '*Menu preferences*',
+            `📝 ${data.get('message') || 'Please advise me on suitable options'}`,
+            '',
+            'Looking forward to hearing from you!'
+          ].join('\n');
+
+          window.location.assign(waUrl(message));
+        });
       }
 
-      /* Pause the logo marquee when it is off-screen to reduce work. */
-      const logoTrack = $('.logo-track');
-      if (logoTrack && 'IntersectionObserver' in window && !reduceMotion) {
+      /* Partner marquee: pause off-screen, in background tabs, or when the user asks. */
+      const logoTrack = $('#logoTrack');
+      const marqueeToggle = $('#marqueeToggle');
+      const clients = $('.clients');
+      let logoInView = true;
+      let logoUserPaused = false;
+
+      const updateMarqueeState = () => {
+        if (!logoTrack) return;
+        const paused = reduceMotion || logoUserPaused || !logoInView || doc.hidden;
+        logoTrack.style.animationPlayState = paused ? 'paused' : 'running';
+      };
+
+      if (logoTrack && clients && 'IntersectionObserver' in window && !reduceMotion) {
         const logoObserver = new IntersectionObserver(([entry]) => {
-          logoTrack.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+          logoInView = Boolean(entry?.isIntersecting);
+          updateMarqueeState();
         }, {threshold:.01});
-        logoObserver.observe($('.clients'));
+        logoObserver.observe(clients);
       }
 
-      /* ---------- Image fallback ---------- */
+      marqueeToggle?.addEventListener('click', () => {
+        logoUserPaused = !logoUserPaused;
+        marqueeToggle.setAttribute('aria-pressed', String(logoUserPaused));
+        marqueeToggle.textContent = logoUserPaused ? 'Resume logos' : 'Pause logos';
+        updateMarqueeState();
+      });
+      doc.addEventListener('visibilitychange', updateMarqueeState);
+      updateMarqueeState();
+
+      /* Broken-image fallback also neutralizes <picture> sources so desktop hero failures recover. */
       const neutralFallback = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#f1e7d6"/></svg>')}`;
-      document.addEventListener('error', (event) => {
+      doc.addEventListener('error', (event) => {
         const image = event.target;
         if (!(image instanceof HTMLImageElement) || image.dataset.fallbackApplied) return;
         image.dataset.fallbackApplied = 'true';
         image.removeAttribute('srcset');
+        image.closest('picture')?.querySelectorAll('source').forEach((source) => source.removeAttribute('srcset'));
         image.src = neutralFallback;
       }, true);
 
-      $('#year').textContent = new Date().getFullYear();
-      updateScrollUI();
+      const year = $('#year');
+      if (year) year.textContent = String(new Date().getFullYear());
     })();
   </script>
 </body>
