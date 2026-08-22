@@ -281,26 +281,28 @@
     .service-card__action{padding-top:var(--space-sm)}
 
     /* ==========================================================
-       9. CLIENTS
+       9. CLIENTS / PARTNER LOGO MARQUEE
        ========================================================== */
     .clients{
-      padding-block:clamp(1.75rem,4vw,2.75rem);
+      --logo-gap:clamp(1rem,2.2vw,1.75rem);
+      padding-block:clamp(1rem,2.2vw,1.45rem);
       border-block:1px solid var(--line);
       background:#fff;
       overflow:hidden;
     }
     .clients__label{
-      margin:0 0 clamp(1.25rem,3vw,2rem);
-      padding-inline:8px;
+      margin:0 0 clamp(.7rem,1.8vw,1rem);
+      padding-inline:12px;
       text-align:center;
       color:var(--muted);
-      font-size:.66rem;
+      font-size:.64rem;
       font-weight:700;
-      letter-spacing:.15em;
+      letter-spacing:.14em;
+      line-height:1.35;
       text-transform:uppercase;
     }
 
-    /* Partner marquee: clean, unboxed logos shown in their original artwork */
+    /* Compact, seamless marquee — logos float directly on white */
     .logo-marquee{
       position:relative;
       width:100%;
@@ -309,24 +311,33 @@
     .logo-track{
       display:flex;
       align-items:center;
-      gap:clamp(2rem,5vw,4.5rem);
+      gap:var(--logo-gap);
       width:max-content;
-      padding-block:8px;
-      animation:marqueeLeft 38s linear infinite;
+      padding-block:2px;
+      animation:marqueeLeft 30s linear infinite;
       will-change:transform;
+      backface-visibility:hidden;
     }
     .logo-track:focus-within{animation-play-state:paused}
     @media (hover:hover){.logo-track:hover{animation-play-state:paused}}
-    @keyframes marqueeLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-    /* Invisible sizing slots only — no cards, borders, fills or shadows */
+    /*
+      There are two identical 9-logo sequences in the markup.
+      Half the track misses half a gap, so subtracting half the gap
+      makes the loop meet perfectly with no visible jump.
+    */
+    @keyframes marqueeLeft{
+      from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(calc(-50% - (var(--logo-gap) / 2)),0,0)}
+    }
+
     .logo-item{
       display:flex;
       align-items:center;
       justify-content:center;
       flex:0 0 auto;
-      width:clamp(112px,12vw,164px);
-      min-height:58px;
+      width:clamp(112px,10.5vw,148px);
+      min-height:62px;
       padding:0;
       margin:0;
       border:0;
@@ -339,11 +350,19 @@
       width:auto;
       height:auto;
       max-width:100%;
-      max-height:52px;
+      max-height:66px;
       object-fit:contain;
       object-position:center;
       filter:none;
       opacity:1;
+    }
+
+    /* Give wide wordmark-style logos enough visual presence without cropping. */
+    .logo-item img[src*="tai.webp"],
+    .logo-item img[src*="internews.webp"],
+    .logo-item img[src*="domiya.webp"]{
+      max-width:146px;
+      max-height:70px;
     }
 
     /* ==========================================================
@@ -439,8 +458,8 @@
       .brand__name{font-size:1.2rem}
       .brand__tag{font-size:.46rem}
       .menu-toggle{width:44px;height:44px}
-      .logo-item{width:clamp(130px,14vw,174px);min-height:66px}
-      .logo-item img{max-height:58px}
+      .logo-item{width:148px;min-height:68px}
+      .logo-item img{max-height:72px}
       .contact-grid{padding:var(--space-lg)}
       .map-card__frame{height:380px}
     }
@@ -455,8 +474,8 @@
       .contact-grid{grid-template-columns:.78fr 1.22fr;gap:var(--space-xl);align-items:start}
       .contact-info{padding:var(--space-md)}
       .footer-main{grid-template-columns:1.4fr .8fr .8fr 1fr}
-      .logo-item{width:176px}
-      .logo-item img{max-height:62px}
+      .logo-item{width:156px;min-height:72px}
+      .logo-item img{max-height:76px}
     }
 
     @media (min-width:1100px){
