@@ -1,0 +1,1 @@
+/* Retained for backwards compatibility. Main functionality is deferred in main.js. */
