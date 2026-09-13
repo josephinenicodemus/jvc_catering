@@ -1,575 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-TZ">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <script>
-    document.documentElement.classList.add('js');
-    window.setTimeout(() => {
-      if (!document.documentElement.classList.contains('js-ready')) {
-        document.documentElement.classList.add('js-failsafe');
-      }
-    }, 2500);
-  </script>
-
-  <!-- Production SEO: official domain only -->
-  <meta name="theme-color" content="#0b2f22">
-  <meta name="description" content="JVC Catering creates tailored Tanzanian menus for weddings, corporate events, private gatherings, buffets and delivery in Dar es Salaam.">
+  <meta name="theme-color" content="#0f2e24">
+  <meta name="description" content="JVC Catering provides premium Tanzanian catering in Dar es Salaam for weddings, corporate events, private celebrations, buffets and delivery. Request a tailored menu and quotation on WhatsApp.">
+  <meta name="keywords" content="catering Dar es Salaam, Tanzanian catering, wedding catering Tanzania, corporate catering Dar es Salaam, event catering Tanzania, buffet catering Dar es Salaam, nyama choma catering, pilau catering">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-  <title>JVC Catering | Tailored Tastes. Warm Moments.</title>
-
+  <meta name="author" content="JVC Catering">
+  <title>Catering Services in Dar es Salaam | JVC Catering</title>
   <link rel="canonical" href="https://jvccatering.co.tz/">
-  <link rel="icon" type="image/png" href="./Logo/favicon.png">
-  <link rel="apple-touch-icon" href="./Logo/favicon.png">
+  <link rel="icon" type="image/png" href="/Logo/favicon.png">
+  <link rel="apple-touch-icon" href="/Logo/favicon.png">
 
-  <!-- Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&amp;display=swap"></noscript>
-  <link rel="preload" as="image" href="./assets/hero.webp" media="(min-width:760px)" fetchpriority="high">
-  <link rel="preload" as="image" href="./assets/hero-mobile.webp" media="(max-width:759px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/hero-v2.webp" type="image/webp" media="(min-width:760px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/hero-mobile.webp" type="image/webp" media="(max-width:759px)" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20260913-1">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="JVC Catering">
   <meta property="og:locale" content="en_TZ">
-  <meta property="og:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
-  <meta property="og:description" content="Premium Tanzanian catering for memorable gatherings in Dar es Salaam.">
+  <meta property="og:title" content="JVC Catering | Premium Catering in Dar es Salaam">
+  <meta property="og:description" content="Tailored Tanzanian menus for weddings, corporate events, private celebrations, buffets and delivery in Dar es Salaam.">
   <meta property="og:url" content="https://jvccatering.co.tz/">
-  <meta property="og:image" content="https://jvccatering.co.tz/assets/hero.webp">
+  <meta property="og:image" content="https://jvccatering.co.tz/assets/hero-v2.webp">
   <meta property="og:image:alt" content="JVC Catering event presentation with Tanzanian dishes">
-
-  <!-- Social sharing -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="JVC Catering | Tailored Tastes. Warm Moments.">
-  <meta name="twitter:description" content="Premium Tanzanian catering for memorable gatherings in Dar es Salaam.">
-  <meta name="twitter:image" content="https://jvccatering.co.tz/assets/hero.webp">
+  <meta name="twitter:title" content="JVC Catering | Premium Catering in Dar es Salaam">
+  <meta name="twitter:description" content="Tailored Tanzanian catering for memorable events in Dar es Salaam.">
+  <meta name="twitter:image" content="https://jvccatering.co.tz/assets/hero-v2.webp">
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "CateringBusiness",
-    "@id": "https://jvccatering.co.tz/#business",
-    "name": "JVC Catering",
-    "url": "https://jvccatering.co.tz/",
-    "image": "https://jvccatering.co.tz/assets/hero.webp",
-    "description": "Tailored Tanzanian catering for weddings, corporate events, private gatherings, buffets and delivery.",
-    "telephone": ["+255767602509", "+255688407366"],
-    "email": "veronica.wlff@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Lagana Street, Mori Road",
-      "addressLocality": "Dar es Salaam",
-      "postalCode": "16102",
-      "addressCountry": "TZ"
-    },
-    "sameAs": ["https://instagram.com/jvc.catering._tz"]
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://jvccatering.co.tz/#website",
+        "url":"https://jvccatering.co.tz/",
+        "name":"JVC Catering",
+        "inLanguage":"en-TZ"
+      },
+      {
+        "@type":["FoodEstablishment","LocalBusiness"],
+        "@id":"https://jvccatering.co.tz/#business",
+        "name":"JVC Catering",
+        "url":"https://jvccatering.co.tz/",
+        "image":"https://jvccatering.co.tz/assets/hero-v2.webp",
+        "description":"Premium Tanzanian catering for weddings, corporate events, private celebrations, buffets and delivery in Dar es Salaam.",
+        "telephone":"+255767602509",
+        "email":"veronica.wlff@gmail.com",
+        "servesCuisine":["Tanzanian","East African"],
+        "menu":"https://jvccatering.co.tz/JVC-Catering-Menu.pdf",
+        "priceRange":"$$",
+        "areaServed":{"@type":"City","name":"Dar es Salaam"},
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"Lagana Street, Mori Road",
+          "addressLocality":"Dar es Salaam",
+          "postalCode":"16102",
+          "addressCountry":"TZ"
+        },
+        "sameAs":["https://instagram.com/jvc.catering._tz"]
+      },
+      {
+        "@type":"Service",
+        "name":"Event Catering in Dar es Salaam",
+        "provider":{"@id":"https://jvccatering.co.tz/#business"},
+        "areaServed":{"@type":"City","name":"Dar es Salaam"},
+        "serviceType":["Wedding catering","Corporate catering","Private event catering","Buffet catering","Catering delivery"]
+      }
+    ]
   }
   </script>
-
-
-
-  <style>
-    /* ==========================================================
-       1. DESIGN TOKENS
-       ========================================================== */
-    :root{
-      --pine-1000:#061d15;
-      --pine-950:#08251a;
-      --pine-900:#0b2f22;
-      --pine-800:#12402e;
-      --pine-700:#1c5a41;
-      --tangerine:#c9772f;
-      --tangerine-deep:#a85f21;
-      --action:#9b551c;
-      --action-hover:#814515;
-      --cream:#faf6ec;
-      --sand:#f1e7d6;
-      --ink:#1a231d;
-      --muted:#666b62;
-      --line:rgba(11,47,34,.14);
-      --white:#fff;
-
-      --display:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
-      --ui:"Bricolage Grotesque","Avenir Next","Segoe UI",sans-serif;
-
-      --container:min(1240px,calc(100% - 32px));
-      --header-h:64px;
-      --radius-sm:10px;
-      --radius-md:18px;
-      --radius-lg:26px;
-      --ease:cubic-bezier(.22,.7,.28,1);
-      --shadow-1:0 10px 30px rgba(8,37,26,.10);
-      --shadow-2:0 24px 60px rgba(8,37,26,.16);
-
-      --space-3xs:clamp(.25rem,.5vw,.375rem);
-      --space-2xs:clamp(.5rem,1vw,.625rem);
-      --space-xs:clamp(.75rem,1.4vw,1rem);
-      --space-sm:clamp(1rem,2vw,1.25rem);
-      --space-md:clamp(1.25rem,2.6vw,1.75rem);
-      --space-lg:clamp(1.75rem,3.4vw,2.5rem);
-      --space-xl:clamp(2.25rem,4.4vw,3.5rem);
-      --space-2xl:clamp(2.75rem,5.4vw,4.5rem);
-      --section-space:clamp(3rem,6vw,5.25rem);
-
-      --fs-eyebrow:.72rem;
-      --fs-nav:.74rem;
-      --fs-lead:clamp(.96rem,1.4vw,1.14rem);
-      --fs-h2:clamp(1.7rem,3.6vw,2.9rem);
-      --fs-hero:clamp(2.1rem,6.4vw,4.6rem);
-    }
-
-    /* ==========================================================
-       2. RESET / BASE
-       ========================================================== */
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 18px)}
-    body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body.menu-open{overflow:hidden;touch-action:none}
-    img{display:block;max-width:100%;height:auto}
-    a{color:inherit;text-decoration:none}
-    button,input,select,textarea{font:inherit;color:inherit}
-    button{cursor:pointer;background:none;border:0}
-    ul{margin:0;padding:0;list-style:none}
-    ::selection{background:var(--tangerine);color:#fff}
-    :focus-visible{outline:2.5px solid var(--tangerine-deep);outline-offset:3px}
-    [hidden]{display:none!important}
-    section[id]{scroll-margin-top:calc(var(--header-h) + 18px)}
-
-    /* ==========================================================
-       3. SHARED UTILITIES
-       ========================================================== */
-    .skip-link{position:fixed;left:14px;top:-70px;z-index:4000;padding:10px 16px;border-radius:var(--radius-sm);background:#fff;color:var(--pine-900);font-weight:700;transition:top .2s ease}
-    .skip-link:focus{top:14px}
-    .container{width:var(--container);margin-inline:auto}
-    .section{position:relative;padding-block:var(--section-space)}
-    .eyebrow{margin:0 0 var(--space-2xs);color:var(--tangerine-deep);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-    .section-title{margin:0;color:var(--pine-900);font-family:var(--display);font-size:var(--fs-h2);font-weight:500;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;text-align:center}
-    .lead{max-width:52ch;margin:var(--space-sm) 0 0;color:var(--muted);font-size:var(--fs-lead)}
-    .section-intro{max-width:760px;margin:0 auto var(--space-lg);text-align:center}
-    .section-intro .lead{margin-inline:auto}
-    .icon{width:18px;height:18px;flex:0 0 auto}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    main>section:not(.hero):not(.clients){content-visibility:auto;contain-intrinsic-size:1px 720px}
-    a,button{-webkit-tap-highlight-color:transparent}
-
-    .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 22px;border:1px solid transparent;border-radius:999px;font-family:var(--ui);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:transform .22s var(--ease),box-shadow .22s ease,background .22s ease,color .22s ease,border-color .22s ease}
-    @media (hover:hover){.btn:hover{transform:translateY(-2px)}}
-    .btn:active{transform:translateY(0) scale(.985)}
-    .btn--primary{background:var(--action);color:#fff;box-shadow:0 10px 24px rgba(155,85,28,.22)}
-    .btn--primary:hover{background:var(--action-hover)}
-    .btn--dark{background:var(--pine-900);color:#fff;box-shadow:0 10px 24px rgba(8,37,26,.20)}
-    .btn--dark:hover{background:var(--pine-700)}
-    .btn--outline{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(8,37,26,.18)}
-    .btn--outline:hover{background:#fff;color:var(--pine-900);border-color:#fff}
-    .btn--ghost{border-color:var(--line);color:var(--pine-900);background:#fff}
-    .btn--ghost:hover{border-color:var(--pine-700);box-shadow:var(--shadow-1)}
-
-    /* ==========================================================
-       4. HEADER / NAVIGATION
-       ========================================================== */
-    .site-header{position:fixed;inset:0 0 auto;z-index:1100;height:var(--header-h);background:rgba(6,29,21,.14);border-bottom:1px solid rgba(255,255,255,.14);transition:background .25s ease,border-color .25s ease,box-shadow .25s ease}
-    .site-header.scrolled{background:rgba(250,246,236,.97);border-color:var(--line);box-shadow:0 6px 24px rgba(8,37,26,.08)}
-    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:inline-flex;align-items:center;gap:8px;min-width:0}
-    .brand__mark{width:34px;height:34px;object-fit:contain;flex:0 0 auto}
-    .brand__text{display:grid;line-height:1.1;min-width:0}
-    .brand__name{color:#fff;font-family:var(--display);font-size:1.05rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;transition:color .2s ease;overflow:hidden;text-overflow:ellipsis}
-    .brand__tag{margin-top:3px;color:#f0c48b;font-size:.44rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;transition:color .2s ease;white-space:nowrap}
-    .site-header.scrolled .brand__name{color:var(--pine-900)}
-    .site-header.scrolled .brand__tag{color:var(--tangerine-deep)}
-
-    .desktop-nav{display:none;align-items:center;gap:4px}
-    .desktop-nav a{position:relative;display:inline-flex;align-items:center;min-height:42px;padding:9px 14px;color:#fff;font-size:var(--fs-nav);font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:color .2s ease,transform .2s ease}
-    .desktop-nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:2px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .25s var(--ease);opacity:.72}
-    .desktop-nav a:hover,.desktop-nav a[aria-current="location"]{transform:translateY(-1px)}
-    .desktop-nav a:hover::after,.desktop-nav a[aria-current="location"]::after{transform:scaleX(1);transform-origin:left}
-    .site-header.scrolled .desktop-nav a{color:var(--pine-900)}
-
-    .nav-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
-    .nav-actions .btn{display:none;min-height:40px;padding:9px 16px}
-    .menu-toggle{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.34);border-radius:50%;background:rgba(8,37,26,.2);color:#fff;transition:background .2s ease,color .2s ease,border-color .2s ease;flex:0 0 auto}
-    .site-header.scrolled .menu-toggle{background:#fff;color:var(--pine-900);border-color:var(--line)}
-
-    .drawer-scrim{position:fixed;inset:0;z-index:1150;background:rgba(2,14,10,.6);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
-    .drawer-scrim.show{opacity:1;visibility:visible}
-    .mobile-drawer{position:fixed;inset:0 0 0 auto;z-index:1160;width:min(88vw,360px);height:100vh;height:100dvh;padding:var(--space-md);background:var(--cream);transform:translateX(102%);transition:transform .32s var(--ease);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;box-shadow:-20px 0 60px rgba(0,0,0,.2)}
-    .mobile-drawer.open{transform:translateX(0)}
-    .drawer-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:var(--space-sm);border-bottom:1px solid var(--line)}
-    .mobile-drawer .brand__name{color:var(--pine-900)}
-    .mobile-drawer .brand__tag{color:var(--tangerine-deep)}
-    .drawer-close{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--pine-900);flex:0 0 auto}
-    .mobile-links{display:grid;margin:var(--space-md) 0}
-    .mobile-links a{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:50px;padding:13px 2px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.3rem;font-weight:500;color:var(--pine-900)}
-    .mobile-links a::after{content:"↗";font-family:var(--ui);font-size:.9rem;color:var(--tangerine);transition:transform .2s var(--ease)}
-    .mobile-links a:hover::after,.mobile-links a:focus-visible::after{transform:translate(2px,-2px)}
-    .mobile-links a[aria-current="location"]{color:var(--tangerine-deep)}
-    .mobile-drawer .btn{width:100%;margin-top:var(--space-xs)}
-    .drawer-contact{display:grid;gap:11px;margin-top:var(--space-lg);color:var(--muted);font-size:.86rem}
-    .drawer-contact a,.drawer-contact span{display:flex;align-items:center;gap:9px}
-    .drawer-contact svg{color:var(--tangerine);flex:0 0 auto}
-
-    /* ==========================================================
-       5. HERO
-       ========================================================== */
-    .hero{position:relative;min-height:520px;min-height:clamp(520px,86svh,860px);display:flex;align-items:flex-end;background:var(--pine-950);isolation:isolate;overflow:hidden}
-    .hero__media{position:absolute;inset:0;overflow:hidden;z-index:-2}
-    .hero__media picture{position:absolute;inset:0;display:block}
-    .hero__media img{width:100%;height:100%;object-fit:cover;object-position:center 36%}
-    .hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,16,11,.32) 0%,rgba(4,16,11,.38) 55%,rgba(4,16,11,.62) 100%);pointer-events:none}
-    .hero__inner{position:relative;width:var(--container);margin-inline:auto;padding:calc(var(--header-h) + var(--space-lg)) 0 var(--space-xl)}
-    .hero__copy{position:relative;max-width:42rem;color:#fff}
-    .hero__copy::before{content:"";display:block;width:44px;height:2px;margin-bottom:var(--space-sm);background:var(--tangerine)}
-    .hero__kicker{margin:0 0 var(--space-xs);color:#f0c48b;font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-    .hero h1{max-width:11ch;margin:0;color:#f7f0df;font-family:var(--display);font-size:var(--fs-hero);font-weight:500;line-height:1;letter-spacing:-.02em;text-wrap:balance}
-    .hero__actions{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:340px;margin-top:var(--space-md)}
-
-    /* ==========================================================
-       6. TEAM / ABOUT
-       ========================================================== */
-    .about{background:#fff}
-    .about-grid{display:grid;gap:var(--space-lg);align-items:center}
-    .about-media{position:relative;isolation:isolate;max-width:340px;width:70%;margin-inline:auto}
-    .about-media::before{content:"";position:absolute;inset:-12px 16px 16px -12px;z-index:-1;border:1.5px solid var(--tangerine);border-radius:44% 56% 58% 42% / 42% 46% 54% 58%}
-    .about-media::after{content:"";position:absolute;right:-10px;bottom:-10px;width:56px;height:56px;border-radius:50%;background:var(--tangerine);opacity:.12;z-index:-1}
-    .about-media__frame{overflow:hidden;border-radius:38% 62% 63% 37% / 45% 40% 60% 55%;background:var(--sand);box-shadow:var(--shadow-2);transition:border-radius .6s var(--ease)}
-    .about-media__frame img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;transition:transform .7s var(--ease)}
-    @media (hover:hover){
-      .about-media:hover::before{transform:translate(6px,-6px);transition:transform .6s var(--ease)}
-      .about-media:hover .about-media__frame{border-radius:46% 54% 50% 50% / 52% 46% 54% 48%}
-      .about-media:hover .about-media__frame img{transform:scale(1.04)}
-    }
-    .about-copy{text-align:center}
-    .about-copy .section-title{max-width:16ch;margin-inline:auto}
-    .about-copy .lead{margin-inline:auto}
-    .about-list{display:grid;margin-top:var(--space-md);border-top:1px solid var(--line);text-align:left}
-    .about-list article{display:grid;grid-template-columns:1fr;gap:6px;padding:var(--space-sm) 0;border-bottom:1px solid var(--line)}
-    .about-list strong{display:block;color:var(--pine-900);font-size:.96rem}
-    .about-list span{display:block;color:var(--muted);font-size:.86rem}
-    .about-copy .btn{margin-top:var(--space-md)}
-
-    /* ==========================================================
-       7. MENU
-       ========================================================== */
-    .menu-section{background:var(--pine-950);color:#fff}
-    .menu-head{max-width:760px;margin:0 auto var(--space-md);text-align:center}
-    .menu-head .section-title{color:#f4efdd}
-    .menu-head .lead{color:rgba(255,255,255,.68);margin-inline:auto}
-    .menu-head__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:var(--space-sm)}
-    .menu-filters{display:flex;justify-content:flex-start;gap:8px;overflow-x:auto;padding:2px 1px var(--space-sm);scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-    .menu-filters::-webkit-scrollbar{display:none}
-    .menu-filter{flex:0 0 auto;min-height:40px;padding:9px 16px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.7);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;transition:background .2s ease,color .2s ease,border-color .2s ease;scroll-snap-align:start}
-    .menu-filter:hover,.menu-filter[aria-pressed="true"]{background:#fff;color:var(--pine-900);border-color:#fff}
-    .menu-grid{display:grid;grid-template-columns:1fr;gap:var(--space-sm)}
-    .menu-card{display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-md);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);contain:layout paint}
-    .menu-card__media{aspect-ratio:4/3;overflow:hidden;background:var(--pine-900)}
-    .menu-card__media img{width:100%;height:100%;object-fit:cover;transition:transform .45s var(--ease)}
-    @media (hover:hover){.menu-card:hover .menu-card__media img{transform:scale(1.035)}}
-    .menu-card__body{padding:var(--space-sm)}
-    .menu-card__label{display:block;margin-bottom:6px;color:#f0c48b;font-size:.64rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
-    .menu-card h3{margin:0;color:#fff;font-family:var(--display);font-size:1.15rem;font-weight:500}
-    .menu-card p{margin:8px 0 0;color:rgba(255,255,255,.68);font-size:.86rem;line-height:1.55}
-    .menu-count{margin:0 0 var(--space-sm);color:rgba(255,255,255,.5);font-size:.78rem;text-align:center}
-
-    /* ==========================================================
-       8. SERVICES — COMPACT 4-CARD LAYOUT
-       ========================================================== */
-    .services{background:var(--sand)}
-    .services-head{max-width:760px;margin:0 auto var(--space-lg);text-align:center}
-    .services-head .lead{margin-inline:auto}
-    .service-grid{display:grid;grid-template-columns:1fr;gap:var(--space-sm);align-items:stretch}
-    .service-card{display:flex;flex-direction:column;width:100%;max-width:420px;margin-inline:auto;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;box-shadow:0 8px 24px rgba(8,37,26,.08);contain:layout paint}
-    .service-card__media{height:clamp(160px,52vw,210px);max-height:210px;overflow:hidden;background:var(--pine-900)}
-    .service-card__media img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .42s var(--ease)}
-    @media (hover:hover){.service-card:hover .service-card__media img{transform:scale(1.035)}}
-    .service-card__body{display:flex;flex:1;flex-direction:column;padding:var(--space-sm)}
-    .service-card h3{margin:0;color:var(--pine-900);font-family:var(--display);font-size:1.2rem;font-weight:500;line-height:1.15}
-    .service-card p{margin:8px 0 0;color:var(--muted);font-size:.86rem;line-height:1.55}
-    .service-card .btn{align-self:flex-start;margin-top:auto;padding-top:10px;padding-bottom:10px;min-height:42px}
-    .service-card__action{padding-top:var(--space-sm)}
-
-    /* ==========================================================
-       9. CLIENTS / PARTNER LOGO MARQUEE
-       ========================================================== */
-    .clients{
-      --logo-gap:clamp(1rem,2.2vw,1.75rem);
-      padding-block:clamp(1rem,2.2vw,1.45rem);
-      border-block:1px solid var(--line);
-      background:#fff;
-      overflow:hidden;
-    }
-    .clients__label{
-      margin:0 0 clamp(.7rem,1.8vw,1rem);
-      padding-inline:12px;
-      text-align:center;
-      color:var(--muted);
-      font-size:.64rem;
-      font-weight:700;
-      letter-spacing:.14em;
-      line-height:1.35;
-      text-transform:uppercase;
-    }
-
-    /* Compact, seamless marquee — logos float directly on white */
-    .logo-marquee{
-      position:relative;
-      width:100%;
-      overflow:hidden;
-    }
-    .logo-track{
-      display:flex;
-      align-items:center;
-      gap:var(--logo-gap);
-      width:max-content;
-      padding-block:2px;
-      animation:marqueeLeft 30s linear infinite;
-      will-change:transform;
-      backface-visibility:hidden;
-    }
-    .logo-track:focus-within{animation-play-state:paused}
-    @media (hover:hover){.logo-track:hover{animation-play-state:paused}}
-
-    /*
-      There are two identical 9-logo sequences in the markup.
-      Half the track misses half a gap, so subtracting half the gap
-      makes the loop meet perfectly with no visible jump.
-    */
-    @keyframes marqueeLeft{
-      from{transform:translate3d(0,0,0)}
-      to{transform:translate3d(calc(-50% - (var(--logo-gap) / 2)),0,0)}
-    }
-
-    .logo-item{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex:0 0 auto;
-      width:clamp(112px,10.5vw,148px);
-      min-height:62px;
-      padding:0;
-      margin:0;
-      border:0;
-      border-radius:0;
-      background:transparent;
-      box-shadow:none;
-    }
-    .logo-item img{
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:100%;
-      max-height:66px;
-      object-fit:contain;
-      object-position:center;
-      filter:none;
-      opacity:1;
-    }
-
-    /* Give wide wordmark-style logos enough visual presence without cropping. */
-    .logo-item img[src*="tai.webp"],
-    .logo-item img[src*="internews.webp"],
-    .logo-item img[src*="domiya.webp"]{
-      max-width:146px;
-      max-height:70px;
-    }
-
-
-    .clients__meta{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:clamp(.7rem,1.8vw,1rem)}
-    .clients__meta .clients__label{margin:0}
-    .marquee-toggle{min-height:34px;padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:var(--cream);color:var(--pine-900);font-size:.68rem;font-weight:700;letter-spacing:.04em}
-    .marquee-toggle:hover{background:var(--sand)}
-    .logo-marquee:focus-within .logo-track{animation-play-state:paused}
-
-    /* ==========================================================
-       10. CONTACT / FORM + SEPARATE MAP
-       ========================================================== */
-    .contact{background:var(--cream)}
-    .contact-head{max-width:760px;margin:0 auto var(--space-lg);text-align:center}
-    .contact-head .lead{margin-inline:auto}
-    .contact-shell{overflow:hidden;border-radius:var(--radius-lg);background:var(--pine-950);box-shadow:var(--shadow-2)}
-    .contact-grid{display:grid;gap:var(--space-md);padding:var(--space-md)}
-    .contact-info{display:flex;flex-direction:column;justify-content:center;padding:var(--space-xs);color:#fff}
-    .contact-info h3{margin:0;color:#f4efdd;font-family:var(--display);font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:500;line-height:1.15}
-    .contact-info p{max-width:38ch;margin:10px 0 0;color:rgba(255,255,255,.64);font-size:.9rem}
-    .contact-list{display:grid;gap:11px;margin-top:var(--space-md)}
-    .contact-list a,.contact-list span{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.84);font-size:.9rem;word-break:break-word}
-    .contact-list a:hover{color:#fff}
-    .contact-list svg{color:#f0c48b;flex-shrink:0}
-
-    .quote-form{display:grid;gap:var(--space-xs);padding:var(--space-md);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-md);background:rgba(255,255,255,.06)}
-    .form-row{display:grid;gap:var(--space-xs)}
-    .field{display:grid;gap:6px}
-    .field label{color:rgba(255,255,255,.82);font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
-    .field .required{color:#f0c48b}
-    .field input,.field select,.field textarea{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.2);border-radius:var(--radius-sm);background:rgba(255,255,255,.08);padding:11px 13px;color:#fff;transition:border-color .18s ease,background .18s ease}
-    .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.42)}
-    .field select option{color:var(--ink)}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:#f0c48b;background:rgba(255,255,255,.12)}
-    .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:2px solid #f0c48b;outline-offset:2px}
-    .field textarea{min-height:96px;resize:vertical}
-    .field[data-invalid="true"] input,.field[data-invalid="true"] select{border-color:#ff9d8a}
-    .field-error{display:none;margin:0;color:#ffcfc4;font-size:.76rem}
-    .field[data-invalid="true"] .field-error{display:block}
-    .form-status{margin:0;min-height:1.2em;color:#ffcfc4;font-size:.84rem}
-    .form-note{margin:0;color:rgba(255,255,255,.48);font-size:.72rem}
-    .quote-form>.btn{width:100%;margin-top:2px}
-
-    .map-card{margin-top:var(--space-lg);overflow:hidden;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-1)}
-    .map-card__head{display:grid;gap:4px;padding:var(--space-sm) var(--space-md)}
-    .map-card__title{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--pine-900);font-family:var(--display);font-size:1.25rem;font-weight:600}
-    .map-card__title svg{color:var(--tangerine);flex:0 0 auto}
-    .map-card__address{margin:0;color:var(--muted);font-size:.82rem;text-align:center}
-    .map-card__frame{position:relative;width:100%;height:clamp(280px,48vw,430px);background:var(--sand)}
-    .map-card__frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-    .map-card__link{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px;color:var(--tangerine-deep);font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-top:1px solid var(--line)}
-    .map-card__link:hover{background:var(--cream)}
-
-    /* ==========================================================
-       11. FOOTER
-       ========================================================== */
-    .footer{background:var(--pine-1000);color:#fff}
-    .footer-main{display:grid;gap:var(--space-lg);padding-block:var(--space-lg) var(--space-md)}
-    .footer .brand__name{color:#fff}
-    .footer-about{max-width:34ch;margin-top:var(--space-sm);color:rgba(255,255,255,.6);font-size:.88rem}
-    .footer h3{margin:0 0 var(--space-xs);font-family:var(--display);font-size:1.1rem;font-weight:500}
-    .footer-links{display:grid;gap:9px;color:rgba(255,255,255,.62);font-size:.86rem}
-    .footer-links a:hover{color:#fff}
-    .socials{display:flex;gap:9px;margin-top:var(--space-sm)}
-    .socials a{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.16);border-radius:50%;transition:background .2s ease,border-color .2s ease}
-    .socials a:hover{background:var(--tangerine);border-color:var(--tangerine)}
-    .footer-bottom{display:flex;flex-direction:column;gap:6px;padding:var(--space-sm) 0;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.72rem}
-
-    /* ==========================================================
-       12. FIXED UI / REVEALS
-       ========================================================== */
-    .back-top{position:fixed;right:14px;bottom:14px;z-index:900;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:var(--tangerine);color:#fff;box-shadow:0 12px 26px rgba(0,0,0,.2);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease}
-    .back-top.show{opacity:1;visibility:visible;transform:none}
-    .toast{position:fixed;left:50%;bottom:72px;z-index:1300;max-width:calc(100% - 28px);padding:11px 16px;border-radius:999px;background:var(--pine-900);color:#fff;box-shadow:var(--shadow-2);font-size:.82rem;font-weight:600;opacity:0;visibility:hidden;transform:translate(-50%,10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease;text-align:center}
-    .toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
-    .reveal{opacity:1;transform:none}
-    .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .46s var(--ease),transform .46s var(--ease)}
-    .js .reveal.visible,.js-failsafe .reveal{opacity:1;transform:none}
-
-    /* ==========================================================
-       13. RESPONSIVE BREAKPOINTS
-       ========================================================== */
-    @media (min-width:400px){
-      .hero__actions{grid-template-columns:1fr 1fr}
-    }
-
-    @media (min-width:560px){
-      .hero__actions{display:flex;width:auto}
-      .form-row{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .menu-grid{grid-template-columns:repeat(2,1fr)}
-      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .service-card{max-width:none}
-      .service-card__media{height:190px}
-      .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}
-      .about-media{width:56%}
-    }
-
-    @media (min-width:760px){
-      :root{--header-h:78px;--container:min(1240px,calc(100% - 48px))}
-      .brand__mark{width:40px;height:40px}
-      .brand__name{font-size:1.2rem}
-      .brand__tag{font-size:.46rem}
-      .menu-toggle{width:44px;height:44px}
-      .logo-item{width:148px;min-height:68px}
-      .logo-item img{max-height:72px}
-      .contact-grid{padding:var(--space-lg)}
-      .map-card__frame{height:380px}
-    }
-
-    @media (min-width:960px){
-      .desktop-nav{display:flex}
-      .menu-toggle{display:none}
-      .nav-actions .btn{display:inline-flex;min-height:42px;padding:10px 18px}
-      .about-grid{grid-template-columns:.9fr 1.1fr;gap:var(--space-2xl)}
-      .about-media{width:100%;max-width:420px}
-      .menu-grid{grid-template-columns:repeat(3,1fr)}
-      .contact-grid{grid-template-columns:.78fr 1.22fr;gap:var(--space-xl);align-items:start}
-      .contact-info{padding:var(--space-md)}
-      .footer-main{grid-template-columns:1.4fr .8fr .8fr 1fr}
-      .logo-item{width:156px;min-height:72px}
-      .logo-item img{max-height:76px}
-    }
-
-    @media (min-width:1100px){
-      .service-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-      .service-card__media{height:172px}
-      .service-card__body{padding:18px}
-    }
-
-    /* ==========================================================
-       14. REDUCED MOTION
-       ========================================================== */
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-      .js .reveal{opacity:1;transform:none}
-      .logo-track{animation:none!important;transform:none!important;flex-wrap:wrap;justify-content:center;width:auto!important}
-      .logo-marquee{overflow:visible}
-      .logo-track [aria-hidden="true"]{display:none}
-      .marquee-toggle{display:none}
-    }
-  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+  <svg aria-hidden="true" class="svg-sprite">
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.61 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.28 1.73.49 2.63.61A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.61 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.28 1.73.49 2.63.61A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
     <symbol id="i-map" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
     <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.6Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.5.3.5.5 0 .3-.2 1.4-.8 1.9-.6.5-1.3.8-2.2.7-1-.1-2.3-.6-4-1.7-1.6-1.1-2.7-2.5-3.3-3.6-.6-1.1-1.2-2.8-.5-3.9Z" fill="currentColor"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-navigate" viewBox="0 0 24 24"><path d="M3 11 21 3l-8 18-2-8-8-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.2-4.5-9.6-9A5.4 5.4 0 0 1 12 5.8 5.4 5.4 0 0 1 21.6 11c-2.4 4.5-9.6 9-9.6 9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h18v0M12 9v12M12 9c-2.5-5-8-4-8 0h8Zm0 0c2.5-5 8-4 8 0h-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2V6Zm11 4h4l4 4v2h-8v-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="18" r="1.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   </svg>
 
   <header class="site-header" id="siteHeader">
     <nav class="container nav" aria-label="Primary navigation">
       <a class="brand" href="#hero" aria-label="JVC Catering home">
-        <img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64">
-        <span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span>
+        <img class="brand__mark" src="/Logo/favicon.png" alt="" width="40" height="40">
+        <span class="brand__text"><strong>JVC Catering</strong><span>Tailored Tastes</span></span>
       </a>
-      <div class="desktop-nav" aria-label="Desktop links">
-        <a href="#hero" aria-current="location">Home</a>
-        <a href="#about">Team</a>
-        <a href="#menu">Menu</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <div class="desktop-nav">
+        <a href="#about">About</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to book catering for an event.">Book an event</a>
+        <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to request a catering quotation.">Request a quote</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileDrawer" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
       </div>
     </nav>
   </header>
 
-  <div class="drawer-scrim" id="drawerScrim" aria-hidden="true" hidden></div>
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
   <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
     <div class="drawer-head">
-      <a class="brand" href="#hero" tabindex="-1"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
+      <a class="brand" href="#hero" tabindex="-1"><img class="brand__mark" src="/Logo/favicon.png" alt="" width="40" height="40"><span class="brand__text"><strong>JVC Catering</strong><span>Tailored Tastes</span></span></a>
       <button class="drawer-close" id="drawerClose" type="button" aria-label="Close navigation"><svg class="icon"><use href="#i-x"/></svg></button>
     </div>
-    <nav class="mobile-links" aria-label="Mobile links">
-      <a href="#hero" aria-current="location">Home</a>
-      <a href="#about">Meet the team</a>
-      <a href="#menu">Menu</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a quotation for my event.">Request a quotation</a>
+    <nav class="mobile-links" aria-label="Mobile links"><a href="#about">About</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn--primary js-wa btn--wide" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to request a catering quotation.">Request a quote</a>
     <div class="drawer-contact">
       <a href="tel:+255767602509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 602 509</a>
-      <a href="tel:+255688407366"><svg class="icon"><use href="#i-phone"/></svg>+255 688 407 366</a>
       <a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
       <span><svg class="icon"><use href="#i-map"/></svg>Lagana Street, Mori Road, Dar es Salaam</span>
     </div>
@@ -577,616 +132,163 @@
 
   <main id="main">
     <section class="hero" id="hero" aria-labelledby="heroTitle">
-      <div class="hero__media">
-        <picture>
-          <source srcset="./assets/hero.webp" media="(min-width:760px)">
-          <img src="./assets/hero-mobile.webp" alt="A beautifully set JVC Catering event table with Tanzanian dishes" width="1600" height="2000" fetchpriority="high">
-        </picture>
-      </div>
+      <div class="hero__media"><picture><source srcset="/assets/hero-v2.webp" media="(min-width:760px)" type="image/webp" width="1832" height="859"><img src="/assets/hero-mobile.webp" alt="JVC Catering event table with Tanzanian dishes" width="1080" height="1350" loading="eager" decoding="async" fetchpriority="high"></picture></div>
+      <div class="hero__shade"></div>
       <div class="container hero__inner">
         <div class="hero__copy">
-          <p class="hero__kicker">Premium catering in Dar es Salaam</p>
-          <h1 id="heroTitle">Tailored tastes.<br>Warm moments.</h1>
-          <div class="hero__actions">
-            <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to book catering for my event.">Book catering <svg class="icon"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--outline" href="#menu">Explore menu</a>
-          </div>
+          <span class="badge"><span class="badge__dot"><svg viewBox="0 0 24 24" fill="none"><use href="#i-heart"/></svg></span>Trusted by organisations and families across Dar es Salaam</span>
+          <h1 id="heroTitle">Food made for the way your event should feel.</h1>
+          <p class="hero__lead">Thoughtful Tanzanian menus, polished presentation and dependable event service for weddings, corporate gatherings and private celebrations.</p>
+          <div class="hero__actions"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to request a catering quotation.">Request a quote <svg class="icon"><use href="#i-arrow"/></svg></a><a class="text-link" href="#menu">View our menu</a></div>
         </div>
       </div>
     </section>
 
     <section class="section about" id="about" aria-labelledby="aboutTitle">
       <div class="container about-grid">
-        <div class="about-media reveal">
-          <div class="about-media__frame">
-            <img src="./assets/FOUNDER.jpg" alt="The JVC Catering team preparing and serving Tanzanian dishes at a catered event" width="1200" height="1500" loading="lazy" decoding="async" fetchpriority="low">
-          </div>
-        </div>
-
+        <div class="about-media reveal"><img src="/assets/FOUNDER.jpg" alt="JVC Catering team preparing food for an event" width="1200" height="1500" loading="lazy" decoding="async"></div>
         <div class="about-copy reveal">
-          <p class="eyebrow">Meet the JVC team</p>
-          <h2 class="section-title" id="aboutTitle">People who make every table feel personal.</h2>
-          <p class="lead">JVC Catering blends Tanzanian flavour, event experience and attentive service. Every gathering is planned with care, from the first menu conversation to the final presentation.</p>
-          <div class="about-list">
-            <article><strong>Menus built around your occasion</strong><span>Guest count, service style, preferences and budget are considered from the beginning.</span></article>
-            <article><strong>Authentic local flavour</strong><span>Familiar Tanzanian favourites prepared with thoughtful presentation and consistent quality.</span></article>
-            <article><strong>Clear event coordination</strong><span>Direct communication keeps setup, timing and expectations aligned.</span></article>
+          <p class="section-label">About JVC Catering</p>
+          <h2 class="section-title" id="aboutTitle">Personal service from planning to presentation.</h2>
+          <p class="lead">JVC Catering brings together Tanzanian flavour, careful preparation and reliable event coordination. Menus are shaped around your occasion, guest count, service style and preferences.</p>
+          <div class="value-list">
+            <div><span class="value-list__icon"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span><strong>Tailored menus</strong><small>Food selections built around your event and guests.</small></span></div>
+            <div><span class="value-list__icon"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span><strong>Local flavour</strong><small>Familiar Tanzanian favourites prepared with consistent quality.</small></span></div>
+            <div><span class="value-list__icon"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span><strong>Reliable coordination</strong><small>Clear communication for setup, timing and service.</small></span></div>
           </div>
-          <a class="btn btn--dark js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to our team</a>
+          <a class="text-link text-link--dark js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to discuss catering for my event.">Talk to our team <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
     <section class="section menu-section" id="menu" aria-labelledby="menuTitle">
       <div class="container">
-        <div class="menu-head reveal">
-          <p class="eyebrow">Menu</p>
-          <h2 class="section-title" id="menuTitle">Choose a dish. Build a menu.</h2>
-          <p class="lead">Browse JVC favourites, then request a menu customised for your guest count and event style.</p>
-          <div class="menu-head__actions">
-            <a class="btn btn--ghost" href="./JVC-Catering-Menu.pdf" download>Download menu <svg class="icon"><use href="#i-download"/></svg></a>
-            <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like help creating a custom event menu.">Build my menu</a>
+        <div class="menu-intro">
+          <div class="menu-intro__copy reveal">
+            <p class="section-label">The JVC menu</p>
+            <h2 class="section-title" id="menuTitle">A generous table built around Tanzanian flavour.</h2>
+            <p class="lead">Choose familiar favourites, coastal dishes, flame-grilled selections, fresh bites, desserts and drinks. We shape the final menu around your event, guest count, service style and preferences.</p>
+            <div class="menu-intro__actions">
+              <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like help creating a menu for my event.">Build my event menu <svg class="icon"><use href="#i-arrow"/></svg></a>
+              <a class="text-link text-link--dark" href="/JVC-Catering-Menu.pdf" target="_blank" rel="noopener">Download full menu <svg class="icon"><use href="#i-download"/></svg></a>
+            </div>
           </div>
+          <aside class="menu-notes reveal" aria-label="Menu planning information">
+            <p class="menu-notes__eyebrow">Designed around your event</p>
+            <div class="menu-note"><strong>Flexible selections</strong><span>Mix dishes across categories to create a balanced buffet or plated service.</span></div>
+            <div class="menu-note"><strong>Guest-led portions</strong><span>Final quantities and quotation are prepared according to your guest count.</span></div>
+            <div class="menu-note"><strong>Dietary planning</strong><span>Share dietary preferences when requesting your quotation so suitable options can be discussed.</span></div>
+          </aside>
         </div>
 
-        <div class="menu-filters" id="menuFilters" role="group" aria-label="Filter menu dishes">
-          <button class="menu-filter" type="button" data-filter="main" aria-pressed="true">Main meals</button>
-          <button class="menu-filter" type="button" data-filter="grill" aria-pressed="false">Grills</button>
-          <button class="menu-filter" type="button" data-filter="bites" aria-pressed="false">Fresh bites</button>
-          <button class="menu-filter" type="button" data-filter="dessert" aria-pressed="false">Desserts</button>
-          <button class="menu-filter" type="button" data-filter="drink" aria-pressed="false">Drinks</button>
+        <div class="menu-toolbar">
+          <div class="menu-filters" id="menuFilters" role="group" aria-label="Filter menu dishes">
+            <button class="menu-filter" type="button" data-filter="all" aria-pressed="true"><span>All</span><small>14</small></button>
+            <button class="menu-filter" type="button" data-filter="main" aria-pressed="false"><span>Main meals</span><small>4</small></button>
+            <button class="menu-filter" type="button" data-filter="grill" aria-pressed="false"><span>From the grill</span><small>2</small></button>
+            <button class="menu-filter" type="button" data-filter="bites" aria-pressed="false"><span>Fresh bites</span><small>3</small></button>
+            <button class="menu-filter" type="button" data-filter="dessert" aria-pressed="false"><span>Desserts</span><small>2</small></button>
+            <button class="menu-filter" type="button" data-filter="drink" aria-pressed="false"><span>Drinks</span><small>3</small></button>
+          </div>
+          <p class="menu-count" id="menuCount" aria-live="polite">14 menu selections</p>
         </div>
-        <p class="menu-count" id="menuCount" aria-live="polite">4 dishes</p>
+
         <div class="menu-grid" id="menuGrid">
-          <article class="menu-card">
-            <div class="menu-card__media"><img src="./menu/pilau.webp" alt="Tanzanian signature pilau" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Signature Pilau</h3><p>Fragrant spiced rice prepared with tender meat and traditional aromatics.</p></div>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card__media"><img src="./menu/walinazi.webp" alt="Coconut rice with chicken" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Wali wa Nazi</h3><p>Coconut rice served with flavourful chicken and warm coastal spices.</p></div>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card__media"><img src="./menu/ndizinyama.webp" alt="Plantain and meat stew" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Ndizi na Nyama</h3><p>Tender plantain and meat simmered into a comforting Tanzanian classic.</p></div>
-          </article>
-          <article class="menu-card">
-            <div class="menu-card__media"><img src="./menu/maharage.webp" alt="Slow cooked beans" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="menu-card__body"><span class="menu-card__label">Main meal</span><h3>Maharage</h3><p>Slow-cooked beans seasoned for a satisfying side or vegetarian meal.</p></div>
-          </article>
+          <article class="menu-card menu-card--featured"><div class="menu-card__media"><img src="/menu/pilau.webp" alt="Tanzanian signature pilau" width="720" height="540" loading="lazy" decoding="async"><span class="menu-card__tag">Main meal</span></div><div class="menu-card__body"><p class="menu-card__kicker">JVC favourite</p><h3>Signature Pilau</h3><p>Fragrant spiced rice prepared with tender meat and traditional aromatics for a warm, celebratory centrepiece.</p><div class="menu-card__meta"><span>Buffet friendly</span><span>Event favourite</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/walinazi.webp" alt="Coconut rice with chicken" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Main meal</span></div><div class="menu-card__body"><h3>Wali wa Nazi</h3><p>Fragrant coconut rice with a soft coastal finish, ideal alongside chicken, grilled meats or rich sauces.</p><div class="menu-card__meta"><span>Coastal</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/ndizinyama.webp" alt="Plantain and meat stew" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Main meal</span></div><div class="menu-card__body"><h3>Ndizi na Nyama</h3><p>Tender plantain and meat slowly cooked into a comforting Tanzanian classic with deep savoury flavour.</p><div class="menu-card__meta"><span>Traditional</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/maharage.webp" alt="Slow cooked beans" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Main meal</span></div><div class="menu-card__body"><h3>Maharage</h3><p>Slow-cooked, well-seasoned beans that work beautifully as a hearty side or plant-based menu option.</p><div class="menu-card__meta"><span>Plant based</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/nyamachoma.webp" alt="Nyama choma grilled meat" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">From the grill</span></div><div class="menu-card__body"><h3>Nyama Choma</h3><p>Char-grilled meat prepared for tenderness, bold flavour and the unmistakable finish of an open flame.</p><div class="menu-card__meta"><span>Flame grilled</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/mshikaki.webp" alt="Tanzanian mishkaki skewers" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">From the grill</span></div><div class="menu-card__body"><h3>Mishkaki</h3><p>Seasoned meat skewers grilled over heat and served fresh, perfect for receptions and relaxed celebrations.</p><div class="menu-card__meta"><span>Reception ready</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/maandazi.webp" alt="Fresh mandazi" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Fresh bite</span></div><div class="menu-card__body"><h3>Classic Mandazi</h3><p>Soft, golden and gently sweet pastries suited to breakfast service, tea breaks and welcoming platters.</p><div class="menu-card__meta"><span>Tea service</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/kitumbua.webp" alt="Kitumbua rice cakes" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Fresh bite</span></div><div class="menu-card__body"><h3>Kitumbua</h3><p>Traditional rice cakes with lightly crisp edges and a soft centre, ideal for breakfast and snack service.</p><div class="menu-card__meta"><span>Traditional</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/kachori.webp" alt="Kachori snack" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Fresh bite</span></div><div class="menu-card__body"><h3>Kachori</h3><p>Crisp savoury bites filled with aromatic spice, designed for tea service, receptions and finger-food tables.</p><div class="menu-card__meta"><span>Finger food</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/coconutpudding.webp" alt="Coconut pudding dessert" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Dessert</span></div><div class="menu-card__body"><h3>Coconut Pudding</h3><p>A smooth, creamy coconut dessert with a gentle tropical flavour to finish the meal on a lighter note.</p><div class="menu-card__meta"><span>Coastal</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/halwa.webp" alt="Traditional halwa dessert" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Dessert</span></div><div class="menu-card__body"><h3>Traditional Halwa</h3><p>Rich, aromatic halwa prepared for celebrations, dessert tables and memorable special-occasion service.</p><div class="menu-card__meta"><span>Celebration classic</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/sugarcanejuice.webp" alt="Fresh sugarcane juice" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Cold drink</span></div><div class="menu-card__body"><h3>Sugarcane Juice</h3><p>Freshly pressed sugarcane with a naturally bright, refreshing finish for daytime and outdoor events.</p><div class="menu-card__meta"><span>Fresh pressed</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/cocktail.webp" alt="Event mocktails" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Cold drink</span></div><div class="menu-card__body"><h3>Event Mocktails</h3><p>Colourful non-alcoholic drinks that can be matched to the atmosphere and service style of your event.</p><div class="menu-card__meta"><span>Event styled</span></div></div></article>
+          <article class="menu-card"><div class="menu-card__media"><img src="/menu/chai.webp" alt="Spiced tea" width="480" height="360" loading="lazy" decoding="async"><span class="menu-card__tag">Hot drink</span></div><div class="menu-card__body"><h3>Spiced Chai</h3><p>Warm tea infused with aromatic spices for breakfasts, meetings, afternoon service and celebrations.</p><div class="menu-card__meta"><span>Hot service</span></div></div></article>
+        </div>
+
+        <div class="menu-quote-panel reveal">
+          <div><p class="menu-quote-panel__label">Planning an event?</p><h3>Your menu does not have to be one-size-fits-all.</h3><p>Tell us your event type, number of guests and preferred dishes. We will help you shape the selection and prepare a tailored quotation.</p></div>
+          <a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a tailored menu and quotation for my event.">Request a tailored menu <svg class="icon"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
     </section>
 
     <section class="section services" id="services" aria-labelledby="servicesTitle">
       <div class="container">
-        <div class="services-head reveal">
-          <p class="eyebrow">Services</p>
-          <h2 class="section-title" id="servicesTitle">One team. Four ways to serve your moment.</h2>
-          <p class="lead">Four focused catering options, presented in a compact layout so the imagery supports the content without overpowering the page.</p>
-        </div>
-
+        <div class="section-head reveal"><p class="section-label">Catering services</p><h2 class="section-title" id="servicesTitle">A service format for every kind of gathering.</h2><p class="lead">From formal celebrations to practical office catering, each service is planned around your venue, timing and guest experience.</p></div>
         <div class="service-grid">
-          <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/wedding.webp" alt="Wedding catering service by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="service-card__body"><h3>Wedding catering</h3><p>Elegant food service, coordinated setup and tailored menus designed around your celebration.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a wedding catering quotation." aria-label="Plan wedding catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/corporate.webp" alt="Corporate event catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="service-card__body"><h3>Corporate events</h3><p>Reliable breakfasts, lunches, refreshments and professional meeting packages for teams and guests.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a corporate event catering quotation." aria-label="Plan corporate event catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/Private.webp" alt="Private gathering catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="service-card__body"><h3>Private gatherings</h3><p>Warm, personal catering for birthdays, family gatherings, anniversaries and intimate celebrations.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like catering for a private gathering." aria-label="Plan private gathering catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-card__media"><img src="./assets/Buffet.webp" alt="Buffet and delivery service by JVC Catering" width="720" height="480" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="service-card__body"><h3>Buffet &amp; delivery</h3><p>Freshly prepared dishes delivered or arranged as a complete buffet with practical event coordination.</p><div class="service-card__action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like a buffet or delivery quotation." aria-label="Plan buffet or delivery catering">Plan service <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
-          </article>
+          <article class="service-card"><img src="/assets/wedding.webp" alt="Wedding catering service by JVC Catering" width="720" height="480" loading="lazy" decoding="async"><div><span class="service-card__icon"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></span><span><h3>Wedding catering</h3><span>Tailored menus, presentation and coordinated service for your celebration.</span></span></div></article>
+          <article class="service-card"><img src="/assets/corporate.webp" alt="Corporate event catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async"><div><span class="service-card__icon"><svg viewBox="0 0 24 24"><use href="#i-briefcase"/></svg></span><span><h3>Corporate events</h3><span>Breakfasts, lunches and refreshments for meetings, workshops and teams.</span></span></div></article>
+          <article class="service-card"><img src="/assets/Private.webp" alt="Private gathering catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async"><div><span class="service-card__icon"><svg viewBox="0 0 24 24"><use href="#i-gift"/></svg></span><span><h3>Private gatherings</h3><span>Personal catering for birthdays, family events and intimate celebrations.</span></span></div></article>
+          <article class="service-card"><img src="/assets/Buffet.webp" alt="Buffet and delivery catering by JVC Catering" width="720" height="480" loading="lazy" decoding="async"><div><span class="service-card__icon"><svg viewBox="0 0 24 24"><use href="#i-truck"/></svg></span><span><h3>Buffet and delivery</h3><span>Freshly prepared dishes delivered or arranged for convenient buffet service.</span></span></div></article>
         </div>
+        <div class="center-action"><a class="btn btn--primary js-wa" href="https://wa.me/255767602509" target="_blank" rel="noopener noreferrer" data-message="Hello JVC Catering, I would like to request a catering quotation.">Request a catering quote <svg class="icon"><use href="#i-arrow"/></svg></a></div>
       </div>
     </section>
 
     <section class="clients" aria-labelledby="clientsLabel">
       <div class="container">
-        <div class="clients__meta">
-          <p class="clients__label" id="clientsLabel">Trusted for professional gatherings and community events</p>
-          <button class="marquee-toggle" id="marqueeToggle" type="button" aria-pressed="false" aria-controls="logoTrack">Pause logos</button>
-        </div>
-        <div class="logo-marquee" aria-label="Organisations JVC Catering has worked with">
-          <div class="logo-track" id="logoTrack">
-            <div class="logo-item"><img src="./brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item"><img src="./brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/dcmc.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/internews.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/giz.webp" alt="" width="866" height="650" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/aiesec.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/cetawico.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/domiya.webp" alt="" width="225" height="225" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/tai.webp" alt="" width="1170" height="476" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="logo-item" aria-hidden="true"><img src="./brands/educate.webp" alt="" width="233" height="216" loading="lazy" decoding="async" fetchpriority="low"></div>
-          </div>
-        </div>
+        <div class="clients__meta"><p id="clientsLabel">Organisations we have served</p><button class="marquee-toggle" id="marqueeToggle" type="button" aria-pressed="false" aria-controls="logoTrack">Pause logos</button></div>
+        <div class="logo-marquee"><div class="logo-track" id="logoTrack">
+          <div class="logo-item"><img src="/brands/dcmc.webp" alt="DCMC" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/oneplanet.webp" alt="One Planet" width="540" height="540" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/internews.webp" alt="Internews" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/giz.webp" alt="GIZ" width="866" height="650" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/aiesec.webp" alt="AIESEC" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/cetawico.webp" alt="Cetawico" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/domiya.webp" alt="Domiya" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/tai.webp" alt="TAI" width="1170" height="476" loading="lazy" decoding="async"></div><div class="logo-item"><img src="/brands/educate.webp" alt="Educate" width="233" height="216" loading="lazy" decoding="async"></div>
+          <div class="logo-item" aria-hidden="true"><img src="/brands/dcmc.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/oneplanet.webp" alt="" width="540" height="540" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/internews.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/giz.webp" alt="" width="866" height="650" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/aiesec.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/cetawico.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/domiya.webp" alt="" width="225" height="225" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/tai.webp" alt="" width="1170" height="476" loading="lazy" decoding="async"></div><div class="logo-item" aria-hidden="true"><img src="/brands/educate.webp" alt="" width="233" height="216" loading="lazy" decoding="async"></div>
+        </div></div>
       </div>
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="contactTitle">
-      <div class="container">
-        <div class="contact-head reveal">
-          <p class="eyebrow">Contact JVC Catering</p>
-          <h2 class="section-title" id="contactTitle">Let us design your table.</h2>
-          <p class="lead">Share your date, venue, guest count and preferred dishes. Your enquiry is prepared as a WhatsApp message and sent directly to the JVC Catering team.</p>
+      <div class="container contact-layout">
+        <div class="contact-intro reveal">
+          <p class="section-label section-label--light">Request a quotation</p><h2 class="section-title" id="contactTitle">Tell us what you are planning.</h2><p>Share a few event details. We will prepare a clear WhatsApp message so the JVC Catering team can respond with the right questions and next steps.</p>
+          <div class="contact-list"><a href="tel:+255767602509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 602 509</a><a href="tel:+255688407366"><svg class="icon"><use href="#i-phone"/></svg>+255 688 407 366</a><a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a><span><svg class="icon"><use href="#i-map"/></svg>Lagana Street, Mori Road, Dar es Salaam 16102</span></div>
         </div>
-
-        <div class="contact-shell reveal">
-          <div class="contact-grid">
-            <aside class="contact-info" aria-label="JVC Catering contact details">
-              <h3>Talk to the team</h3>
-              <p>Use the details below for quick questions, or complete the quotation form for an event-specific request.</p>
-              <div class="contact-list">
-                <a href="tel:+255767602509"><svg class="icon"><use href="#i-phone"/></svg>+255 767 602 509</a>
-                <a href="tel:+255688407366"><svg class="icon"><use href="#i-phone"/></svg>+255 688 407 366</a>
-                <a href="mailto:veronica.wlff@gmail.com"><svg class="icon"><use href="#i-mail"/></svg>veronica.wlff@gmail.com</a>
-                <span><svg class="icon"><use href="#i-map"/></svg>Lagana Street, Mori Road, Dar es Salaam 16102</span>
-                <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener"><svg class="icon"><use href="#i-instagram"/></svg>@jvc.catering._tz</a>
-              </div>
-            </aside>
-
-            <form class="quote-form" id="quoteForm" novalidate aria-describedby="formStatus">
-              <div class="form-row">
-                <div class="field" id="fieldName"><label for="name">Your name <span class="required" aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Full name" aria-required="true" aria-invalid="false" aria-describedby="errorName"><span class="field-error" id="errorName">Please enter your name.</span></div>
-                <div class="field" id="fieldEmail"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" aria-invalid="false" aria-describedby="errorEmail"><span class="field-error" id="errorEmail">Please enter a valid email.</span></div>
-              </div>
-              <div class="form-row">
-                <div class="field" id="fieldPhone"><label for="phone">Phone number <span class="required" aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required placeholder="+255 7xx xxx xxx" aria-required="true" aria-invalid="false" aria-describedby="errorPhone"><span class="field-error" id="errorPhone">Please enter a phone number.</span></div>
-                <div class="field" id="fieldEventType"><label for="eventType">Event type <span class="required" aria-hidden="true">*</span></label><select id="eventType" name="eventType" required aria-required="true" aria-invalid="false" aria-describedby="errorEventType"><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select><span class="field-error" id="errorEventType">Please select an event type.</span></div>
-              </div>
-              <div class="form-row">
-                <div class="field" id="fieldGuests"><label for="guestCount">Estimated guests <span class="required" aria-hidden="true">*</span></label><input id="guestCount" name="guestCount" type="number" min="1" inputmode="numeric" required placeholder="e.g. 80" aria-required="true" aria-invalid="false" aria-describedby="errorGuests"><span class="field-error" id="errorGuests">Please estimate your guest count.</span></div>
-                <div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div>
-              </div>
-              <div class="field"><label for="location">Venue or area</label><input id="location" name="location" autocomplete="street-address" maxlength="160" placeholder="Event location"></div>
-              <div class="field"><label for="message">Menu preferences</label><textarea id="message" name="message" maxlength="700" placeholder="Preferred dishes, service style or budget range"></textarea></div>
-              <p class="form-status" id="formStatus" role="alert"></p>
-              <button class="btn btn--primary" type="submit">Send via WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
-              <p class="form-note">No information is stored on this website. Your enquiry opens directly in WhatsApp.</p>
-              <noscript><p class="form-note">JavaScript is unavailable. Please use the WhatsApp, phone or email contact links shown on this page.</p></noscript>
-            </form>
+        <form class="quote-form reveal" id="quoteForm" novalidate aria-describedby="formStatus">
+          <div class="honeypot" aria-hidden="true"><label for="companyWebsite">Company website</label><input id="companyWebsite" name="companyWebsite" type="text" tabindex="-1" autocomplete="off"></div>
+          <input type="hidden" id="formStartedAt" name="formStartedAt" value="">
+          <div class="form-row">
+            <div class="field" id="fieldName"><label for="name">Your name <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" maxlength="100" required placeholder="Full name" aria-invalid="false" aria-describedby="errorName"><span class="field-error" id="errorName">Enter your name.</span></div>
+            <div class="field" id="fieldPhone"><label for="phone">Phone number <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" required placeholder="+255 7xx xxx xxx" aria-invalid="false" aria-describedby="errorPhone"><span class="field-error" id="errorPhone">Enter a valid phone number.</span></div>
           </div>
-        </div>
+          <div class="form-row">
+            <div class="field" id="fieldEventType"><label for="eventType">Event type <span aria-hidden="true">*</span></label><select id="eventType" name="eventType" required aria-invalid="false" aria-describedby="errorEventType"><option value="">Select event</option><option>Wedding</option><option>Corporate event</option><option>Private celebration</option><option>Buffet or delivery</option><option>Other event</option></select><span class="field-error" id="errorEventType">Select an event type.</span></div>
+            <div class="field" id="fieldGuests"><label for="guestCount">Estimated guests <span aria-hidden="true">*</span></label><input id="guestCount" name="guestCount" type="number" min="1" max="10000" inputmode="numeric" required placeholder="80" aria-invalid="false" aria-describedby="errorGuests"><span class="field-error" id="errorGuests">Enter a guest count above 0.</span></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="eventDate">Event date</label><input id="eventDate" name="eventDate" type="date"></div>
+            <div class="field" id="fieldEmail"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" aria-invalid="false" aria-describedby="errorEmail"><span class="field-error" id="errorEmail">Enter a valid email address.</span></div>
+          </div>
+          <div class="field"><label for="location">Venue or area</label><input id="location" name="location" maxlength="160" placeholder="Event location"></div>
+          <div class="field"><label for="message">Menu preferences or notes</label><textarea id="message" name="message" maxlength="700" placeholder="Preferred dishes, service style or budget range"></textarea></div>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <button class="btn btn--primary btn--wide" type="submit">Continue on WhatsApp <svg class="icon"><use href="#i-whatsapp"/></svg></button>
+          <p class="form-note">Your details are not stored on this website. Submission opens WhatsApp with your event brief.</p>
+        </form>
+      </div>
+    </section>
 
-        <div class="map-card reveal" aria-labelledby="mapTitle">
-          <div class="map-card__head">
-            <div class="map-card__title" id="mapTitle"><svg class="icon"><use href="#i-map"/></svg>Find us</div>
-            <p class="map-card__address">Lagana Street, Mori Road, Dar es Salaam 16102, Tanzania</p>
-          </div>
-          <div class="map-card__frame">
-            <iframe title="JVC Catering location — satellite map" src="https://www.google.com/maps?q=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania&t=k&z=17&output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" fetchpriority="low" allowfullscreen></iframe>
-          </div>
-          <a class="map-card__link" href="https://www.google.com/maps/dir/?api=1&destination=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania" target="_blank" rel="noopener">Get directions <svg class="icon"><use href="#i-navigate"/></svg></a>
-        </div>
+    <section class="location-section" aria-labelledby="mapTitle">
+      <div class="container map-card reveal">
+        <div class="map-card__head"><div><p class="section-label">Location</p><h2 id="mapTitle">Find JVC Catering</h2><p>Lagana Street, Mori Road, Dar es Salaam 16102, Tanzania</p></div><a class="btn btn--secondary" style="color:var(--pine);border-color:var(--line)" href="https://www.google.com/maps/dir/?api=1&destination=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania" target="_blank" rel="noopener">Get directions <svg class="icon"><use href="#i-navigate"/></svg></a></div>
+        <div class="map-card__frame"><iframe title="JVC Catering satellite location map" src="https://www.google.com/maps?q=Lagana+Street,+Mori+Road,+Dar+es+Salaam+16102,+Tanzania&t=k&z=17&output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-main">
-      <div>
-        <a class="brand" href="#hero"><img class="brand__mark" src="./Logo/favicon.png" alt="" width="64" height="64"><span class="brand__text"><span class="brand__name">JVC Catering</span><span class="brand__tag">Tailored Tastes</span></span></a>
-        <p class="footer-about">Premium Tanzanian catering for weddings, corporate events, private celebrations and buffet service in Dar es Salaam.</p>
-        <div class="socials">
-          <a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
-          <a href="https://wa.me/255767602509" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a>
-          <a href="mailto:veronica.wlff@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
-        </div>
-      </div>
-      <div><h3>Explore</h3><nav class="footer-links"><a href="#hero">Home</a><a href="#about">Team</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Contact</a></nav></div>
-      <div><h3>Services</h3><div class="footer-links"><span>Wedding catering</span><span>Corporate events</span><span>Private gatherings</span><span>Buffet &amp; delivery</span></div></div>
-      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+255767602509">+255 767 602 509</a><a href="tel:+255688407366">+255 688 407 366</a><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a><span>Lagana Street, Mori Road, Dar es Salaam</span></div></div>
+      <div class="footer-brand"><a class="brand" href="#hero"><img class="brand__mark" src="/Logo/favicon.png" alt="" width="40" height="40"><span class="brand__text"><strong>JVC Catering</strong><span>Tailored Tastes</span></span></a><p>Premium Tanzanian catering for weddings, corporate events, private celebrations, buffets and delivery in Dar es Salaam.</p><div class="socials"><a href="https://instagram.com/jvc.catering._tz" target="_blank" rel="noopener" aria-label="JVC Catering on Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a><a href="https://wa.me/255767602509" target="_blank" rel="noopener" aria-label="JVC Catering on WhatsApp"><svg class="icon"><use href="#i-whatsapp"/></svg></a><a href="mailto:veronica.wlff@gmail.com" aria-label="Email JVC Catering"><svg class="icon"><use href="#i-mail"/></svg></a></div></div>
+      <div><h3>Explore</h3><nav class="footer-links" aria-label="Footer navigation"><a href="#about">About</a><a href="#menu">Menu</a><a href="#services">Services</a><a href="#contact">Request a quote</a></nav></div>
+      <div><h3>Services</h3><div class="footer-links"><a href="#services">Wedding catering</a><a href="#services">Corporate catering</a><a href="#services">Private events</a><a href="#services">Buffet and delivery</a></div></div>
+      <div><h3>Contact</h3><div class="footer-links"><a href="tel:+255767602509">+255 767 602 509</a><a href="tel:+255688407366">+255 688 407 366</a><a href="mailto:veronica.wlff@gmail.com">veronica.wlff@gmail.com</a><span>Dar es Salaam, Tanzania</span></div></div>
     </div>
-    <div class="container footer-bottom"><span>&copy; <span id="year"></span> JVC Catering. All rights reserved.</span><span>Tailored Tastes. Warm Moments.</span></div>
+    <div class="container footer-bottom"><span>&copy; <span id="year">2026</span> JVC Catering. All rights reserved.</span><span>Tailored Tastes. Warm Moments.</span></div>
   </footer>
 
   <button class="back-top" id="backTop" type="button" aria-label="Back to top"><svg class="icon"><use href="#i-up"/></svg></button>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script>
-    (() => {
-      'use strict';
-
-      const doc = document;
-      const root = doc.documentElement;
-      const $ = (selector, scope = doc) => scope.querySelector(selector);
-      const $$ = (selector, scope = doc) => Array.from(scope.querySelectorAll(selector));
-      const PHONE = '255767602509';
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const waUrl = (message = '') => `https://wa.me/${PHONE}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
-
-      /* Reveal setup runs first so a later module failure cannot leave content hidden. */
-      const revealItems = $$('.reveal');
-      if ('IntersectionObserver' in window && !reduceMotion) {
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          for (const entry of entries) {
-            if (!entry.isIntersecting) continue;
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        }, {threshold:.08, rootMargin:'0px 0px -36px 0px'});
-        revealItems.forEach((item) => revealObserver.observe(item));
-      } else {
-        revealItems.forEach((item) => item.classList.add('visible'));
-      }
-      root.classList.add('js-ready');
-
-      /* WhatsApp links remain functional without JavaScript; JS only adds the preset message. */
-      $$('.js-wa').forEach((link) => {
-        const message = link.dataset.message || 'Hello JVC Catering, I would like more information.';
-        link.href = waUrl(message);
-      });
-
-      /* Header, back-to-top, and section navigation. Section offsets are cached. */
-      const header = $('#siteHeader');
-      const backTop = $('#backTop');
-      const sections = $$('main section[id]');
-      const navLinks = $$('.desktop-nav a, .mobile-links a');
-      let sectionOffsets = [];
-      let scrollTicking = false;
-
-      const refreshSectionOffsets = () => {
-        sectionOffsets = sections.map((section) => ({id:section.id, top:section.offsetTop}));
-      };
-
-      const setActiveLink = (marker) => {
-        let activeId = 'hero';
-        for (const section of sectionOffsets) {
-          if (section.top <= marker) activeId = section.id;
-          else break;
-        }
-        navLinks.forEach((link) => {
-          const active = link.getAttribute('href') === `#${activeId}`;
-          if (active) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      };
-
-      const updateScrollUI = () => {
-        const y = window.scrollY || 0;
-        header?.classList.toggle('scrolled', y > 24);
-        backTop?.classList.toggle('show', y > 600);
-        setActiveLink(y + window.innerHeight * .34);
-        scrollTicking = false;
-      };
-
-      refreshSectionOffsets();
-      updateScrollUI();
-
-      window.addEventListener('scroll', () => {
-        if (scrollTicking) return;
-        scrollTicking = true;
-        window.requestAnimationFrame(updateScrollUI);
-      }, {passive:true});
-
-      backTop?.addEventListener('click', () => {
-        window.scrollTo({top:0, behavior:reduceMotion ? 'auto' : 'smooth'});
-      });
-
-      /* Accessible mobile drawer. */
-      const drawer = $('#mobileDrawer');
-      const scrim = $('#drawerScrim');
-      const menuToggle = $('#menuToggle');
-      const drawerClose = $('#drawerClose');
-      const pageRegions = [header, $('#main'), $('.footer'), backTop].filter(Boolean);
-      let lastFocused = null;
-      let scrimTimer = 0;
-
-      const getFocusable = () => drawer ? $$('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])', drawer).filter((el) => el.tabIndex !== -1) : [];
-      const setPageInert = (value) => pageRegions.forEach((region) => { region.inert = value; });
-
-      const setDrawer = (open, restoreFocus = true) => {
-        if (!drawer || !scrim || !menuToggle || !drawerClose) return;
-        window.clearTimeout(scrimTimer);
-        drawer.inert = !open;
-
-        if (open) {
-          lastFocused = doc.activeElement;
-          scrim.hidden = false;
-          window.requestAnimationFrame(() => scrim.classList.add('show'));
-        } else {
-          scrim.classList.remove('show');
-          scrimTimer = window.setTimeout(() => { scrim.hidden = true; }, reduceMotion ? 0 : 250);
-        }
-
-        drawer.classList.toggle('open', open);
-        doc.body.classList.toggle('menu-open', open);
-        setPageInert(open);
-        drawer.setAttribute('aria-hidden', String(!open));
-        menuToggle.setAttribute('aria-expanded', String(open));
-
-        if (open) drawerClose.focus({preventScroll:true});
-        else if (restoreFocus && lastFocused instanceof HTMLElement) lastFocused.focus({preventScroll:true});
-      };
-
-      if (drawer) drawer.inert = true;
-      menuToggle?.addEventListener('click', () => setDrawer(true));
-      drawerClose?.addEventListener('click', () => setDrawer(false));
-      scrim?.addEventListener('click', () => setDrawer(false));
-
-      doc.addEventListener('keydown', (event) => {
-        if (!drawer?.classList.contains('open')) return;
-        if (event.key === 'Escape') {
-          event.preventDefault();
-          setDrawer(false);
-          return;
-        }
-        if (event.key !== 'Tab') return;
-        const focusable = getFocusable();
-        if (!focusable.length) return;
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (event.shiftKey && doc.activeElement === first) {
-          event.preventDefault();
-          last.focus();
-        } else if (!event.shiftKey && doc.activeElement === last) {
-          event.preventDefault();
-          first.focus();
-        }
-      });
-
-      /* One delegated internal-navigation listener instead of one listener per link. */
-      doc.addEventListener('click', (event) => {
-        const link = event.target.closest?.('a[href^="#"]:not(.skip-link)');
-        if (!link) return;
-        const hash = link.getAttribute('href');
-        if (!hash || hash === '#') return;
-        let target;
-        try { target = $(hash); } catch { return; }
-        if (!target) return;
-        event.preventDefault();
-        if (drawer?.classList.contains('open')) setDrawer(false, false);
-        window.requestAnimationFrame(() => {
-          target.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'start'});
-          if (history.replaceState) history.replaceState(null, '', hash);
-        });
-      });
-
-      const desktopQuery = window.matchMedia('(min-width:960px)');
-      const handleDesktopChange = () => {
-        if (desktopQuery.matches && drawer?.classList.contains('open')) setDrawer(false, false);
-        refreshSectionOffsets();
-        updateScrollUI();
-      };
-      if (desktopQuery.addEventListener) desktopQuery.addEventListener('change', handleDesktopChange);
-      else desktopQuery.addListener?.(handleDesktopChange);
-
-      let resizeTimer = 0;
-      window.addEventListener('resize', () => {
-        window.clearTimeout(resizeTimer);
-        resizeTimer = window.setTimeout(() => {
-          refreshSectionOffsets();
-          updateScrollUI();
-        }, 140);
-      }, {passive:true});
-
-      if (doc.fonts?.ready) {
-        doc.fonts.ready.then(() => {
-          refreshSectionOffsets();
-          updateScrollUI();
-        }).catch(() => {});
-      }
-
-      /* Menu data; default main meals are already in HTML for no-JS reliability and SEO. */
-      const menuItems = [
-        {title:'Signature Pilau',category:'main',label:'Main meal',image:'./menu/pilau.webp',alt:'Tanzanian signature pilau',description:'Fragrant spiced rice prepared with tender meat and traditional aromatics.'},
-        {title:'Wali wa Nazi',category:'main',label:'Main meal',image:'./menu/walinazi.webp',alt:'Coconut rice with chicken',description:'Coconut rice served with flavourful chicken and warm coastal spices.'},
-        {title:'Ndizi na Nyama',category:'main',label:'Main meal',image:'./menu/ndizinyama.webp',alt:'Plantain and meat stew',description:'Tender plantain and meat simmered into a comforting Tanzanian classic.'},
-        {title:'Maharage',category:'main',label:'Main meal',image:'./menu/maharage.webp',alt:'Slow cooked beans',description:'Slow-cooked beans seasoned for a satisfying side or vegetarian meal.'},
-        {title:'Nyama Choma',category:'grill',label:'From the grill',image:'./menu/nyamachoma.webp',alt:'Nyama choma grilled meat',description:'Char-grilled meat prepared for rich flavour, tenderness and a smoky finish.'},
-        {title:'Mishkaki',category:'grill',label:'From the grill',image:'./menu/mshikaki.webp',alt:'Tanzanian mishkaki skewers',description:'Seasoned meat skewers grilled over heat and served fresh from the flame.'},
-        {title:'Classic Mandazi',category:'bites',label:'Fresh bite',image:'./menu/maandazi.webp',alt:'Fresh mandazi',description:'Soft, golden and lightly sweetened pastries for breakfast or event tea service.'},
-        {title:'Kitumbua',category:'bites',label:'Fresh bite',image:'./menu/kitumbua.webp',alt:'Kitumbua rice cakes',description:'Traditional rice cakes with a delicately crisp outside and soft centre.'},
-        {title:'Kachori',category:'bites',label:'Fresh bite',image:'./menu/kachori.webp',alt:'Kachori snack',description:'Crisp savoury bites filled with aromatic spices for receptions and tea service.'},
-        {title:'Coconut Pudding',category:'dessert',label:'Dessert',image:'./menu/coconutpudding.webp',alt:'Coconut pudding dessert',description:'A creamy coconut dessert with a smooth texture and gentle tropical flavour.'},
-        {title:'Traditional Halwa',category:'dessert',label:'Dessert',image:'./menu/halwa.webp',alt:'Traditional halwa dessert',description:'Rich, aromatic halwa prepared for celebrations and special gatherings.'},
-        {title:'Sugarcane Juice',category:'drink',label:'Cold drink',image:'./menu/sugarcanejuice.webp',alt:'Fresh sugarcane juice',description:'Freshly pressed sugarcane with a bright and naturally refreshing finish.'},
-        {title:'Event Mocktails',category:'drink',label:'Cold drink',image:'./menu/cocktail.webp',alt:'Event mocktails',description:'Colourful non-alcoholic drinks tailored to your event theme and guest profile.'},
-        {title:'Spiced Chai',category:'drink',label:'Hot drink',image:'./menu/chai.webp',alt:'Spiced tea',description:'Warm tea infused with aromatic spices for meetings, breakfasts and celebrations.'}
-      ];
-
-      const menuGrid = $('#menuGrid');
-      const menuCount = $('#menuCount');
-      const menuFilterButtons = $$('.menu-filter');
-      const menuFilters = new Set(menuFilterButtons.map((button) => button.dataset.filter));
-      let currentFilter = 'main';
-
-      const renderMenu = (filter = 'main') => {
-        if (!menuGrid || !menuCount) return;
-        const safeFilter = menuFilters.has(filter) ? filter : 'main';
-        if (safeFilter === currentFilter && menuGrid.children.length) return;
-        currentFilter = safeFilter;
-        const items = menuItems.filter((item) => item.category === safeFilter);
-        menuCount.textContent = `${items.length} ${items.length === 1 ? 'dish' : 'dishes'}`;
-        menuGrid.innerHTML = items.map((item) => `
-          <article class="menu-card">
-            <div class="menu-card__media"><img src="${item.image}" alt="${item.alt}" width="480" height="360" loading="lazy" decoding="async" fetchpriority="low"></div>
-            <div class="menu-card__body">
-              <span class="menu-card__label">${item.label}</span>
-              <h3>${item.title}</h3>
-              <p>${item.description}</p>
-            </div>
-          </article>`).join('');
-        window.requestAnimationFrame(() => {
-          refreshSectionOffsets();
-          updateScrollUI();
-        });
-      };
-
-      menuFilterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-          menuFilterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-          renderMenu(button.dataset.filter || 'main');
-        });
-      });
-
-      const menuFiltersEl = $('#menuFilters');
-      menuFiltersEl?.addEventListener('keydown', (event) => {
-        if (!['ArrowRight','ArrowLeft','ArrowDown','ArrowUp'].includes(event.key)) return;
-        const items = $$('.menu-filter', menuFiltersEl);
-        const currentIndex = items.indexOf(doc.activeElement);
-        if (currentIndex === -1) return;
-        event.preventDefault();
-        const direction = (event.key === 'ArrowRight' || event.key === 'ArrowDown') ? 1 : -1;
-        items[(currentIndex + direction + items.length) % items.length].focus();
-      });
-
-      /* Quote form: guarded initialization and bounded fields prevent oversized WhatsApp URLs. */
-      const quoteForm = $('#quoteForm');
-      const formStatus = $('#formStatus');
-      const toast = $('#toast');
-      let toastTimer = 0;
-
-      const showToast = (message) => {
-        if (!toast) return;
-        toast.textContent = message;
-        toast.classList.add('show');
-        window.clearTimeout(toastTimer);
-        toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2600);
-      };
-
-      if (quoteForm) {
-        const eventDate = $('#eventDate', quoteForm);
-        if (eventDate) {
-          const now = new Date();
-          const localDate = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-          eventDate.min = localDate;
-        }
-
-        const validatedFields = [
-          {id:'fieldName', input:'name', test:(value) => value.trim().length > 0},
-          {id:'fieldEmail', input:'email', test:(value, el) => !value.trim() || el.validity.valid},
-          {id:'fieldPhone', input:'phone', test:(value) => value.trim().length >= 7},
-          {id:'fieldEventType', input:'eventType', test:(value) => value.trim().length > 0},
-          {id:'fieldGuests', input:'guestCount', test:(value) => Number(value) > 0}
-        ];
-
-        const setFieldValidity = (fieldId, inputId, valid) => {
-          const field = $('#' + fieldId, quoteForm);
-          const input = $('#' + inputId, field || quoteForm);
-          if (!field || !input) return null;
-          field.setAttribute('data-invalid', String(!valid));
-          input.setAttribute('aria-invalid', String(!valid));
-          return input;
-        };
-
-        validatedFields.forEach(({id,input,test}) => {
-          const field = $('#' + id, quoteForm);
-          const fieldInput = field ? $('#' + input, field) : null;
-          if (!fieldInput) return;
-          const eventName = fieldInput.tagName === 'SELECT' ? 'change' : 'input';
-          fieldInput.addEventListener(eventName, () => {
-            const valid = test(String(fieldInput.value || ''), fieldInput);
-            setFieldValidity(id, input, valid);
-            if (valid && !$('.field[data-invalid="true"]', quoteForm)) formStatus && (formStatus.textContent = '');
-          });
-        });
-
-        quoteForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const data = new FormData(quoteForm);
-          let firstInvalid = null;
-
-          validatedFields.forEach(({id,input,test}) => {
-            const inputEl = $('#' + input, quoteForm);
-            const valid = inputEl ? test(String(data.get(input) || ''), inputEl) : false;
-            const fieldInput = setFieldValidity(id, input, valid);
-            if (!valid && !firstInvalid && fieldInput) firstInvalid = fieldInput;
-          });
-
-          if (firstInvalid) {
-            if (formStatus) formStatus.textContent = 'Please complete the required fields before sending.';
-            showToast('Please complete the required fields.');
-            firstInvalid.scrollIntoView({behavior:reduceMotion ? 'auto' : 'smooth', block:'center'});
-            firstInvalid.focus({preventScroll:true});
-            return;
-          }
-
-          if (formStatus) formStatus.textContent = '';
-          const message = [
-            'Hello JVC Catering! 👋',
-            'I would like to request a catering quotation.',
-            '',
-            '*Event details*',
-            `🍽️ Type: ${data.get('eventType')}`,
-            `👥 Guests: ${data.get('guestCount')}`,
-            `📅 Date: ${data.get('eventDate') || 'To be confirmed'}`,
-            `📍 Location: ${data.get('location') || 'To be confirmed'}`,
-            '',
-            '*Contact details*',
-            `🙋 Name: ${data.get('name')}`,
-            `📞 Phone: ${data.get('phone')}`,
-            `✉️ Email: ${data.get('email') || 'Not provided'}`,
-            '',
-            '*Menu preferences*',
-            `📝 ${data.get('message') || 'Please advise me on suitable options'}`,
-            '',
-            'Looking forward to hearing from you!'
-          ].join('\n');
-
-          window.location.assign(waUrl(message));
-        });
-      }
-
-      /* Partner marquee: pause off-screen, in background tabs, or when the user asks. */
-      const logoTrack = $('#logoTrack');
-      const marqueeToggle = $('#marqueeToggle');
-      const clients = $('.clients');
-      let logoInView = true;
-      let logoUserPaused = false;
-
-      const updateMarqueeState = () => {
-        if (!logoTrack) return;
-        const paused = reduceMotion || logoUserPaused || !logoInView || doc.hidden;
-        logoTrack.style.animationPlayState = paused ? 'paused' : 'running';
-      };
-
-      if (logoTrack && clients && 'IntersectionObserver' in window && !reduceMotion) {
-        const logoObserver = new IntersectionObserver(([entry]) => {
-          logoInView = Boolean(entry?.isIntersecting);
-          updateMarqueeState();
-        }, {threshold:.01});
-        logoObserver.observe(clients);
-      }
-
-      marqueeToggle?.addEventListener('click', () => {
-        logoUserPaused = !logoUserPaused;
-        marqueeToggle.setAttribute('aria-pressed', String(logoUserPaused));
-        marqueeToggle.textContent = logoUserPaused ? 'Resume logos' : 'Pause logos';
-        updateMarqueeState();
-      });
-      doc.addEventListener('visibilitychange', updateMarqueeState);
-      updateMarqueeState();
-
-      /* Broken-image fallback also neutralizes <picture> sources so desktop hero failures recover. */
-      const neutralFallback = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#f1e7d6"/></svg>')}`;
-      doc.addEventListener('error', (event) => {
-        const image = event.target;
-        if (!(image instanceof HTMLImageElement) || image.dataset.fallbackApplied) return;
-        image.dataset.fallbackApplied = 'true';
-        image.removeAttribute('srcset');
-        image.closest('picture')?.querySelectorAll('source').forEach((source) => source.removeAttribute('srcset'));
-        image.src = neutralFallback;
-      }, true);
-
-      const year = $('#year');
-      if (year) year.textContent = String(new Date().getFullYear());
-    })();
-  </script>
+  <script src="/assets/js/main.js?v=20260913-1" defer></script>
 </body>
 </html>
